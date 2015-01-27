@@ -78,6 +78,9 @@ call vundle#end()            " required
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
 
+" Sho line numbers
+set nu
+
 " Turn on the WiLd menu
 set wildmenu
 
