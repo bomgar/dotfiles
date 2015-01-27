@@ -70,6 +70,8 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'bling/vim-airline'
 
+Bundle 'jonathanfilip/vim-lucius'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
