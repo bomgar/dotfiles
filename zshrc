@@ -37,14 +37,11 @@ ZSH_THEME="rkj-repos"
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-#tmux
-ZSH_TMUX_AUTOSTART=true
-ZSH_TMUX_FIXTERM=false
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git mvn svn command-not-found vagrant tmux)
+plugins=(git mvn svn command-not-found vagrant)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
@@ -69,3 +66,17 @@ cdpath=(/home/phaun/development/projects)
 export http_proxy=http://proxy.inf.epost-dev.de:8080
 export https_proxy=http://proxy.inf.epost-dev.de:8080
 
+alias tmux="tmux -2"
+if [[ -z $TMUX ]]; then
+    if [ -e /usr/share/terminfo/x/xterm+256color ]; then # may be xterm-256 depending on your distro
+        export TERM='xterm-256color'
+    else
+        export TERM='xterm'
+    fi
+else
+    if [ -e /usr/share/terminfo/s/screen-256color ]; then
+        export TERM='screen-256color'
+    else
+        export TERM='screen'
+    fi
+fi

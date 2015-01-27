@@ -124,13 +124,16 @@ set tm=500
 " Enable syntax highlighting
 syntax enable 
 
-set background=dark
+"set background=dark
+colorscheme lucius
+LuciusBlackHighContrast
+
+set t_Co=256
 
 " Set extra options when running in GUI mode
 if has("gui_running")
     set guioptions-=T
     set guioptions+=e
-    set t_Co=256
     set guitablabel=%M\ %t
 endif
 
