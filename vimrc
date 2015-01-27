@@ -42,9 +42,6 @@
 " Sets how many lines of history VIM has to remember
 set history=700
 
-" Enable filetype plugins
-filetype plugin on
-filetype indent on
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -71,6 +68,10 @@ Bundle 'jonathanfilip/vim-lucius'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+
+" Enable filetype plugins
+filetype plugin on
+filetype indent on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
