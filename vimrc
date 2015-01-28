@@ -63,6 +63,8 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/nerdtree'
 
 Bundle 'jonathanfilip/vim-lucius'
 
