@@ -54,7 +54,7 @@ alias gitlog='git log --pretty=format:"%h - %an, %ar : %s"'
 #Maven
 alias mvn-componentTests='mvn clean install -P component-tests,without-unit-tests,local'
 alias mvn-unitTests='mvn clean install'
-export M2_HOME=/opt/maven/apache-maven-3.2.3/
+export M2_HOME=/data/opt/apache-maven-3.2.5/
 export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
 export MAVEN_OPTS="-Xmx2048m -XX:MaxPermSize=2048M"
 

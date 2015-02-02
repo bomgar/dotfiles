@@ -65,6 +65,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
+Plugin 'derekwyatt/vim-scala'
 
 Bundle 'jonathanfilip/vim-lucius'
 
