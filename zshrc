@@ -61,10 +61,7 @@ export MAVEN_OPTS="-Xmx2048m -XX:MaxPermSize=2048M"
 
 export PATH=/home/phaun/bin:$PATH
 
-cdpath=(/home/phaun/development/projects)
-
-export http_proxy=http://proxy.inf.epost-dev.de:8080
-export https_proxy=http://proxy.inf.epost-dev.de:8080
+cdpath=(/data/home/phaun/development/projects)
 
 alias tmux="tmux -2"
 if [[ -z $TMUX ]]; then
