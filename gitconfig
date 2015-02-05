@@ -1,0 +1,9 @@
+[user]
+	name = Patrick Haun
+	email = patrick.haun@immobilienscout24.de
+[color]
+	ui = true
+[push]
+	default = matching
+[core]
+	editor = vim
