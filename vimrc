@@ -66,6 +66,7 @@ Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'elzr/vim-json'
 
 Bundle 'jonathanfilip/vim-lucius'
 
@@ -280,6 +281,11 @@ let g:airline#extensions#tabline#show_buffers = 1
 " => NERDTree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <C-n> :NERDTreeToggle<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => JSON
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:vim_json_syntax_conceal = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
