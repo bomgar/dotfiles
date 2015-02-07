@@ -143,7 +143,7 @@ syntax enable
 
 "set background=dark
 colorscheme lucius
-LuciusBlackHighContrast
+LuciusLight
 
 set t_Co=256
 
