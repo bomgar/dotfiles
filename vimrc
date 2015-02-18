@@ -67,6 +67,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'elzr/vim-json'
+Plugin 'kien/ctrlp.vim'
 
 Bundle 'jonathanfilip/vim-lucius'
 
