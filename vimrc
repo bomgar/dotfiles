@@ -49,6 +49,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'elzr/vim-json'
 Plugin 'kien/ctrlp.vim'
+Plugin 'ervandew/supertab'
+Plugin 'tpope/vim-repeat'
 
 Bundle 'jonathanfilip/vim-lucius'
 
@@ -277,6 +279,19 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](\.(git|hg|svn))|(target)$',
   \ 'file': '\v\.(exe|so|dll|jar)$',
   \ }
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => completion
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set omnifunc=syntaxcomplete#Complete
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => supertab
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
