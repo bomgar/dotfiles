@@ -52,6 +52,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-repeat'
 Plugin 'tomtom/tcomment_vim'
+Plugin 'groenewege/vim-less'
+Plugin 'kchmck/vim-coffee-script'
 
 Bundle 'jonathanfilip/vim-lucius'
 
