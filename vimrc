@@ -51,6 +51,7 @@ Plugin 'elzr/vim-json'
 Plugin 'kien/ctrlp.vim'
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-repeat'
+Plugin 'tomtom/tcomment_vim'
 
 Bundle 'jonathanfilip/vim-lucius'
 
