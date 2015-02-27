@@ -314,7 +314,7 @@ function! SplitAfter()
   if l:splitchar =~ '^\d\+$'
     let l:splitchar = nr2char(l:splitchar)
   endif
-  execute 'substitute/\(' . l:splitchar . '\)/\1\r/g'
+  execute 'substitute/\V\(' . l:splitchar . '\)/\1\r/g'
 endfunction
 
 nnoremap <Leader>sa :call SplitAfter()<CR>
