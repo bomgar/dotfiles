@@ -189,7 +189,7 @@ set wrap "Wrap lines
 vnoremap <silent> * :call VisualSelection('f')<CR>
 vnoremap <silent> # :call VisualSelection('b')<CR>
 
-hi Visual term=reverse cterm=reverse guibg=Grey
+"hi Visual term=reverse cterm=reverse guibg=Grey
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
