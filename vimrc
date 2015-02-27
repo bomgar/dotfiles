@@ -306,6 +306,18 @@ set omnifunc=syntaxcomplete#Complete
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => splitAfter
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! SplitAfter()
+  let l:splitchar = getchar()
+  if l:splitchar =~ '^\d\+$'
+    let l:splitchar = nr2char(l:splitchar)
+  endif
+  execute 'substitute/\(' . l:splitchar . '\)/\1\r/g'
+endfunction
+
+nnoremap <Leader>sa :call SplitAfter()<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
