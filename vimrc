@@ -54,6 +54,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'groenewege/vim-less'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-fugitive'
 
 Bundle 'jonathanfilip/vim-lucius'
 
