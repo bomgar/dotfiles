@@ -140,6 +140,10 @@ if has("gui_running")
     set guioptions-=T
     set guioptions+=e
     set guitablabel=%M\ %t
+    set lines=50 columns=120
+    if has("win32")
+      set guifont=Lucida_Console:h12:cANSI
+    end
 endif
 
 " Set utf8 as standard encoding and en_US as the standard language
