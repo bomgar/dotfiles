@@ -55,8 +55,8 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'groenewege/vim-less'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-fugitive'
-
-Bundle 'jonathanfilip/vim-lucius'
+Plugin 'jonathanfilip/vim-lucius'
+Plugin 'bomgar/breakit.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -309,19 +309,6 @@ set omnifunc=syntaxcomplete#Complete
 " => supertab
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => splitAfter
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function! SplitAfter()
-  let l:splitchar = getchar()
-  if l:splitchar =~ '^\d\+$'
-    let l:splitchar = nr2char(l:splitchar)
-  endif
-  execute 'substitute/\V\(' . l:splitchar . '\)/\1\r/g'
-endfunction
-
-nnoremap <Leader>sa :call SplitAfter()<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
