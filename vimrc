@@ -303,7 +303,7 @@ let g:ctrlp_custom_ignore = {
 " => completion
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set omnifunc=syntaxcomplete#Complete
-
+inoremap <C-Space> <C-p>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => supertab
