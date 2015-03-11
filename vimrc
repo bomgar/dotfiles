@@ -56,6 +56,8 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-fugitive'
 Plugin 'jonathanfilip/vim-lucius'
 Plugin 'bomgar/breakit.vim'
+Plugin 'pangloss/vim-javascript'
+
 
 "Snipmate
 Plugin 'MarcWeber/vim-addon-mw-utils'
