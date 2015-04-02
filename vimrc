@@ -150,6 +150,8 @@ if has("gui_running")
     set lines=50 columns=120
     if has("win32")
       set guifont=Lucida_Console:h12:cANSI
+    else
+      set guifont=DejaVu\ Sans\ Mono\ 11
     end
 endif
 
