@@ -58,6 +58,8 @@ Plugin 'jonathanfilip/vim-lucius'
 Plugin 'bomgar/breakit.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'gre/play2vim'
+Plugin 'rust-lang/rust.vim'
+Plugin 'scrooloose/syntastic'
 
 "Snipmate
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -314,6 +316,14 @@ let g:ctrlp_custom_ignore = {
 set omnifunc=syntaxcomplete#Complete
 inoremap <C-Space> <C-p>
 inoremap <M-Space> <C-X><C-O>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => syntastic
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
