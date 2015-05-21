@@ -1,9 +1,10 @@
 [user]
 	name = Patrick Haun
-	email = patrick.haun@immobilienscout24.de
+  email = patrick.haun@immobilienscout24.de
+  #email = bomgar85@googlemail.com
 [color]
 	ui = true
 [push]
-	default = matching
+	default = simple
 [core]
 	editor = vim
