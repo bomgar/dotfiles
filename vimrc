@@ -60,6 +60,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'gre/play2vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-abolish'
 
 "Snipmate
 Plugin 'MarcWeber/vim-addon-mw-utils'
