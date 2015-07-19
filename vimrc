@@ -61,6 +61,7 @@ Plugin 'gre/play2vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-abolish'
+Plugin 'terryma/vim-multiple-cursors'
 
 "Snipmate
 Plugin 'MarcWeber/vim-addon-mw-utils'
