@@ -164,6 +164,13 @@ bar {
 exec --no-startup-id feh --bg-max ~/.i3/wallpaper.png
 
 
-#custom apps
+# workspace assignments
 #use xprop to find class
 assign [class="Gnome-terminal"] 1: terminal
+
+# custom style
+for_window [class="Gnome-terminal"] border none
+
+#autostart
+exec i3-msg 'workspace 1: terminal;exec i3-sensible-terminal'
+
