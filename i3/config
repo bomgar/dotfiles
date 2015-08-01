@@ -161,3 +161,8 @@ bar {
 
 #wallpaper
 exec --no-startup-id feh --bg-max ~/.i3/wallpaper.png
+
+
+#custom apps
+#use xprop to find class
+assign [class="Gnome-terminal"] 1: terminal
