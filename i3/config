@@ -158,3 +158,6 @@ bar {
         status_command i3status
         position top
 }
+
+#wallpaper
+exec --no-startup-id feh --bg-max ~/.i3/wallpaper.png

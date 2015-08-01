@@ -56,3 +56,4 @@ ln -sf $DIR/gitconfig ~/.gitconfig
 echo "Installing i3 config"
 ln -sf $DIR/i3/config ~/.i3/config
 ln -sf $DIR/i3/lock.sh ~/.i3/lock.sh
+ln -sf $DIR/i3/wallpaper.png ~/.i3/wallpaper.png
