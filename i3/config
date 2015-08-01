@@ -147,4 +147,5 @@ bindsym $mod+Mod1+l exec "sh ~/.i3/lock.sh"
 # finds out, if available)
 bar {
         status_command i3status
+        position top
 }
