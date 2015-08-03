@@ -92,10 +92,10 @@ bindsym $mod+a focus parent
 
 # switch to workspace
 bindsym $mod+1 workspace 1: terminal
-bindsym $mod+2 workspace 2: idea
-bindsym $mod+3 workspace 3: www
+bindsym $mod+2 workspace 2: mail
+bindsym $mod+3 workspace 3: idea
 bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
+bindsym $mod+5 workspace 5: www
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
@@ -104,10 +104,10 @@ bindsym $mod+0 workspace 10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1: terminal
-bindsym $mod+Shift+2 move container to workspace 2: idea
-bindsym $mod+Shift+3 move container to workspace 3: www
+bindsym $mod+Shift+2 move container to workspace 2: mail
+bindsym $mod+Shift+3 move container to workspace 3: idea
 bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+5 move container to workspace 5: www
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
@@ -158,7 +158,10 @@ bindsym Ctrl+Mod1+l exec "sh ~/.i3/lock.sh"
 bar {
         status_command i3status -c ~/.i3/i3status.conf
         position top
+          
+        tray_output primary
 }
+
 
 #wallpaper
 exec --no-startup-id feh --bg-max ~/.i3/wallpaper.png
