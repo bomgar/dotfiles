@@ -181,5 +181,5 @@ assign [class="Gnome-terminal"] 1: terminal
 for_window [class="Gnome-terminal"] border none
 
 #autostart
-exec i3-msg 'workspace 1: terminal;exec i3-sensible-terminal'
+exec i3-msg 'workspace 1: terminal;exec gnome-terminal --hide-menubar'
 
