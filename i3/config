@@ -176,6 +176,7 @@ exec --no-startup-id feh --bg-max ~/.i3/wallpaper.png
 # workspace assignments
 #use xprop to find class
 assign [class="Gnome-terminal"] $w1
+assign [class="Thunderbird"] $w2
 assign [class="jetbrains-idea"] $w3
 
 # custom style
