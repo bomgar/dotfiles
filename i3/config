@@ -184,5 +184,6 @@ assign [class="Google-chrome" window_role="browser"] $w4
 
 # custom style
 for_window [class="Gnome-terminal"] border none
+for_window [class="Google-chrome" window_role="browser"] border none
 
 
