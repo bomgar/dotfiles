@@ -77,3 +77,7 @@ else
         export TERM='screen'
     fi
 fi
+
+export PINENTRY_USER_DATA="USE_CURSES=1"
+unset GPG_AGENT_INFO
+unset SSH_ASKPASS
