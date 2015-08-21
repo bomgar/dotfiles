@@ -51,21 +51,15 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-repeat'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'groenewege/vim-less'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-fugitive'
 Plugin 'jonathanfilip/vim-lucius'
 Plugin 'bomgar/breakit.vim'
 Plugin 'pangloss/vim-javascript'
-Plugin 'gre/play2vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-abolish'
 Plugin 'terryma/vim-multiple-cursors'
-
-"Snipmate
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
+Plugin 'sirver/ultisnips'
 Plugin 'honza/vim-snippets'
 
 " All of your Plugins must be added before the following line
