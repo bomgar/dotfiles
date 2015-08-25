@@ -38,19 +38,7 @@ fi
 ################################################
 echo "Installing zsh config"
 ln -sf $DIR/zshrc ~/.zshrc
-
-if [ ! -n "$ZSH" ]; then
-  ZSH=~/.oh-my-zsh
-fi
-
-if [ -d "$ZSH" ]; then
-  echo "You already have Oh My Zsh installed. You'll need to remove $ZSH if you want to install"
-else
-  echo "\033[0;34mCloning Oh My Zsh...\033[0m"
-  hash git >/dev/null 2>&1 && env git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git $ZSH || {
-    echo "git not installed"
-  }
-fi
+ln -sf $DIR/zshrc.local ~/.zshrc.local
 
 
 ################################################
