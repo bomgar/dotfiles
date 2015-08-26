@@ -1,7 +1,7 @@
 - clean: ['~']
 
 - shell:
-  - ["git submodule update --init --recursive", "Installing submodules"]
+  - ["git submodule update --init --remote", "Installing submodules"]
   - ["sudo aptitude install vim tmux git i3 zsh feh xautolock", "installing packages"]
 
 - link:
