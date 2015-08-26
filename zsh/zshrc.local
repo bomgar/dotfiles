@@ -5,8 +5,6 @@ alias gitlog='git log --pretty=format:"%h - %an, %ar : %s"'
 alias gst='git status'
 
 #Maven
-alias mvn-componentTests='mvn clean install -P component-tests,without-unit-tests,local'
-alias mvn-unitTests='mvn clean install'
 export M2_HOME=/data/opt/apache-maven-3.2.5/
 export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
 export MAVEN_OPTS="-Xmx2048m -XX:MaxPermSize=2048M"
@@ -49,75 +47,13 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m'
 export LESS_TERMCAP_so=$'\e[0;31m'
 
 #Prompt
-grml_prompt_token_default=(
-    at                '@'
-    battery           'PERCENT'
-    change-root       'debian_chroot'
-    date              '%D{%Y-%m-%d}'
-    grml-chroot       'GRML_CHROOT'
-    history           '{history#%!} '
-    host              '%m '
-    jobs              '[%j running job(s)] '
-    newline           $'\n'
-    path              '%d '
-    percent           '%# '
-    dollar            '$ '
-    gtprompt          '» '
-    rc                '%(?..%? )'
-    rc-always         '%?'
-    sad-smiley        '%(?..✖)'
-    shell-level       '%(3L.+ .)'
-    space             ' '
-    time              '%D{%H:%M:%S} '
-    user              '%n'
-    vcs               '0'
-)
 
-grml_prompt_pre_default=(
-    at                ''
-    battery           ' '
-    change-root       ''
-    date              '%F{blue}'
-    grml-chroot       '%F{red}'
-    history           '%F{green}'
-    host              '%F{magenta}'
-    jobs              '%F{cyan}'
-    newline           ''
-    path              '%B'
-    percent           ''
-    dollar            ''
-    gtprompt          ''
-    rc                '%B%F{red}'
-    rc-always         ''
-    sad-smiley        '%F{red}'
-    shell-level       '%F{red}'
-    time              '%F{blue}'
-    user              '%F{green}'
-    vcs               ''
-)
+grml_theme_add_token gtprompt "» "
+grml_theme_add_token longpath '%d ' '%B' '%b'
+grml_theme_add_token magentahost '%m ' '%F{magenta}' '%f'
+grml_theme_add_token greenuser '%n' '%F{green}' '%f'
 
-grml_prompt_post_default=(
-    at                ''
-    battery           ''
-    change-root       ''
-    date              '%f'
-    grml-chroot       '%f '
-    history           '%f'
-    host              '%f'
-    jobs              '%f'
-    newline           ''
-    path              '%b'
-    percent           ''
-    dollar            ''
-    gtprompt          ''
-    rc                '%f%b'
-    rc-always         ''
-    sad-smiley        '%f'
-    shell-level       '%f'
-    time              '%f'
-    user              '%f'
-    vcs               ''
-)
 
-zstyle ':prompt:grml:left:setup' items rc date space time virtual-env change-root user at host path vcs newline gtprompt
+zstyle ':prompt:grml:left:setup' items date space time virtual-env change-root greenuser at magentahost longpath vcs newline gtprompt
+zstyle ':prompt:grml:right:setup' items rc
 
