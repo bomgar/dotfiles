@@ -1,0 +1,18 @@
+- clean: ['~']
+
+- shell:
+  - ["sudo aptitude install vim tmux git i3 zsh feh xautolock", "installing packages"]
+  - ["if [ ! -d ~/.vim/bundle/Vundle.vim ]; then mkdir -p ~/.vim/bundle && git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim; fi;", "installing vundle"]
+  - ["if [ ! -d ~/.tmux/plugins/tpm ]; then git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm; fi;", "installing tmux plugin manager"]
+  - ["mkdir -p ~/.i3", "creating i3 folder"]
+
+- link:
+    ~/.tmux.conf: tmux.conf
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
+    ~/.zshrc.local: zshrc.local
+    ~/.gitconfig: gitconfig
+    ~/.i3/config: i3/config
+    ~/.i3/lock.sh: i3/lock.sh
+    ~/.i3/wallpaper.png: i3/wallpaper.png
+    ~/.i3/i3status.conf: i3/i3status.conf
