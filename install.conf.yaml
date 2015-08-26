@@ -9,10 +9,11 @@
 - link:
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
-    ~/.zshrc: zshrc
-    ~/.zshrc.local: zshrc.local
+    ~/.zshrc: zsh/zshrc
+    ~/.zshrc.local: zsh/zshrc.local
     ~/.gitconfig: gitconfig
     ~/.i3/config: i3/config
     ~/.i3/lock.sh: i3/lock.sh
     ~/.i3/wallpaper.png: i3/wallpaper.png
     ~/.i3/i3status.conf: i3/i3status.conf
+    ~/.xsessionrc: xsessionrc
