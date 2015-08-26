@@ -5,7 +5,7 @@
   - ["sudo aptitude install vim tmux git i3 zsh feh xautolock", "installing packages"]
 
 - link:
-    ~/.tmux/plugins/tpm: 
+    ~/.tmux/plugins/tpm:
       create: true
       path: tpm
     ~/.vim/bundle/Vundle.vim:
