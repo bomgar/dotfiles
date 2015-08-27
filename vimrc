@@ -134,8 +134,10 @@ set tm=500
 syntax enable
 
 "set background=dark
-colorscheme lucius
-LuciusLight
+if v:version > 703
+  colorscheme lucius
+  LuciusLight
+endif
 
 set t_Co=256
 
