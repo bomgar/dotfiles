@@ -59,7 +59,9 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-abolish'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'sirver/ultisnips'
+if v:version > 703
+  Plugin 'sirver/ultisnips'
+endif
 Plugin 'honza/vim-snippets'
 
 " All of your Plugins must be added before the following line
