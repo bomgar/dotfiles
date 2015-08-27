@@ -1,1 +1,4 @@
 source ~/.vimrc
+nmap <C-H> :action VimMotionPreviousTab<CR>
+nmap <C-L> :action VimMotionNextTab<CR>
+
