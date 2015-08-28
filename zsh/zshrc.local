@@ -47,7 +47,11 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m'
 export LESS_TERMCAP_so=$'\e[0;31m'
 
 #Prompt
+function git_radar () {
+    REPLY=$(git-radar --zsh)
+}
 
+grml_theme_add_token git-radar -f git_radar
 grml_theme_add_token gtprompt "»"
 grml_theme_add_token longpath '%d' '%B' '%b'
 grml_theme_add_token magentahost '%m' '%F{magenta}' '%f'
@@ -56,6 +60,6 @@ grml_theme_add_token returnSymbol '%(?..⏎)' '%F{red}' '%f'
 grml_theme_add_token space ' '
 
 
-zstyle ':prompt:grml:left:setup' items date space time virtual-env change-root greenuser at magentahost space longpath space vcs newline gtprompt space
+zstyle ':prompt:grml:left:setup' items date space time virtual-env change-root greenuser at magentahost space longpath space git-radar newline gtprompt space
 zstyle ':prompt:grml:right:setup' items rc returnSymbol
 
