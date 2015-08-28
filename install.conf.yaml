@@ -38,3 +38,9 @@
     ~/bin/git-radar: 
       path: git-radar/git-radar
       create: true
+    ~/bin/svnaddallthethings.sh:
+      path: bin/svnaddallthethings.sh
+      create: true
+    ~/bin/svnvimdiff.sh:
+      path: bin/svnvimdiff.sh
+      create: true
