@@ -9,4 +9,4 @@
 	url = https://github.com/tmux-plugins/tpm
 [submodule "git-radar"]
 	path = git-radar
-	url = git@github.com:michaeldfallen/git-radar.git
+	url = https://github.com/michaeldfallen/git-radar.git
