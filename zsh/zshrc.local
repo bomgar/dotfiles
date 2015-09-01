@@ -53,7 +53,7 @@ function git_radar () {
 
 grml_theme_add_token git-radar -f git_radar
 grml_theme_add_token gtprompt "»"
-grml_theme_add_token longpath '%40<..<%~%<<' '%B' '%b'
+grml_theme_add_token longpath '%60<..<%~%<<' '%B' '%b'
 grml_theme_add_token magentahost '%m' '%F{magenta}' '%f'
 grml_theme_add_token greenuser '%n' '%F{green}' '%f'
 grml_theme_add_token returnSymbol '%(?..⏎)' '%F{red}' '%f'
