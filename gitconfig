@@ -4,6 +4,10 @@
   #email = bomgar85@googlemail.com
 [color]
 	ui = true
+[color "status"]
+  added = green bold
+  changed = magenta bold
+  untracked = red bold
 [push]
 	default = tracking
 [core]
