@@ -5,6 +5,6 @@
 [color]
 	ui = true
 [push]
-	default = simple
+	default = tracking
 [core]
 	editor = vim
