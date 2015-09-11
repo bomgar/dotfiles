@@ -2,7 +2,7 @@
 alias rebase='git svn rebase'
 alias dcommit='git svn dcommit'
 alias gitlog='git log --pretty=format:"%h - %an, %ar : %s"'
-alias gst='git status'
+alias gst='git st'
 
 #Maven
 export M2_HOME=/data/opt/apache-maven-3.2.5/
