@@ -1,21 +1,21 @@
 [user]
-	name = Patrick Haun
+  name = Patrick Haun
   email = patrick.haun@immobilienscout24.de
   #email = bomgar85@googlemail.com
 [color]
-	ui = true
+  ui = true
 [color "status"]
   added = green bold
   changed = magenta bold
   untracked = red bold
 [push]
-	default = tracking
+  default = tracking
 [core]
-	editor = vim
+  editor = vim
 [alias]
   st = status -uall -b
   rup = remote update --prune
   ffm = merge --ff-only
   uff = !sh -c 'git rup && git ffm'
 [rerere]
-    enabled = 1
+  enabled = 1
