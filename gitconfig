@@ -12,3 +12,10 @@
 	default = tracking
 [core]
 	editor = vim
+[alias]
+  st = status -uall -b
+  rup = remote update --prune
+  ffm = merge --ff-only
+  uff = !sh -c 'git rup && git ffm'
+[rerere]
+    enabled = 1
