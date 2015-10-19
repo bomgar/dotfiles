@@ -179,11 +179,11 @@ exec --no-startup-id feh --bg-max ~/.i3/wallpaper.png
 assign [class="Gnome-terminal"] $w1
 assign [class="Thunderbird"] $w2
 assign [class="jetbrains-idea"] $w3
-assign [class="Google-chrome" window_role="app"] $w5
-assign [class="Google-chrome" window_role="browser"] $w4
+assign [class="google-chrome" window_role="app"] $w5
+assign [class="google-chrome" window_role="browser"] $w4
 
 # custom style
 for_window [class="Gnome-terminal"] border none
-for_window [class="Google-chrome" window_role="browser"] border none
+for_window [class="google-chrome" window_role="browser"] border none
 
 
