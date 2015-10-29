@@ -19,3 +19,5 @@
   uff = !sh -c 'git rup && git ffm'
 [rerere]
   enabled = 1
+[diff]
+	tool = vimdiff
