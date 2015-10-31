@@ -181,6 +181,7 @@ assign [class="Thunderbird"] $w2
 assign [class="jetbrains-idea"] $w3
 assign [class="google-chrome" window_role="app"] $w5
 assign [class="google-chrome" window_role="browser"] $w4
+assign [class="Firefox"] $w4
 
 # custom style
 for_window [class="Gnome-terminal"] border none
