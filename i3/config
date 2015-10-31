@@ -186,5 +186,6 @@ assign [class="Firefox"] $w4
 # custom style
 for_window [class="Gnome-terminal"] border none
 for_window [class="google-chrome" window_role="browser"] border none
+for_window [class="Firefox"] border none
 
 
