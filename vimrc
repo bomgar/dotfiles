@@ -59,6 +59,7 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-abolish'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'scrooloose/nerdtree'
 if v:version > 703
   Plugin 'sirver/ultisnips'
 endif
@@ -294,7 +295,7 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERDTree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <C-n> :NERDTreeToggle<CR>
+map <leader>n :NERDTreeToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => JSON
