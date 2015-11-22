@@ -33,13 +33,13 @@
       path: i3/i3status.conf
       create: true
     ~/.xsessionrc: xsessionrc
-    ~/bin/radar-base.sh: 
+    ~/bin/radar-base.sh:
       path: git-radar/radar-base.sh
       create: true
-    ~/bin/prompt.zsh: 
+    ~/bin/prompt.zsh:
       path: git-radar/prompt.zsh
       create: true
-    ~/bin/git-radar: 
+    ~/bin/git-radar:
       path: git-radar/git-radar
       create: true
     ~/bin/svnaddallthethings.sh:
@@ -49,3 +49,9 @@
       path: bin/svnvimdiff.sh
       create: true
     ~/.vimperatorrc: vimperatorrc
+    ~/.config/nvim/autoload/plug.vim:
+      path: vim-plug/plug.vim
+      create: true
+    ~/.vim/autoload/plug.vim:
+      path: vim-plug/plug.vim
+      create: true

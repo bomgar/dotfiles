@@ -10,3 +10,6 @@
 [submodule "git-radar"]
 	path = git-radar
 	url = https://github.com/michaeldfallen/git-radar.git
+[submodule "vim-plug"]
+	path = vim-plug
+	url = https://github.com/junegunn/vim-plug.git

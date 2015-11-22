@@ -32,41 +32,34 @@ set nocompatible
 " => Vundle
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-Plugin 'bling/vim-airline'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'derekwyatt/vim-scala'
-Plugin 'elzr/vim-json'
-Plugin 'kien/ctrlp.vim'
-Plugin 'tpope/vim-repeat'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'groenewege/vim-less'
-Plugin 'tpope/vim-fugitive'
-Plugin 'jonathanfilip/vim-lucius'
-Plugin 'bomgar/breakit.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'rust-lang/rust.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-abolish'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'scrooloose/nerdtree'
-if v:version > 703
-  Plugin 'sirver/ultisnips'
+if has('nvim')
+  call plug#begin('~/config/nvim/plugged')
+else
+  call plug#begin('~/.vim/plugged')
 endif
-Plugin 'honza/vim-snippets'
+Plug 'bling/vim-airline'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'derekwyatt/vim-scala'
+Plug 'elzr/vim-json'
+Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-repeat'
+Plug 'tomtom/tcomment_vim'
+Plug 'groenewege/vim-less'
+Plug 'tpope/vim-fugitive'
+Plug 'jonathanfilip/vim-lucius'
+Plug 'bomgar/breakit.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'rust-lang/rust.vim'
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-abolish'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'scrooloose/nerdtree'
+if v:version > 703
+  Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+endif
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
+call plug#end()
 
 " Enable filetype plugins
 filetype plugin on
@@ -129,6 +122,7 @@ set novisualbell
 set t_vb=
 set tm=500
 
+set mouse-=a
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
