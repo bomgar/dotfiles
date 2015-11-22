@@ -169,6 +169,10 @@ bar {
         tray_output primary
 }
 
+#mouse
+focus_follows_mouse no
+mouse_warping none
+
 
 #wallpaper
 exec --no-startup-id feh --bg-max ~/.i3/wallpaper.png
