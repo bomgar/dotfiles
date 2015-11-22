@@ -8,11 +8,15 @@
     ~/.tmux/plugins/tpm:
       create: true
       path: tpm
+    ~/.config/nvim/bundle/Vundle.vim:
+      create: true
+      path: Vundle.vim
     ~/.vim/bundle/Vundle.vim:
       create: true
       path: Vundle.vim
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
+    ~/.config/nvim/init.vim: vimrc
     ~/.zshrc: zsh/zshrc
     ~/.zshrc.local: zsh/zshrc.local
     ~/.gitconfig: gitconfig
