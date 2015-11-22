@@ -40,8 +40,8 @@ endif
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'derekwyatt/vim-scala'
-Plug 'elzr/vim-json'
+Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
+Plug 'elzr/vim-json', { 'for': 'json' }
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-repeat'
 Plug 'tomtom/tcomment_vim'
@@ -54,7 +54,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-abolish'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 if v:version > 703
   Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 endif
