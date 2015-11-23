@@ -1,6 +1,5 @@
 #Git
-alias rebase='git svn rebase'
-alias dcommit='git svn dcommit'
+
 alias gitlog='git log --pretty=format:"%h - %an, %ar : %s"'
 alias gst='git st'
 
@@ -63,3 +62,5 @@ grml_theme_add_token space ' '
 zstyle ':prompt:grml:left:setup' items date space time virtual-env change-root greenuser at magentahost space longpath git-radar newline gtprompt space
 zstyle ':prompt:grml:right:setup' items rc returnSymbol
 
+# fuck you nautilus
+alias nautilus='nautilus --no-desktop'
