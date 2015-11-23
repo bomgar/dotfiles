@@ -55,9 +55,6 @@ Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-abolish'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-if v:version > 703
-  Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-endif
 
 call plug#end()
 
