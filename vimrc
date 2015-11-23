@@ -33,7 +33,7 @@ set nocompatible
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 if has('nvim')
-  call plug#begin('~/config/nvim/plugged')
+  call plug#begin('~/.config/nvim/plugged')
 else
   call plug#begin('~/.vim/plugged')
 endif
