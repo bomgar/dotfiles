@@ -64,3 +64,9 @@ zstyle ':prompt:grml:right:setup' items rc returnSymbol
 
 # fuck you nautilus
 alias nautilus='nautilus --no-desktop'
+
+
+[[ -f ~/zshrc.is24 ]] && {
+  source ~/zshrc.is24
+}
+
