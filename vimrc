@@ -55,6 +55,7 @@ Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-abolish'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
