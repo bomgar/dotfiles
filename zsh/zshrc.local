@@ -30,6 +30,9 @@ else
     fi
 fi
 
+# avoid nomatch errors
+setopt nonomatch
+
 #disable annoying ui prompts
 export PINENTRY_USER_DATA="USE_CURSES=1"
 unset GPG_AGENT_INFO
