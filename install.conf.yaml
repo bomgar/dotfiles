@@ -2,7 +2,7 @@
 
 - shell:
   - ["git submodule update --init --remote", "Installing submodules"]
-  - ["sudo aptitude install vim tmux git i3 zsh feh xautolock scrot imagemagick tig arandr", "installing packages"]
+  - ["sudo apt install -y vim tmux git i3 zsh feh xautolock scrot imagemagick tig arandr i3blocks", "installing packages"]
 
 - link:
     ~/.tmux/plugins/tpm:
@@ -23,10 +23,16 @@
     ~/.i3/wallpaper.png:
       path: i3/wallpaper.png
       create: true
+    ~/.i3/i3blocks.conf:
+      path: i3/i3blocks.conf
+      create: true
     ~/.i3/i3status.conf:
       path: i3/i3status.conf
       create: true
     ~/.xsessionrc: xsessionrc
+    ~/bin/i3blockKeyLayout:
+      path: bin/i3blockKeyLayout
+      create: true
     ~/bin/radar-base.sh:
       path: git-radar/radar-base.sh
       create: true
