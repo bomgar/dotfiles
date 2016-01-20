@@ -155,6 +155,18 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+set $mode_key us (u), (i) us intl, (d) de
+mode "$mode_key" {
+    bindsym u exec --no-startup-id setxkbmap us
+    bindsym d exec --no-startup-id setxkbmap de
+    bindsym i exec --no-startup-id setxkbmap us -variant intl
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+Shift+T mode "$mode_key"
+
 #lock
 #bindsym $mod+Mod1+l exec "sh ~/.i3/lock.sh"
 bindsym Ctrl+Mod1+l exec "sh ~/.i3/lock.sh"
