@@ -68,9 +68,9 @@ zstyle ':prompt:grml:right:setup' items rc returnSymbol
 # fuck you nautilus
 alias nautilus='nautilus --no-desktop'
 
-alias layus='setxkbmap us'
-alias layde='setxkbmap de'
-alias layusint='setxkbmap us -variant intl'
+alias layus='setxkbmap us && pkill -RTMIN+1 i3blocks'
+alias layde='setxkbmap de && pkill -RTMIN+1 i3blocks'
+alias layusint='setxkbmap us -variant intl && pkill -RTMIN+1 i3blocks'
 
 alias mplayer='mplayer -stop-xscreensaver'
 
