@@ -10,6 +10,7 @@
       path: tpm
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
+    ~/.emacs.d: emacs.d
     ~/.config/nvim/init.vim: vimrc
     ~/.zshrc: zsh/zshrc
     ~/.zshrc.local: zsh/zshrc.local
