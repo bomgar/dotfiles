@@ -46,7 +46,7 @@
 (add-hook 'prog-mode-hook 'line-number-mode t)
 (add-hook 'prog-mode-hook 'column-number-mode t)
 (global-linum-mode 1)
-(setq linum-format "%4d \u2502 ")
+(setq linum-format "%4d\u2502")
 
 ;move between buffers
 (define-key evil-normal-state-map (kbd "] b") 'next-buffer)
@@ -71,3 +71,6 @@
 ;tab settings
 (setq-default tab-width 2 indent-tabs-mode nil)
 
+;move in wraps
+(define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
+(define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
