@@ -60,3 +60,6 @@
 
 ;show mathing parens
 (show-paren-mode t)
+
+;tab settings
+(setq-default tab-width 2 indent-tabs-mode nil)
