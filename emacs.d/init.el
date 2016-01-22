@@ -39,6 +39,7 @@
 
 ; display line numbers
 (global-linum-mode 1)
+(setq linum-format "%4d \u2502 ")
 
 ;move between buffers
 (define-key evil-normal-state-map (kbd "] b") 'next-buffer)
@@ -51,3 +52,4 @@
     (newline-mark 10 [182 10]) ; 10 LINE FEED
     (tab-mark 9 [9655 9] [92 9]) ; 9 TAB, 9655 WHITE RIGHT-POINTING TRIANGLE 「▷」
     ))
+
