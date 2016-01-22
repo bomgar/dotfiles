@@ -37,7 +37,14 @@
 ; Set 7 lines to the cursor - when moving vertically
 (setq scroll-margin 7)
 
+;smoot scrolling
+(setq scroll-margin 5
+      scroll-conservatively 9999
+      scroll-step 1)
+
 ; display line numbers
+(add-hook 'prog-mode-hook 'line-number-mode t)
+(add-hook 'prog-mode-hook 'column-number-mode t)
 (global-linum-mode 1)
 (setq linum-format "%4d \u2502 ")
 
@@ -63,3 +70,4 @@
 
 ;tab settings
 (setq-default tab-width 2 indent-tabs-mode nil)
+
