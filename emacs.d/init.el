@@ -18,27 +18,15 @@
 (require 'init-evil)
 (require 'init-theme)
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (linum+ evil))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 
 ;; Set to auto read when a file is changed from the outside
 (global-auto-revert-mode t)
 
 ;; splits movement
-(global-set-key (kbd "C-h") 'windmove-left)
-(global-set-key (kbd "C-l") 'windmove-right)
-(global-set-key (kbd "C-k") 'windmove-up)
-(global-set-key (kbd "C-j") 'windmove-down)
+(define-key evil-normal-state-map (kbd "C-h") 'windmove-left)
+(define-key evil-normal-state-map (kbd "C-l") 'windmove-right)
+(define-key evil-normal-state-map (kbd "C-k") 'windmove-up)
+(define-key evil-normal-state-map (kbd "C-j") 'windmove-down)
 
 ;; save history
 (setq savehist-additional-variables    ;; also save...
@@ -51,3 +39,7 @@
 
 ; display line numbers
 (global-linum-mode 1)
+
+;move between buffers
+(define-key evil-normal-state-map (kbd "] b") 'next-buffer)
+(define-key evil-normal-state-map (kbd "[ b") 'previous-buffer)
