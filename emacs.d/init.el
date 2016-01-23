@@ -21,6 +21,7 @@
 (require 'init-packages)
 (require 'init-evil)
 (require 'init-theme)
+(require 'init-powerline)
 
 
 ;; Show me the new saved file if the contents change on disk when editing.
