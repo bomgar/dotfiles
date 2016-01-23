@@ -108,5 +108,5 @@
 ;; nevermind that's annoying
 (setq ring-bell-function 'ignore)
 
-
-
+;disable scrollbar
+(scroll-bar-mode -1)
