@@ -1,6 +1,9 @@
 (require-package 'evil)
 
 (setq evil-want-C-i-jump nil) ; org mode tab fix
+(setq evil-search-module 'evil-search)
+(setq evil-magic 'very-magic)
+
 (require 'evil)
 (evil-mode 1)
 
@@ -16,6 +19,11 @@
 (require-package 'evil-matchit)
 (require 'evil-matchit)
 (global-evil-matchit-mode 1)
+
+(require-package 'evil-visualstar)
+(require 'evil-visualstar)
+(global-evil-visualstar-mode t)
+
 
 (provide 'init-evil)
 
