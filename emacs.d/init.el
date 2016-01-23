@@ -22,6 +22,7 @@
 (require 'init-evil)
 (require 'init-theme)
 (require 'init-powerline)
+(require 'init-esc)
 
 
 ;; Show me the new saved file if the contents change on disk when editing.
