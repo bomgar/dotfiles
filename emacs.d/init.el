@@ -11,6 +11,10 @@
 (menu-bar-mode -1)
 
 (setq make-backup-files nil)
+
+;; lockfiles are evil.
+(setq create-lockfiles nil)
+
 (set 'ad-redefinition-action 'accept)
 
 (add-to-list 'load-path (expand-file-name "subconfigs" user-emacs-directory))
@@ -19,8 +23,8 @@
 (require 'init-theme)
 
 
-;; Set to auto read when a file is changed from the outside
-(global-auto-revert-mode t)
+;; Show me the new saved file if the contents change on disk when editing.
+(global-auto-revert-mode 1)
 
 ;; splits movement
 (define-key evil-normal-state-map (kbd "C-h") 'windmove-left)
@@ -70,7 +74,37 @@
 
 ;tab settings
 (setq-default tab-width 2 indent-tabs-mode nil)
+(setq-default indent-tabs-mode nil)
 
 ;move in wraps
 (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
 (define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
+
+;; require a trailing newline
+(setq require-final-newline t)
+
+;; don't put intitial text in scratch buffer
+(setq initial-scratch-message nil)
+
+
+;; Disable toolbars and splash screens.
+(when (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+
+;; Hide startup messages
+(setq inhibit-splash-screen t
+      inhibit-startup-echo-area-message t
+      inhibit-startup-message t)
+
+;; UTF-8 everything!
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(set-selection-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
+
+;; Flash the frame to represent a bell.
+(setq visible-bell t)
+;; nevermind that's annoying
+(setq ring-bell-function 'ignore)
+
+
+
