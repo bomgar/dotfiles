@@ -17,8 +17,7 @@
 
 setxkbmap -query | awk '/layout/{print $2}' | tr -d '\n'
 variant=$(setxkbmap -query | awk '/variant/{print $2}')
-if [ ! -z $variant ]; then
-  echo -n " "
-  echo $variant
+if [[ ! -z $variant ]]; then
+  echo " $variant"
 fi
 

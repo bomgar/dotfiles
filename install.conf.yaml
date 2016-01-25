@@ -2,7 +2,7 @@
 
 - shell:
   - ["git submodule update --init --remote", "Installing submodules"]
-  - ["sudo apt install -y vim tmux git i3 zsh feh xautolock scrot imagemagick tig arandr i3blocks", "installing packages"]
+  - ["sudo apt install -y vim tmux git i3 zsh feh xautolock scrot imagemagick tig arandr i3blocks emacs", "installing packages"]
 
 - link:
     ~/.tmux/plugins/tpm:
