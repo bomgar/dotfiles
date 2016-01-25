@@ -1,7 +1,6 @@
 - clean: ['~']
 
 - shell:
-  - ["git submodule update --init --remote", "Installing submodules"]
   - ["sudo apt install -y vim tmux git i3 zsh feh xautolock scrot imagemagick tig arandr i3blocks emacs", "installing packages"]
 
 - link:
@@ -32,7 +31,7 @@
       create: true
     ~/.xsessionrc: xsessionrc
     ~/bin/i3blockKeyLayout:
-      path: bin/i3blockKeyLayout
+      path: i3blocks-contrib/key_layout/key_layout
       create: true
     ~/bin/radar-base.sh:
       path: git-radar/radar-base.sh
