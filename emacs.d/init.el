@@ -22,8 +22,8 @@
 (require 'init-evil)
 (require 'init-theme)
 (require 'init-powerline)
-(require 'init-esc)
 (require 'init-json)
+(require 'init-helm)
 
 
 ;; Show me the new saved file if the contents change on disk when editing.
