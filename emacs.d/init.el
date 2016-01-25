@@ -25,6 +25,7 @@
 (require 'init-json)
 (require 'init-helm)
 (require 'init-auto-complete)
+(require 'init-magit)
 
 
 ;; Show me the new saved file if the contents change on disk when editing.
