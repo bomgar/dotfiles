@@ -24,6 +24,7 @@
 (require 'init-powerline)
 (require 'init-json)
 (require 'init-helm)
+(require 'init-auto-complete)
 
 
 ;; Show me the new saved file if the contents change on disk when editing.
