@@ -66,7 +66,7 @@ alias layusint='setxkbmap us -variant intl && pkill -RTMIN+1 i3blocks'
 
 alias mplayer='mplayer -stop-xscreensaver'
 
-alias emacs='emacs -nw'
+alias emacs='emacsclient -nw'
 
 
 [[ -f ~/zshrc.is24 ]] && {
