@@ -26,6 +26,7 @@
 (require 'init-helm)
 (require 'init-auto-complete)
 (require 'init-magit)
+(require 'init-linum)
 
 
 ;; Show me the new saved file if the contents change on disk when editing.
@@ -50,12 +51,6 @@
 (setq scroll-margin 5
       scroll-conservatively 9999
       scroll-step 1)
-
-; display line numbers
-(add-hook 'prog-mode-hook 'line-number-mode t)
-(add-hook 'prog-mode-hook 'column-number-mode t)
-(global-linum-mode 1)
-(setq linum-format "%4d\u2502")
 
 ;move between buffers
 (define-key evil-normal-state-map (kbd "] b") 'next-buffer)
