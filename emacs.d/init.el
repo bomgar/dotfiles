@@ -27,6 +27,7 @@
 (require 'init-auto-complete)
 (require 'init-magit)
 (require 'init-linum)
+(require 'init-markdown)
 
 
 ;; Show me the new saved file if the contents change on disk when editing.
