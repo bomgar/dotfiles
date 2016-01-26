@@ -68,6 +68,8 @@ alias mplayer='mplayer -stop-xscreensaver'
 
 alias emacs='emacsclient -nw'
 
+export EDITOR="emacsclient -nw"
+
 
 [[ -f ~/zshrc.is24 ]] && {
   source ~/zshrc.is24

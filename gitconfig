@@ -11,7 +11,7 @@
 [push]
   default = tracking
 [core]
-  editor = vim
+  editor = emacsclient -nw
 [alias]
   st = status -uall -b
   rup = remote update --prune
