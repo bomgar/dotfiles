@@ -1,3 +1,3 @@
-(load-theme 'leuven t)
+(load-theme 'whiteboard t)
 
 (provide 'init-theme)
