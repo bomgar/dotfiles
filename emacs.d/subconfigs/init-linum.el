@@ -11,8 +11,8 @@
        :group 'linum)
 
      (defun linum-format-func (line)
-       (let ((w (length
-                 (number-to-string (count-lines (point-min) (point-max))))))
+       (let ((w (max 2 (length
+                 (number-to-string (count-lines (point-min) (point-max)))))))
          (concat
           (propertize (make-string (- w (length (number-to-string line))) ?0)
                       'face 'linum-leading-zero)
