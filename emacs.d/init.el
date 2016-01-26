@@ -46,7 +46,7 @@
 ; Set 7 lines to the cursor - when moving vertically
 (setq scroll-margin 7)
 
-;smoot scrolling
+;smooth scrolling
 (setq scroll-margin 5
       scroll-conservatively 9999
       scroll-step 1)
