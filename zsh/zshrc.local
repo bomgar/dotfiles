@@ -16,11 +16,7 @@ cdpath=(/data/home/phaun/development/projects)
 
 #TMUX
 alias tmux="tmux -2"
-if [ -e /usr/share/terminfo/x/xterm+256color ]; then # may be xterm-256 depending on your distro
-    export TERM='xterm-256color'
-else
-    export TERM='xterm'
-fi
+export TERM='xterm-256color'
 
 # avoid nomatch errors
 setopt nonomatch
@@ -67,6 +63,7 @@ alias layusint='setxkbmap us -variant intl && pkill -RTMIN+1 i3blocks'
 alias mplayer='mplayer -stop-xscreensaver'
 
 alias emacs='emacsclient -nw'
+alias restartEmacs='systemctl restart --user emacs'
 
 export EDITOR="emacsclient -nw"
 

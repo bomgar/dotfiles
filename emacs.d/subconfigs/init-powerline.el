@@ -9,7 +9,7 @@
       (progn
         (setq powerline-arrow-shape 'arrow14)
         (set-face-foreground 'mode-line "#FFF")
-        (set-face-background 'mode-line "#999")
+        (set-face-background 'mode-line "#BBB")
         (setq-default mode-line-format
                       '("%e"
                         (:eval
