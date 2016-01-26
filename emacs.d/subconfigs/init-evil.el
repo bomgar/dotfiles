@@ -24,6 +24,9 @@
 (require 'evil-visualstar)
 (global-evil-visualstar-mode t)
 
+(require-package 'evil-magit)
+(require 'evil-magit)
+
 
 (provide 'init-evil)
 
