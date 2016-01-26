@@ -28,6 +28,7 @@
 (require 'init-magit)
 (require 'init-linum)
 (require 'init-markdown)
+(require 'init-neotree)
 
 
 ;; Show me the new saved file if the contents change on disk when editing.
