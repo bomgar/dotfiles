@@ -113,3 +113,6 @@
 
 ;disable scrollbar
 (scroll-bar-mode -1)
+
+;always follow symlinks
+(setq vc-follow-symlinks t)
