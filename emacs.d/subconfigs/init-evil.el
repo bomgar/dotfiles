@@ -28,6 +28,8 @@
 (require-package 'evil-magit)
 (require 'evil-magit)
 
+(setq evil-want-fine-undo 'no)
+
 
 (provide 'init-evil)
 
