@@ -9,4 +9,4 @@ Environment=SSH_AUTH_SOCK=%t/keyring/ssh
 Restart=always
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
