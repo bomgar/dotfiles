@@ -116,8 +116,6 @@
 ;always follow symlinks
 (setq vc-follow-symlinks t)
 
-;; indent on ret
-(define-key global-map (kbd "RET") 'newline-and-indent)
 
 ; 2 line indent
 (setq-default tab-width 2 indent-tabs-mode nil)

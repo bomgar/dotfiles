@@ -31,5 +31,11 @@
 (setq evil-want-fine-undo 'no)
 
 
+;; indent on ret
+(define-key evil-insert-state-map (kbd "RET") 'newline-and-indent)
+(define-key evil-normal-state-map (kbd "SPC SPC") 'helm-M-x)
+
+
+
 (provide 'init-evil)
 
