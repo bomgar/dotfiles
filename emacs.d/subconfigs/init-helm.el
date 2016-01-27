@@ -15,6 +15,7 @@
 (setq projectile-require-project-root nil)
 
 (global-set-key (kbd "M-x") 'helm-M-x)
+(define-key helm-map [esc] 'helm-keyboard-quit)
 
 (helm-mode 1)
 
