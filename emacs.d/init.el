@@ -10,10 +10,14 @@
 
 (menu-bar-mode -1)
 
+;; backup files are evil
 (setq make-backup-files nil)
 
 ;; lockfiles are evil.
 (setq create-lockfiles nil)
+
+;; autosave is evil
+(setq auto-save-default nil)
 
 (set 'ad-redefinition-action 'accept)
 
