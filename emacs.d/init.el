@@ -46,11 +46,8 @@
   savehist-file "~/.emacs.d/savehist") ;; keep my home clean
 (savehist-mode t)                      ;; do customization before activate
 
-; Set 7 lines to the cursor - when moving vertically
-(setq scroll-margin 7)
-
 ;smooth scrolling
-(setq scroll-margin 5
+(setq scroll-margin 7
       scroll-conservatively 9999
       scroll-step 1)
 
