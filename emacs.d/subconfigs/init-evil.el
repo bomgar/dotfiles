@@ -5,6 +5,9 @@
 (setq evil-magic 'very-magic)
 
 (setq evil-want-C-u-scroll t)
+(setq evil-want-C-w-in-emacs-state t)
+(setq evil-want-fine-undo 'no)
+
 (require 'evil)
 (evil-mode 1)
 
@@ -28,7 +31,6 @@
 (require-package 'evil-magit)
 (require 'evil-magit)
 
-(setq evil-want-fine-undo 'no)
 
 
 ;; indent on ret

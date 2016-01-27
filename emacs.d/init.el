@@ -39,11 +39,6 @@
 ;; Show me the new saved file if the contents change on disk when editing.
 (global-auto-revert-mode 1)
 
-;; splits movement
-(define-key evil-normal-state-map (kbd "C-h") 'windmove-left)
-(define-key evil-normal-state-map (kbd "C-l") 'windmove-right)
-(define-key evil-normal-state-map (kbd "C-k") 'windmove-up)
-(define-key evil-normal-state-map (kbd "C-j") 'windmove-down)
 
 ;; save history
 (setq savehist-additional-variables    ;; also save...
