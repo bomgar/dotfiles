@@ -34,6 +34,7 @@
 (require 'init-linum)
 (require 'init-markdown)
 (require 'init-neotree)
+(require 'init-javascript)
 
 
 ;; Show me the new saved file if the contents change on disk when editing.
