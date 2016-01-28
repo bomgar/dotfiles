@@ -36,6 +36,7 @@
 (require 'init-neotree)
 (require 'init-javascript)
 (require 'init-ensime)
+(require 'init-package-list)
 
 
 ;; Show me the new saved file if the contents change on disk when editing.
