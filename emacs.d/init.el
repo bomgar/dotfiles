@@ -35,6 +35,7 @@
 (require 'init-markdown)
 (require 'init-neotree)
 (require 'init-javascript)
+(require 'init-ensime)
 
 
 ;; Show me the new saved file if the contents change on disk when editing.
