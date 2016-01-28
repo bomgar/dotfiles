@@ -14,6 +14,8 @@
 (setq projectile-completion-system 'helm)
 (setq projectile-require-project-root nil)
 
+(add-to-list 'projectile-globally-ignored-directories "target")
+
 (global-set-key (kbd "M-x") 'helm-M-x)
 (define-key helm-map [esc] 'helm-keyboard-quit)
 
