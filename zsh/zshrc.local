@@ -62,8 +62,11 @@ alias layusint='setxkbmap us -variant intl && pkill -RTMIN+1 i3blocks'
 
 alias mplayer='mplayer -stop-xscreensaver'
 
+alias vim='echo Did you mean "emacs"?'
 alias emacs='emacsclient -nw'
 alias restartEmacs='systemctl restart --user emacs'
+alias uemacs='/usr/bin/emacs'
+alias reloadEmacs='/usr/bin/emacsclient --eval "(load-file \"~/.emacs.d/init.el\")"'
 
 export EDITOR="emacsclient -nw"
 
