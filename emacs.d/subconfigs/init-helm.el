@@ -14,9 +14,9 @@
 (setq projectile-completion-system 'helm)
 (setq projectile-require-project-root nil)
 (setq projectile-globally-ignored-directories
-	  (append projectile-globally-ignored-directories '(".git"
-														".svn"
-                            "target"
+      (append projectile-globally-ignored-directories '(".git"
+                                                        ".svn"
+                                                        "target"
 														)))
 
 (global-set-key (kbd "M-x") 'helm-M-x)
