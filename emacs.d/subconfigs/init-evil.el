@@ -31,6 +31,10 @@
 (require-package 'evil-magit)
 (require 'evil-magit)
 
+(require-package 'evil-jumper)
+(require 'evil-jumper)
+
+(global-evil-jumper-mode 1)
 
 
 ;; indent on ret
