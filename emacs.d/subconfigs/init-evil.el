@@ -7,6 +7,7 @@
 (setq evil-want-C-u-scroll t)
 (setq evil-want-C-w-in-emacs-state t)
 (setq evil-want-fine-undo 'no)
+(setq evil-shift-width 2)
 
 (require 'evil)
 (evil-mode 1)
