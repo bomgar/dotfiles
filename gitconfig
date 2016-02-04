@@ -1,3 +1,7 @@
+# Local Variables:
+# mode: conf
+# End:
+
 [user]
   name = Patrick Haun
   email = patrick.haun@immobilienscout24.de
@@ -21,3 +25,4 @@
   enabled = 1
 [diff]
 	tool = vimdiff
+
