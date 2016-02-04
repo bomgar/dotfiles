@@ -1,3 +1,7 @@
+## Local Variables:
+## mode: shell-script
+## End:
+
 #Git
 
 alias gitlog='git log --pretty=format:"%h - %an, %ar : %s"'
