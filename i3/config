@@ -157,9 +157,9 @@ bindsym $mod+r mode "resize"
 
 set $mode_key us (u), (i) us intl, (d) de
 mode "$mode_key" {
-    bindsym u exec --no-startup-id setxkbmap us && pkill -RTMIN+1 i3blocks
-    bindsym d exec --no-startup-id setxkbmap de && pkill -RTMIN+1 i3blocks
-    bindsym i exec --no-startup-id setxkbmap us -variant intl && pkill -RTMIN+1 i3blocks
+    bindsym u exec --no-startup-id setxkbmap us && pkill -RTMIN+1 i3blocks, mode "default"
+    bindsym d exec --no-startup-id setxkbmap de && pkill -RTMIN+1 i3blocks, mode "default"
+    bindsym i exec --no-startup-id setxkbmap us -variant intl && pkill -RTMIN+1 i3blocks, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
