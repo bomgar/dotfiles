@@ -57,6 +57,15 @@ grml_theme_add_token space ' '
 zstyle ':prompt:grml:left:setup' items date space time virtual-env change-root greenuser at magentahost space longpath git-radar newline gtprompt space
 zstyle ':prompt:grml:right:setup' items rc returnSymbol
 
+function ediff() {
+    if [ "X${2}" = "X" ]; then
+        echo "USAGE: ediff <FILE 1> <FILE 2>"
+    else
+        # The --eval flag takes lisp code and evaluates it with EMACS
+        emacsclient -nw --eval "(ediff-files \"$1\" \"$2\")"
+    fi
+}
+
 # fuck you nautilus
 alias nautilus='nautilus --no-desktop'
 
