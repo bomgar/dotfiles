@@ -38,3 +38,6 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
 ; C-u scroll up like in vim 
 (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
+
+
+(set-default-font "DejaVu Sans Mono Book 11")
