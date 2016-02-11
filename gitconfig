@@ -24,5 +24,6 @@
 [rerere]
   enabled = 1
 [diff]
-	tool = vimdiff
+  tool = vimdiff
+  algorithm = histogram
 
