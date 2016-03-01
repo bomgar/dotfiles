@@ -40,4 +40,4 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
 
 
-(set-default-font "DejaVu Sans Mono Book 11")
+(set-default-font "Source Code Pro 13")
