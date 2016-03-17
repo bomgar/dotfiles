@@ -187,7 +187,7 @@ mouse_warping none
 
 
 #wallpaper
-#exec --no-startup-id feh --bg-max ~/.i3/wallpaper.png
+exec --no-startup-id feh --bg-max ~/.i3/wallpaper.png
 
 
 # workspace assignments
