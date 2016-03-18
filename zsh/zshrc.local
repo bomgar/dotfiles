@@ -81,7 +81,7 @@ alias restartEmacs='systemctl restart --user emacs'
 alias uemacs='/usr/bin/emacs'
 alias reloadEmacs='/usr/bin/emacsclient --eval "(load-file \"~/.emacs.d/init.el\")"'
 
-export EDITOR="emacsclient -nw"
+export SUDO_EDITOR='emacsclient -nw'
 
 
 [[ -f ~/zshrc.is24 ]] && {
