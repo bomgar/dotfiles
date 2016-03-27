@@ -10,6 +10,7 @@ alias gst='git st'
 #Maven
 export M2_HOME=/data/opt/apache-maven-3.2.5/
 export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
+export JDK_HOME="/usr/lib/jvm/java-8-oracle/"
 export MAVEN_OPTS="-Xmx2048m -XX:MaxPermSize=2048M"
 
 
