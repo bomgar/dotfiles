@@ -31,6 +31,9 @@
       path: i3/i3status.conf
       create: true
     ~/.xsessionrc: xsessionrc
+    ~/bin/toggle_touchpad.sh:
+      path: bin/toggle_touchpad.sh
+      create: true
     ~/bin/i3blockKeyLayout:
       path: i3blocks-contrib/key_layout/key_layout
       create: true
