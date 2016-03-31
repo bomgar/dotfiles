@@ -206,4 +206,4 @@ for_window [class="Gnome-terminal"] border none
 for_window [class="google-chrome" window_role="browser"] border none
 for_window [class="Firefox"] border none
 for_window [class="Emacs24"] border pixel
-
+for_window [class="Screenkey"] floating enable, move absolute bottom
