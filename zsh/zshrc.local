@@ -82,6 +82,8 @@ alias restartEmacs='systemctl restart --user emacs'
 alias uemacs='/usr/bin/emacs'
 alias reloadEmacs='/usr/bin/emacsclient --eval "(load-file \"~/.emacs.d/init.el\")"'
 
+command -v thefuck 2>&1 > /dev/null && eval $(thefuck --alias)
+
 export SUDO_EDITOR='emacsclient -nw'
 
 
