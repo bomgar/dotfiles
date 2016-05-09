@@ -1,7 +1,7 @@
 - clean: ['~']
 
 - shell:
-  - ["sudo apt install -y vim tmux git i3 zsh feh xautolock scrot imagemagick tig arandr i3blocks emacs gnutls-bin", "installing packages"]
+  - ["sudo apt install -y vim tmux git i3 zsh feh xautolock scrot imagemagick tig arandr i3blocks emacs gnutls-bin silversearcher-ag", "installing packages"]
   - ["[[ -f ~/.config/systemd/user/emacs.service ]] || mkdir -p ~/.config/systemd/user/ && cp services/emacs.service ~/.config/systemd/user/emacs.service", "copy systemd emacs config"]
 
 - link:
