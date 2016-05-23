@@ -158,9 +158,9 @@ bindsym $mod+r mode "resize"
 
 set $mode_key us (u), (i) us intl, (d) de
 mode "$mode_key" {
-    bindsym u exec --no-startup-id setxkbmap us && pkill -RTMIN+1 i3blocks, mode "default"
-    bindsym d exec --no-startup-id setxkbmap de && pkill -RTMIN+1 i3blocks, mode "default"
-    bindsym i exec --no-startup-id setxkbmap us -variant intl && pkill -RTMIN+1 i3blocks, mode "default"
+    bindsym u exec --no-startup-id setxkbmap us && pkill -RTMIN+1 i3blocks && setxkbmap -option "caps:none", mode "default"
+    bindsym d exec --no-startup-id setxkbmap de && pkill -RTMIN+1 i3blocks && setxkbmap -option "caps:none", mode "default"
+    bindsym i exec --no-startup-id setxkbmap us -variant intl && pkill -RTMIN+1 i3blocks && setxkbmap -option "caps:none", mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
@@ -186,12 +186,6 @@ bar {
 focus_follows_mouse no
 mouse_warping none
 
-
-#wallpaper
-exec --no-startup-id nm-applet
-exec --no-startup-id xsetroot -solid black
-
-
 # workspace assignments
 #use xprop to find class
 assign [class="Gnome-terminal"] $w1
@@ -208,3 +202,8 @@ for_window [class="google-chrome" window_role="browser"] border none
 for_window [class="Firefox"] border none
 for_window [class="Emacs24"] border pixel
 for_window [class="Screenkey"] floating enable, move absolute bottom
+
+#exec
+exec --no-startup-id nm-applet
+exec --no-startup-id xsetroot -solid black
+exec --no-startup-id setxkbmap -option "caps:none"
