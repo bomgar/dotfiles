@@ -21,6 +21,8 @@
   rup = remote update --prune
   ffm = merge --ff-only
   uff = !sh -c 'git rup && git ffm'
+	destroy = reset --hard
+	pulr = pull --rebase
 [rerere]
   enabled = 1
 [diff]
