@@ -36,8 +36,15 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
 (global-set-key [escape] 'evil-exit-emacs-state)
 
-; C-u scroll up like in vim 
-(define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
+; C-u scroll up like in vim
+(define-key global-map (kbd "C-f") 'universal-argument)
+(define-key universal-argument-map (kbd "C-u") nil)
+(define-key universal-argument-map (kbd "C-f") 'universal-argument-more)
+(define-key global-map (kbd "C-u") 'nil)
+(eval-after-load 'evil-maps
+  '(progn
+     (define-key evil-motion-state-map (kbd "C-f") nil)
+          (define-key evil-motion-state-map (kbd "C-u") 'evil-scroll-up)))
 
 
 (set-default-font "Source Code Pro 12")
