@@ -233,6 +233,7 @@ assign [class="google-chrome" window_role="app"] $w5
 assign [class="google-chrome" window_role="browser"] $w4
 assign [class="chromium-browser" window_role="browser"] 9
 assign [class="Firefox"] $w4
+assign [class="Franz"] $w5
 assign [class="Emacs24"] $w3
 
 # custom style
