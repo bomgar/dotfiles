@@ -173,6 +173,23 @@ bindsym $mod+Shift+T mode "$mode_key"
 bindsym Ctrl+Mod1+l exec "sh ~/.i3/lock.sh"
 exec xautolock -time 5 -locker "sh ~/.i3/lock.sh" &
 
+# sound volume
+bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle
+bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 10%-
+bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 10%+
+
+# media keys
+bindsym $mod+n exec playerctl next
+bindsym $mod+Shift+n exec playerctl previous
+bindsym $mod+p exec playerctl play-pause
+
+# screen backlight
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+
+# toggle touchpad
+bindsym $mod+apostrophe exec ~/.i3/toggle_touchpad.sh
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
