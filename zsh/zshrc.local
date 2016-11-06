@@ -16,7 +16,7 @@ export MAVEN_OPTS="-Xmx2048m -XX:MaxPermSize=2048M"
 
 export PATH=/home/phaun/bin:$PATH
 
-cdpath=(/data/home/phaun/development/projects)
+cdpath=(~/development/projects)
 
 
 #TMUX
