@@ -21,7 +21,9 @@ cdpath=(/data/home/phaun/development/projects)
 
 #TMUX
 alias tmux="tmux -2"
-export TERM='screen-256color'
+if [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; then
+  export TERM='screen-256color'
+fi
 
 # avoid nomatch errors
 setopt nonomatch
