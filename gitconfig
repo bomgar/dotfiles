@@ -4,18 +4,23 @@
 
 [user]
   name = Patrick Haun
-  email = patrick.haun@immobilienscout24.de
-  #email = bomgar85@googlemail.com
+  #email = patrick.haun@immobilienscout24.de
+  email = bomgar85@googlemail.com
+
 [color]
   ui = true
+
 [color "status"]
   added = green bold
   changed = magenta bold
   untracked = red bold
+
 [push]
   default = tracking
+
 [core]
   editor = emacsclient -nw
+
 [alias]
   st = status -uall -b
   rup = remote update --prune
@@ -24,9 +29,18 @@
   destroy = reset --hard
   pulr = pull --rebase
   co = checkout
+  sur = submodule update --remote
+  surr = submodule update --remote --recursive
+
 [rerere]
   enabled = 1
+
 [diff]
   tool = vimdiff
   algorithm = histogram
 
+[web]
+  browser = firefox
+
+[status]
+  submoduleSummary = true
