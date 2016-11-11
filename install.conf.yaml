@@ -10,6 +10,7 @@
       path: tpm
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
+    ~/.ideavimrc: ideavimrc
     ~/.emacs.d: emacs.d
     ~/.config/nvim/init.vim:
       create: true
