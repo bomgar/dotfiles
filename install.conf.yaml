@@ -1,8 +1,8 @@
 - clean: ['~']
 
 - shell:
-  - ["[[ -f ~/.config/systemd/user/emacs.service ]] || mkdir -p ~/.config/systemd/user/ && cp services/emacs.service ~/.config/systemd/user/emacs.service", "copy systemd emacs config"]
-  - ["[[ -f ~/.config/systemd/user/ssh-agent.service ]] || mkdir -p ~/.config/systemd/user/ && cp services/ssh-agent.service ~/.config/systemd/user/ssh-agent.service", "copy systemd ssh-agent config"]
+  - ["mkdir -p ~/.config/systemd/user/ && cp -u services/emacs.service ~/.config/systemd/user/emacs.service", "copy systemd emacs config"]
+  - ["mkdir -p ~/.config/systemd/user/ && cp -u services/ssh-agent.service ~/.config/systemd/user/ssh-agent.service", "copy systemd ssh-agent config"]
 
 - link:
     ~/.tmux/plugins/tpm:
