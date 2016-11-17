@@ -44,3 +44,5 @@
 
 [status]
   submoduleSummary = true
+[pull]
+	rebase = true
