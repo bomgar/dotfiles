@@ -31,7 +31,7 @@
   co = checkout
   sur = submodule update --remote
   surr = submodule update --remote --recursive
-  gcallthethings = !sh -c 'git reflog expire --expire-unreachable=now --all && git gc'
+  gcallthethings = -c gc.reflogExpire=0 -c gc.reflogExpireUnreachable=0 -c gc.rerereresolved=0 -c gc.rerereunresolved=0 -c gc.pruneExpire=now gc
 
 [rerere]
   enabled = 1
