@@ -65,3 +65,6 @@
     ~/.sbt/0.13/plugins/plugins.sbt:
       path: sbt/0.13/plugins/plugins.sbt
       create: true
+    ~/.sbt/0.13/global.sbt:
+      path: sbt/0.13/global.sbt
+      create: true
