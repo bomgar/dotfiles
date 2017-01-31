@@ -87,6 +87,19 @@ alias reloadEmacs='/usr/bin/emacsclient --eval "(load-file \"~/.emacs.d/init.el\
 unalias ag 2>/dev/null
 alias ag='ag --smart-case --color-line-number "1;34"'
 
+
+# setup exa
+if [[ -x "$(command -v exa)" ]];
+then
+  unalias ls
+  unalias la
+  unalias ll
+  alias ls="command exa"
+  alias la="command exa -la"
+  alias ll="command exa -l"
+  alias lt="command exa --tree"
+fi;
+
 command -v thefuck 2>&1 > /dev/null && eval $(thefuck --alias)
 
 export SUDO_EDITOR='emacsclient -nw'
