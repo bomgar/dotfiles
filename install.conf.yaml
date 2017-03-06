@@ -1,3 +1,7 @@
+- defaults:
+    link:
+      create: true
+
 - clean: ['~']
 
 - shell:
@@ -5,66 +9,30 @@
   - ["mkdir -p ~/.config/systemd/user/ && cp -u services/ssh-agent.service ~/.config/systemd/user/ssh-agent.service", "copy systemd ssh-agent config"]
 
 - link:
-    ~/.tmux/plugins/tpm:
-      create: true
-      path: tpm
+    ~/.tmux/plugins/tpm: tpm
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
     ~/.ideavimrc: ideavimrc
     ~/.emacs.d: emacs.d
-    ~/.config/nvim/init.vim:
-      create: true
-      path: vimrc
+    ~/.config/nvim/init.vim: vimrc
     ~/.zshrc: zsh/zshrc
     ~/.zshrc.local: zsh/zshrc.local
     ~/.gitconfig: gitconfig
-    ~/.i3/config:
-      path: i3/config
-      create: true
-    ~/.i3/lock.sh:
-      path: i3/lock.sh
-      create: true
-    ~/.i3/wallpaper.png:
-      path: i3/wallpaper.png
-      create: true
-    ~/.i3/i3blocks.conf:
-      path: i3/i3blocks.conf
-      create: true
-    ~/.i3/i3status.conf:
-      path: i3/i3status.conf
-      create: true
+    ~/.i3/config: i3/config
+    ~/.i3/lock.sh: i3/lock.sh
+    ~/.i3/wallpaper.png: i3/wallpaper.png
+    ~/.i3/i3blocks.conf: i3/i3blocks.conf
+    ~/.i3/i3status.conf: i3/i3status.conf
     ~/.xsessionrc: xsessionrc
-    ~/bin/toggle_touchpad.sh:
-      path: bin/toggle_touchpad.sh
-      create: true
-    ~/bin/i3blockKeyLayout:
-      path: i3blocks-contrib/key_layout/key_layout
-      create: true
-    ~/bin/radar-base.sh:
-      path: git-radar/radar-base.sh
-      create: true
-    ~/bin/prompt.zsh:
-      path: git-radar/prompt.zsh
-      create: true
-    ~/bin/git-radar:
-      path: git-radar/git-radar
-      create: true
-    ~/bin/svnaddallthethings.sh:
-      path: bin/svnaddallthethings.sh
-      create: true
-    ~/bin/svnvimdiff.sh:
-      path: bin/svnvimdiff.sh
-      create: true
+    ~/bin/toggle_touchpad.sh: bin/toggle_touchpad.sh
+    ~/bin/i3blockKeyLayout: i3blocks-contrib/key_layout/key_layout
+    ~/bin/radar-base.sh: git-radar/radar-base.sh
+    ~/bin/prompt.zsh: git-radar/prompt.zsh
+    ~/bin/git-radar: git-radar/git-radar
+    ~/bin/svnaddallthethings.sh: bin/svnaddallthethings.sh
+    ~/bin/svnvimdiff.sh: bin/svnvimdiff.sh
     ~/.vimperatorrc: vimperatorrc
-    ~/.config/nvim/autoload/plug.vim:
-      path: vim-plug/plug.vim
-      create: true
-    ~/.vim/autoload/plug.vim:
-      path: vim-plug/plug.vim
-      create: true
-    ~/.sbt/0.13/plugins/plugins.sbt:
-      path: sbt/0.13/plugins/plugins.sbt
-      create: true
-    ~/.sbt/0.13/global.sbt:
-      path: sbt/0.13/global.sbt
-      create: true
+    ~/.config/nvim/autoload/plug.vim: vim-plug/plug.vim
+    ~/.vim/autoload/plug.vim: vim-plug/plug.vim
+    ~/.sbt/0.13/plugins/plugins.sbt: sbt/0.13/plugins/plugins.sbt
+    ~/.sbt/0.13/global.sbt: sbt/0.13/global.sbt
