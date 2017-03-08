@@ -24,6 +24,7 @@
     ~/.i3/i3blocks.conf: i3/i3blocks.conf
     ~/.i3/i3status.conf: i3/i3status.conf
     ~/.xsessionrc: xsessionrc
+    ~/.xsession: xsession
     ~/bin/toggle_touchpad.sh: bin/toggle_touchpad.sh
     ~/bin/i3blockKeyLayout: i3blocks-contrib/key_layout/key_layout
     ~/bin/radar-base.sh: git-radar/radar-base.sh
