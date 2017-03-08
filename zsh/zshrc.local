@@ -86,6 +86,7 @@ alias reloadEmacs='/usr/bin/emacsclient --eval "(load-file \"~/.emacs.d/init.el\
 alias get_local_ip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1' | grep -v '172.'"
 alias docker-killall='docker kill $(docker ps -q)'
 alias docker-be-gone='docker rmi -f $(docker images -a -q); docker rm -f $(docker ps -a -q)'
+alias pwn-docker='docker rm $(docker kill $(docker ps -a -q))'
 
 unalias ag 2>/dev/null
 alias ag='ag --smart-case --color-line-number "1;34"'
