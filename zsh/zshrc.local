@@ -1,6 +1,3 @@
-## Local Variables:
-## mode: shell-script
-## End:
 
 #Git
 
@@ -113,3 +110,7 @@ export SUDO_EDITOR='emacsclient -nw'
 [[ -f ~/zshrc.21re ]] && {
   source ~/zshrc.21re
 }
+
+## Local Variables:
+## mode: shell-script
+## End:
