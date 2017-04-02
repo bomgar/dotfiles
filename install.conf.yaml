@@ -1,14 +1,4 @@
-- defaults:
-    link:
-      create: true
-
-- clean: ['~']
-
-- shell:
-  - ["mkdir -p ~/.config/systemd/user/ && cp -u services/emacs.service ~/.config/systemd/user/emacs.service", "copy systemd emacs config"]
-  - ["mkdir -p ~/.config/systemd/user/ && cp -u services/ssh-agent.service ~/.config/systemd/user/ssh-agent.service", "copy systemd ssh-agent config"]
-
-- link:
+files:
     ~/.tmux/plugins/tpm: tpm
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
@@ -37,3 +27,9 @@
     ~/.vim/autoload/plug.vim: vim-plug/plug.vim
     ~/.sbt/0.13/plugins/plugins.sbt: sbt/0.13/plugins/plugins.sbt
     ~/.sbt/0.13/global.sbt: sbt/0.13/global.sbt
+    ~/.config/systemd/user/ssh-agent.service:
+        src: services/ssh-agent.service
+        type: COPY
+    ~/.config/systemd/user/emacs.service:
+        src: services/emacs.service
+        type: COPY
