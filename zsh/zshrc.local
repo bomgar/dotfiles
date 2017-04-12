@@ -69,6 +69,25 @@ function ediff() {
     fi
 }
 
+# fw
+workon () {
+  SCRIPT="$(~/.cargo/bin/fw -q gen-workon $@)"
+  if [ $? -eq 0 ]; then
+    eval "$SCRIPT"
+  else
+    printf "$SCRIPT\n"
+  fi
+}
+
+nworkon () {
+  SCRIPT="$(~/.cargo/bin/fw -q gen-workon -x $@)"
+  if [ $? -eq 0 ]; then
+    eval "$SCRIPT"
+  else
+    printf "$SCRIPT\n"
+  fi
+}
+
 # fuck you nautilus
 alias nautilus='nautilus --no-desktop'
 
