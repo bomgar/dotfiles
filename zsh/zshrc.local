@@ -49,7 +49,7 @@ function git_radar () {
 }
 
 function current_node_version () {
-    if [ -n "$NVM_DIR" ];
+    if [ -n "$NVM_BIN" ];
     then
       REPLY=" %F{041}node: %F{247}$(nvm current)%f"
     else
