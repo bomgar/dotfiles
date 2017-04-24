@@ -7,5 +7,5 @@
    #+BEGIN_SRC conf
    [Service]
    ExecStart=
-   ExecStart=/usr/bin/docker daemon -H fd:// -g /data/docker
+   ExecStart=/usr/bin/dockerd -H fd:// -g /data/docker
    #+END_SRC
