@@ -80,23 +80,6 @@ function ediff() {
 }
 
 # fw
-workon () {
-  SCRIPT="$(~/.cargo/bin/fw -q gen-workon $@)"
-  if [ $? -eq 0 ]; then
-    eval "$SCRIPT"
-  else
-    printf "$SCRIPT\n"
-  fi
-}
-
-nworkon () {
-  SCRIPT="$(~/.cargo/bin/fw -q gen-workon -x $@)"
-  if [ $? -eq 0 ]; then
-    eval "$SCRIPT"
-  else
-    printf "$SCRIPT\n"
-  fi
-}
 
 # fuck you nautilus
 alias nautilus='nautilus --no-desktop'
@@ -133,6 +116,11 @@ then
   alias la="command exa -la"
   alias ll="command exa -l"
   alias lt="command exa --tree"
+fi;
+
+if [[ -x "$(command -v fw)" ]];
+then
+  eval $(fw print-zsh-setup 2>/dev/null);
 fi;
 
 command -v thefuck 2>&1 > /dev/null && eval $(thefuck --alias)
