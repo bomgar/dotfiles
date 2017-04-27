@@ -118,9 +118,16 @@ then
   alias lt="command exa --tree"
 fi;
 
+# fw
 if [[ -x "$(command -v fw)" ]];
 then
   eval $(fw print-zsh-setup 2>/dev/null);
+fi;
+
+# deploy-control
+if [[ -x "$(command -v deploy-control)" ]];
+then
+  eval $(deploy-control --init-completion zsh)
 fi;
 
 command -v thefuck 2>&1 > /dev/null && eval $(thefuck --alias)
