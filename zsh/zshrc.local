@@ -118,12 +118,6 @@ then
   alias lt="command exa --tree"
 fi;
 
-# deploy-control
-if [[ -x "$(command -v deploy-control)" ]];
-then
-  eval $(deploy-control --init-completion zsh);
-fi;
-
 # fw
 if [[ -x "$(command -v fw)" ]];
 then
