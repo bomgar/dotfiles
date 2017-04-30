@@ -101,6 +101,8 @@ alias docker-be-gone='docker rmi -f $(docker images -a -q); docker rm -f $(docke
 alias pwn-docker='docker rm -f $(docker ps -a -q)'
 alias back-to-master='git checkout master && git uff && git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
 
+alias dist-upgrade-cargo='cargo install-update -a'
+
 unalias ag 2>/dev/null
 alias ag='ag --smart-case --color-line-number "1;34"'
 
