@@ -108,6 +108,8 @@ alias ag='ag --smart-case --color-line-number "1;34"'
 
 alias sourcenvm='source /usr/share/nvm/init-nvm.sh'
 
+alias sbt='sbt -J-Xms512M -J-Xmx1024M -J-Xss1M -J-XX:+CMSClassUnloadingEnabled'
+
 # setup exa
 if [[ -x "$(command -v exa)" ]];
 then
