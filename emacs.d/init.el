@@ -48,5 +48,6 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
 
 (set-default-font "Source Code Pro 12")
+(set-frame-font "Source Code Pro 12" t t)
 
 (setq custom-file "/dev/null")
