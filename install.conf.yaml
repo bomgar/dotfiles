@@ -33,3 +33,15 @@ files:
     ~/.config/systemd/user/emacs.service:
         src: services/emacs.service
         type: COPY
+    ~/.ssh:
+        src: /mnt/secret/ssh
+        type: LINK
+    ~/.config/21re/deploy-control:
+        src: /mnt/secret/deploy-control
+        type: LINK
+    ~/.fw.json:
+        src: /mnt/secret/fw.json
+        type: LINK
+    ~/.aws:
+        src: /mnt/secret/aws
+        type: LINK
