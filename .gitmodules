@@ -13,3 +13,6 @@
 [submodule "emacs.d/subconfigs"]
 	path = emacs.d/subconfigs
 	url = git@github.com:brocode/emacs_subconfigs.git
+[submodule "secret"]
+	path = secret
+	url = git@gitlab.com:bomgar/secret.git
