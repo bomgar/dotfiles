@@ -45,3 +45,6 @@ files:
     ~/.aws:
         src: /mnt/secret/aws
         type: LINK
+    ~/.gnupg:
+        src: /mnt/secret/gnupg
+        type: LINK
