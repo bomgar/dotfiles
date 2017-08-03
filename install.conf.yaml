@@ -48,3 +48,6 @@ files:
     ~/.gnupg:
         src: /mnt/secret/gnupg
         type: LINK
+    ~/.config/hub:
+        src: /mnt/secret/hub
+        type: LINK
