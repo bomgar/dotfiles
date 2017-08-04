@@ -55,6 +55,15 @@ function current_node_version () {
     else
       REPLY=""
     fi;
+};
+
+function virtual_env_prompt () {
+    if [ -n "$VIRTUAL_ENV" ];
+    then
+      REPLY="${VIRTUAL_ENV+${VIRTUAL_ENV:t}} "
+    else
+      REPLY=""
+    fi;
 }
 
 grml_theme_add_token git-radar -f git_radar
@@ -65,6 +74,7 @@ grml_theme_add_token greenuser '%n' '%F{green}' '%f'
 grml_theme_add_token returnSymbol '%(?..⏎)' '%F{red}' '%f'
 grml_theme_add_token space ' '
 grml_theme_add_token node_version -f current_node_version
+grml_theme_add_token virtual-env -f virtual_env_prompt '%F{magenta}' '%f'
 
 
 zstyle ':prompt:grml:left:setup' items date space time virtual-env change-root greenuser at magentahost space longpath git-radar node_version newline gtprompt space
