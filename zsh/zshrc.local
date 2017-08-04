@@ -98,6 +98,7 @@ alias reloadEmacs='/usr/bin/emacsclient --eval "(load-file \"~/.emacs.d/init.el\
 alias get_local_ip="ip a | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1' | grep -v '172.'"
 alias docker-killall='docker kill $(docker ps -q)'
 alias docker-be-gone='docker rmi -f $(docker images -a -q); docker rm -f $(docker ps -a -q)'
+alias docker-forget-untagged='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
 alias pwn-docker='docker rm -f $(docker ps -a -q)'
 alias back-to-master='git checkout master && git uff && git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
 
