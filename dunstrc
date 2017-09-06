@@ -256,3 +256,7 @@ timeout = 8
 #    urgency = normal
 #
 # vim: ft=cfg
+
+# Local Variables:
+# mode: conf-unix
+# End:
