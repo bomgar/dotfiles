@@ -252,3 +252,4 @@ for_window [class="Screenkey"] floating enable, move absolute bottom
 exec --no-startup-id nm-applet
 exec --no-startup-id xsetroot -solid black
 exec --no-startup-id setxkbmap -option "caps:none"
+exec --no-startup-id dunst -conf /home/phaun/.dunstrc
