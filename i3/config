@@ -178,10 +178,11 @@ bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle
 bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 10%-
 bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 10%+
 
-# media keys
-bindsym $mod+n exec playerctl next
-bindsym $mod+Shift+n exec playerctl previous
-bindsym $mod+p exec playerctl play-pause
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
 # screen backlight
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
