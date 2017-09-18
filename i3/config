@@ -179,8 +179,7 @@ bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 10%-
 bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 10%+
 
 # Media player controls
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
