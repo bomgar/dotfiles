@@ -28,6 +28,8 @@ files:
   ~/.vim/autoload/plug.vim: "vim-plug/plug.vim"
   ~/.sbt/0.13/plugins/plugins.sbt: sbt/0.13/plugins/plugins.sbt
   ~/.sbt/0.13/global.sbt: sbt/0.13/global.sbt
+  ~/.sbt/1.0/plugins/plugins.sbt: sbt/1.0/plugins/plugins.sbt
+  ~/.sbt/1.0/global.sbt: sbt/1.0/global.sbt
   "~/.config/systemd/user/ssh-agent.service": 
     src: "services/ssh-agent.service"
     type: COPY
