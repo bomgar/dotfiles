@@ -13,8 +13,6 @@ export MAVEN_OPTS="-Xmx2048m -XX:MaxPermSize=2048M"
 
 export PATH=~/bin:~/.cargo/bin:$PATH
 
-cdpath=(~/development/projects)
-
 
 #TMUX
 alias tmux="tmux -2"
