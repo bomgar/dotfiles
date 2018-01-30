@@ -11,7 +11,7 @@ export JDK_HOME=$(readlink -f /usr/bin/javac | sed "s:bin/javac::")
 export MAVEN_OPTS="-Xmx2048m -XX:MaxPermSize=2048M"
 
 
-export PATH=~/bin:~/.cargo/bin:$PATH
+export PATH=~/bin:~/.cargo/bin:~/go/bin:$PATH
 
 
 #TMUX
