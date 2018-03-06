@@ -52,3 +52,5 @@
 	insteadOf = https://github.com/
 [magit]
 	hideCampaign = true
+[commit]
+	gpgsign = true
