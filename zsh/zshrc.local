@@ -122,7 +122,7 @@ alias fbjenkins.='git remote get-url origin | cut -d : -f 2 | sed "s/\.git$//g" 
 
 alias fullstack.="git remote get-url origin | cut -d : -f 2 | sed 's/\.git$//g' | sed 's/\(.*\)\/\(.*\)/https:\/\/github.com\/\1\/\2\/settings\/branches\/master\//g' | xargs xdg-open"
 
-alias fuckjira="fbjira issue list-open TRADE TEAS | fzf --preview \"echo {} | cut -d' ' -f1 | xargs fbjira issue summary\" | cut -d ' ' -f1 | xargs -I {} xdg-open 'https://21real.atlassian.net/browse/{}'"
+alias fuckjira="fbjira issue list-open TRADE TEAS FEED | fzf --preview \"echo {} | cut -d' ' -f1 | xargs fbjira issue summary\" | cut -d ' ' -f1 | xargs -I {} xdg-open 'https://21real.atlassian.net/browse/{}'"
 export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxMetaspaceSize=512M -XX:MetaspaceSize=256M -Xms512M -Xmx2G -XX:+UseG1GC"
 
 # setup exa
