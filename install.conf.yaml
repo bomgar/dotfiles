@@ -18,9 +18,6 @@ files:
   ~/.xsession: xsession
   ~/bin/toggle_touchpad.sh: bin/toggle_touchpad.sh
   ~/bin/i3blockKeyLayout: "i3blocks-contrib/key_layout/key_layout"
-  "~/bin/radar-base.sh": "git-radar/radar-base.sh"
-  ~/bin/prompt.zsh: "git-radar/prompt.zsh"
-  "~/bin/git-radar": "git-radar/git-radar"
   ~/bin/svnaddallthethings.sh: bin/svnaddallthethings.sh
   ~/bin/svnvimdiff.sh: bin/svnvimdiff.sh
   ~/.vimperatorrc: vimperatorrc
@@ -56,4 +53,7 @@ files:
     type: LINK
   ~/.dunstrc: 
     src: dunstrc
+    type: LINK
+  ~/.githudrc: 
+    src: githudrc
     type: LINK

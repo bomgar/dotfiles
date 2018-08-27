@@ -42,8 +42,17 @@ export LESS_TERMCAP_so=$'\e[0;31m'
 export GOPATH=~/go
 
 #Prompt
-function git_radar () {
-    REPLY=$(git-radar --zsh)
+function git_hud () {
+  if [[ -x "$(command -v githud)" ]];
+  then
+    REPLY=$(githud zsh)
+    if [[ ! -z "$REPLY" ]];
+    then
+      REPLY=" ($REPLY) "
+    fi
+  else
+    REPLY=""
+  fi
 }
 
 function current_node_version () {
@@ -64,7 +73,7 @@ function virtual_env_prompt () {
     fi;
 }
 
-grml_theme_add_token git-radar -f git_radar
+grml_theme_add_token git-hud -f git_hud
 grml_theme_add_token gtprompt "»"
 grml_theme_add_token longpath '%60<..<%~%<<' '%B' '%b'
 grml_theme_add_token magentahost '%m' '%F{magenta}' '%f'
@@ -75,7 +84,7 @@ grml_theme_add_token node_version -f current_node_version
 grml_theme_add_token virtual-env -f virtual_env_prompt '%F{magenta}' '%f'
 
 
-zstyle ':prompt:grml:left:setup' items date space time virtual-env change-root greenuser at magentahost space longpath git-radar node_version newline gtprompt space
+zstyle ':prompt:grml:left:setup' items date space time virtual-env change-root greenuser at magentahost space longpath git-hud node_version newline gtprompt space
 zstyle ':prompt:grml:right:setup' items rc returnSymbol
 
 function ediff() {
