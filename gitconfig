@@ -5,7 +5,8 @@
 [user]
   name = Patrick Haun
   #email = patrick.haun@immobilienscout24.de
-  email = bomgar85@googlemail.com
+  #email = bomgar85@googlemail.com
+  email = patrick@bomgar.email
 
 [color]
   ui = true
