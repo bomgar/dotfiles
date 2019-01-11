@@ -57,3 +57,4 @@ files:
   ~/.githudrc: 
     src: githudrc
     type: LINK
+  ~/.config/alacritty/alacritty.yml: alacritty.yml

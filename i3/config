@@ -240,6 +240,7 @@ assign [class="Emacs"] $w3
 
 # custom style
 for_window [class="Gnome-terminal"] border none
+for_window [class="Alacritty"] border none
 for_window [class="google-chrome" window_role="browser"] border none
 for_window [class="Google-chrome" window_role="browser"] border none
 for_window [class="chromium-browser" window_role="browser"] border none
