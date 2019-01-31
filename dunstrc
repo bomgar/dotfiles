@@ -261,6 +261,10 @@ timeout = 8
     appname = "Electron"
     format = "<b>%s</b> (%a)"
 
+[keybase]
+    appname = "Keybase"
+    format = "<b>%s</b> (%a)"
+
 [firefox]
     appname = "Firefox"
     format = "<b>%s</b> (%a)"
