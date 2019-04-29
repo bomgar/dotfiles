@@ -13,3 +13,5 @@
 /emacs.d/eshell/lastdir
 /emacs.d/projectile.cache
 /emacs.d/.python*
+/emacs.d/.lsp-session-v1
+/emacs.d/transient/history.el
