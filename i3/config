@@ -28,7 +28,7 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec gnome-terminal --hide-menubar
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec konsole --hide-menubar
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -228,6 +228,7 @@ mouse_warping none
 # workspace assignments
 #use xprop to find class
 assign [class="Gnome-terminal"] $w1
+assign [class="konsole"] $w1
 assign [class="Thunderbird"] $w2
 assign [class="jetbrains-idea"] $w3
 assign [class="google-chrome" window_role="app"] $w5
@@ -242,6 +243,7 @@ assign [class="Emacs"] $w3
 
 # custom style
 for_window [class="Gnome-terminal"] border none
+for_window [class="konsole"] border none
 for_window [class="Alacritty"] border none
 for_window [class="google-chrome" window_role="browser"] border none
 for_window [class="Google-chrome" window_role="browser"] border none
