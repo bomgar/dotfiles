@@ -169,6 +169,11 @@ export SUDO_EDITOR='emacsclient -nw'
   source ~/zshrc.21re
 }
 
+[[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && {
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+}
+
+
 ## Local Variables:
 ## mode: shell-script
 ## End:
