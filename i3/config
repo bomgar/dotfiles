@@ -170,6 +170,17 @@ mode "$mode_key" {
 }
 bindsym $mod+Shift+T mode "$mode_key"
 
+set $mode_rfkill block wifi (b), unblock wifi(u)
+mode "$mode_rfkill" {
+    bindsym b exec --no-startup-id rfkill block wifi, mode  "default"
+    bindsym u exec --no-startup-id rfkill unblock wifi, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+Shift+N mode "$mode_rfkill"
+
 #lock
 #bindsym $mod+Mod1+l exec "sh ~/.i3/lock.sh"
 bindsym Ctrl+Mod1+l exec "sh ~/.i3/lock.sh"
