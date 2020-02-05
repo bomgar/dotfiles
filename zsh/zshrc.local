@@ -164,9 +164,10 @@ fi;
 
 export SUDO_EDITOR='emacsclient -nw'
 
+
 # 21re customizations
-[[ -f ~/zshrc.21re ]] && {
-  source ~/zshrc.21re
+[[ -f ~/.zshrc.dpdhl ]] && {
+  source ~/.zshrc.dpdhl
 }
 
 [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && {
