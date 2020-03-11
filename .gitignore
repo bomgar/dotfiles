@@ -15,3 +15,6 @@
 /emacs.d/.python*
 /emacs.d/.lsp-session-v1
 /emacs.d/transient/history.el
+/emacs.d/workspace
+.cache
+/emacs.d/groovy-language-server
