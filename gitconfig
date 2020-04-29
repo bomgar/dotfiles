@@ -21,6 +21,10 @@
 
 [core]
   editor = emacsclient -nw
+  pager = delta --light
+
+[interactive]
+  diffFilter = delta --color-only --light
 
 [alias]
   st = status -uall -b
