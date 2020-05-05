@@ -51,7 +51,7 @@ files:
   ~/.config/hub: 
     src: /mnt/secret/hub
     type: LINK
-  ~/.dunstrc: 
+  ~/.config/dunst/dunstrc:
     src: dunstrc
     type: LINK
   ~/.githudrc: 

@@ -265,6 +265,10 @@ timeout = 8
     appname = "Keybase"
     format = "<b>%s</b> (%a)"
 
+[discord]
+    appname = "discord"
+    format = "<b>%s</b> (%a)"
+
 [firefox]
     appname = "Firefox"
     format = "<b>%s</b> (%a)"
