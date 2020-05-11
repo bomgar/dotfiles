@@ -96,7 +96,7 @@ set $w1 "1: terminal"
 set $w2 "2: mail"
 set $w3 "3: ide"
 set $w4 "4: www"
-set $w5 "5: keybase"
+set $w5 "5: discord"
 set $w6 "6: im"
 
 # switch to workspace
