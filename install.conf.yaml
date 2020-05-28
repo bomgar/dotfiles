@@ -39,9 +39,6 @@ files:
   "~/.config/21re/deploy-control": 
     src: "/mnt/secret/deploy-control"
     type: LINK
-  ~/.fw.json: 
-    src: /mnt/secret/fw.json
-    type: LINK
   ~/.aws: 
     src: /mnt/secret/aws
     type: LINK
