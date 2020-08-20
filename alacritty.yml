@@ -13,6 +13,7 @@
   #TERM: xterm-256color
 
 window:
+  dynamic_title: true
   # Window dimensions (changes require restart)
   #
   # Specified in number of columns/lines, not pixels.
@@ -51,26 +52,6 @@ scrolling:
   # scrollback is enabled (history > 0).
   multiplier: 3
 
-  # Faux Scrolling
-  #
-  # The `faux_multiplier` setting controls the number of lines the terminal
-  # should scroll when the alternate screen buffer is active. This is used
-  # to allow mouse scrolling for applications like `man`.
-  #
-  # Specifying `0` will disable faux scrolling.
-  faux_multiplier: 3
-
-  # Scroll to the bottom when new text is written to the terminal.
-  auto_scroll: false
-
-# Spaces per Tab (changes require restart)
-#
-# This setting defines the width of a tab in cells.
-#
-# Some applications, like Emacs, rely on knowing about the width of a tab.
-# To prevent unexpected behavior in these applications, it's also required to
-# change the `it` value in terminfo when altering this setting.
-tabspaces: 8
 
 # Font configuration (changes require restart)
 #
@@ -110,7 +91,7 @@ font:
 
 
   # Point size
-  size: 11.0
+  size: 10.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -139,7 +120,7 @@ draw_bold_text_with_bright_colors: true
 colors:
   # Default colors
   primary:
-    background: '0xF3F3F3'
+    background: '0xEEEEEE'
     foreground: '0x000000'
 
     # Bright and dim foreground colors
@@ -173,10 +154,10 @@ colors:
   bright:
     black:   '0x555753'
     red:     '0xef2929'
-    green:   '0x8ae234'
-    yellow:  '0xdfcb2a'
-    blue:    '0x729fcf'
-    magenta: '0xad7fa8'
+    green:   '0x3ebd3e'
+    yellow:  '0xbcbc30'
+    blue:    '0x4688c2'
+    magenta: '0xb43bb4'
     cyan:    '0x34E2E2'
     white:   '0xffffff'
 
@@ -201,31 +182,6 @@ colors:
   #indexed_colors:
   #  - { index: 16, color: '0x000000' }
 
-# Visual Bell
-#
-# Any time the BEL code is received, Alacritty "rings" the visual bell. Once
-# rung, the terminal background will be set to white and transition back to the
-# default background color. You can control the rate of this transition by
-# setting the `duration` property (represented in milliseconds). You can also
-# configure the transition function by setting the `animation` property.
-#
-# Values for `animation`:
-#   - Ease
-#   - EaseOut
-#   - EaseOutSine
-#   - EaseOutQuad
-#   - EaseOutCubic
-#   - EaseOutQuart
-#   - EaseOutQuint
-#   - EaseOutExpo
-#   - EaseOutCirc
-#   - Linear
-#
-# Specifying a `duration` of `0` will disable the visual bell.
-visual_bell:
-  animation: EaseOutExpo
-  duration: 0
-  color: '0xffffff'
 
 # Background opacity
 #
@@ -284,7 +240,6 @@ selection:
   # clipboard.
   save_to_clipboard: false
 
-dynamic_title: true
 
 cursor:
   # Cursor style
