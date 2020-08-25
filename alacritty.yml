@@ -158,7 +158,7 @@ colors:
     yellow:  '0xbcbc30'
     blue:    '0x4688c2'
     magenta: '0xb43bb4'
-    cyan:    '0x34E2E2'
+    cyan:    '0x2abcbf'
     white:   '0xffffff'
 
   # Dim colors
