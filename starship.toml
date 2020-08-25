@@ -52,3 +52,7 @@ symbol = "»"
 [time]
 disabled = false
 format = "%T"
+
+[git_status]
+  [git_status.staged_count]
+  enabled = true
