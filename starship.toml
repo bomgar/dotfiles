@@ -52,6 +52,7 @@ symbol = "»"
 [time]
 disabled = false
 format = "%T"
+style = "bold blue"
 
 [git_status]
   [git_status.staged_count]
