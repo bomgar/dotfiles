@@ -48,6 +48,9 @@ prompt_order = [
 use_symbol_for_status = true
 symbol = "»"
 
+[java]
+disabled = true
+
 
 [time]
 disabled = false
