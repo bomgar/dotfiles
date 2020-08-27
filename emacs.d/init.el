@@ -3,7 +3,7 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-(package-initialize)
+;(package-initialize)
 
 (setq user-full-name "Patrick Haun")
 (setq user-mail-address "bomgar85@googlemail.com")
@@ -47,7 +47,6 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
           (define-key evil-motion-state-map (kbd "C-u") 'evil-scroll-up)))
 
 
-(set-default-font "Source Code Pro 12")
 (set-frame-font "Source Code Pro 12" t t)
 
 (setq custom-file "/dev/null")
