@@ -352,6 +352,7 @@ tmux 3.1_b-1
 ttf-bitstream-vera 1.10-14
 ttf-dejavu 2.37+18+g9b5d1b2f-2
 ttf-droid 20121017-8
+ttf-fira-code 5.2-1
 ttf-inconsolata 1:3.000-2
 ttf-indic-otf 0.2-11
 ttf-liberation 2.1.1-1
@@ -372,6 +373,8 @@ wallpapers-2018 1.2-1
 wallpapers-juhraya 1.1-2
 wget 1.20.3-3
 which 2.21-5
+woff-fira-code 5.2-1
+woff2-fira-code 5.2-1
 wpa_supplicant 2:2.9-7
 x2goclient 4.1.2.2-2
 xautolock 2.2-6
