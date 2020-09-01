@@ -72,3 +72,7 @@ style = "bold blue"
   enabled = true
   [git_status.show_sync_count]
   enabled = true
+
+
+[cmd_duration]
+min_time=6_000
