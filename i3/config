@@ -28,7 +28,8 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec gnome-terminal --hide-menubar
-bindsym $mod+Return exec konsole --hide-menubar
+#bindsym $mod+Return exec konsole --hide-menubar
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -241,6 +242,7 @@ mouse_warping none
 #use xprop to find class
 assign [class="Gnome-terminal"] $w1
 assign [class="konsole"] $w1
+assign [class="Alacritty"] $w1
 assign [class="Thunderbird"] $w2
 assign [class="jetbrains-idea"] $w3
 assign [class="google-chrome" window_role="app"] $w5
@@ -266,6 +268,8 @@ for_window [class="firefoxdeveloperedition"] border none
 for_window [class="Emacs24"] border pixel
 for_window [class="Emacs"] border pixel
 for_window [class="Screenkey"] floating enable, move absolute bottom
+for_window [title="Microsoft Teams Notification"] floating enable
+no_focus [title="Microsoft Teams Notification"]
 
 #exec
 exec --no-startup-id nm-applet
