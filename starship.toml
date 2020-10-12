@@ -1,52 +1,54 @@
 add_newline = false
 
-prompt_order = [
-    "time",
-    "username",
-    "hostname",
-    "kubernetes",
-    "directory",
-    "hg_branch",
-    "docker_context",
-    "package",
-    "dotnet",
-    "elixir",
-    "elm",
-    "erlang",
-    "golang",
-    "java",
-    "julia",
-    "nim",
-    "nodejs",
-    "ocaml",
-    "php",
-    "purescript",
-    "python",
-    "ruby",
-    "rust",
-    "terraform",
-    "zig",
-    "nix_shell",
-    "conda",
-    "memory_usage",
-    "aws",
-    "env_var",
-    "crystal",
-    "git_branch",
-    "git_commit",
-    "git_state",
-    "git_status",
-    "cmd_duration",
-    "custom",
-    "line_break",
-    "jobs",
-    "battery",
-    "character",
-]
+format = """\
+    $time\
+    $username\
+    $hostname\
+    $kubernetes\
+    $directory\
+    $hg_branch\
+    $docker_context\
+    $package\
+    $dotnet\
+    $elixir\
+    $elm\
+    $erlang\
+    $golang\
+    $java\
+    $julia\
+    $nim\
+    $nodejs\
+    $ocaml\
+    $php\
+    $purescript\
+    $python\
+    $ruby\
+    $rust\
+    $terraform\
+    $zig\
+    $nix_shell\
+    $conda\
+    $memory_usage\
+    $aws\
+    $env_var\
+    $crystal\
+    $git_branch\
+    $git_commit\
+    $git_state\
+    $git_status\
+    $cmd_duration\
+    $custom\
+    $line_break\
+    $jobs\
+    $battery\
+    $character\
+    """
 
 [character]
 use_symbol_for_status = true
-symbol = "»"
+format="$symbol "
+success_symbol="[»](bold green)"
+error_symbol="[»](bold red)"
 
 [java]
 disabled = true
@@ -54,8 +56,9 @@ disabled = true
 
 [time]
 disabled = false
-format = "%T"
+time_format = "%T"
 style = "bold blue"
+format="[$time]($style) "
 
 [git_status]
   [git_status.staged_count]
