@@ -277,6 +277,10 @@ timeout = 8
     appname = "Firefox Developer Edition"
     format = "<b>%s</b> (%a)"
 
+[signal]
+    appname = "Signal"
+    format = "<b>%s</b> (%a)"
+
 # Local Variables:
 # mode: conf-unix
 # End:
