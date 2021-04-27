@@ -47,6 +47,6 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
           (define-key evil-motion-state-map (kbd "C-u") 'evil-scroll-up)))
 
 
-(set-frame-font "Source Code Pro 12" t t)
+(set-frame-font "Fira Code 12" t t)
 
 (setq custom-file "/dev/null")
