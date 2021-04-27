@@ -37,6 +37,7 @@
   sur = submodule update --remote
   surr = submodule update --remote --recursive
   gcallthethings = -c gc.reflogExpire=0 -c gc.reflogExpireUnreachable=0 -c gc.rerereresolved=0 -c gc.rerereunresolved=0 -c gc.pruneExpire=now gc
+	rootcd = rev-parse --show-toplevel
 
 [rerere]
   enabled = 1
