@@ -45,7 +45,6 @@ format = """\
     """
 
 [character]
-use_symbol_for_status = true
 format="$symbol "
 success_symbol="[»](bold green)"
 error_symbol="[»](bold red)"
@@ -61,19 +60,17 @@ style = "bold blue"
 format="[$time]($style) "
 
 [git_status]
-  [git_status.staged_count]
+  [git_status.staged]
   enabled = true
-  [git_status.modified_count]
+  [git_status.modified]
   enabled = true
-  [git_status.stashed_count]
+  [git_status.stashed]
   enabled = true
-  [git_status.untracked_count]
+  [git_status.untracked]
   enabled = true
-  [git_status.conflicted_count]
+  [git_status.conflicted]
   enabled = true
-  [git_status.renamed_count]
-  enabled = true
-  [git_status.show_sync_count]
+  [git_status.renamed]
   enabled = true
 
 
