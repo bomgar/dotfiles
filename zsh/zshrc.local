@@ -41,6 +41,8 @@ export LESS_TERMCAP_so=$'\e[0;31m'
 # Go
 export GOPATH=~/go
 
+export GLAMOUR_STYLE=light
+
 
 if [[ -x "$(command -v starship)" ]];
   then
@@ -78,14 +80,19 @@ alias docker-killall='docker kill $(docker ps -q)'
 alias docker-be-gone='docker rmi -f $(docker images -a -q); docker rm -f $(docker ps -a -q)'
 alias docker-forget-untagged='docker rmi $(docker images | grep "<none>" | awk "{print $3}")'
 alias pwn-docker='docker rm -f $(docker ps -a -q)'
-alias back-to-master='git checkout master && git uff && git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
+alias back-to-master='git checkout master && git uff && git-trim'
+
+alias zvenv='source ~/venv/bin/activate'
 
 alias dist-upgrade-cargo='cargo install-update -a'
 
 unalias ag 2>/dev/null
 alias ag='ag --smart-case --color-line-number "1;34"'
 
-alias sourcenvm='source /usr/share/nvm/init-nvm.sh'
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#alias sourcenvm='source /usr/share/nvm/init-nvm.sh'
+alias sourcenvm='source $NVM_DIR/nvm.sh'
 
 alias fbjenkins="fw ls | fzf | xargs fw inspect -j | jq -r '.git' | cut -d : -f 2 | sed 's/\.git$//g' | sed 's/\(.*\)\/\(.*\)/https:\/\/jenkins.21re.works\/job\/\1\/job\/\2\/job\/master\//g' | xargs xdg-open"
 alias fbjenkins.='git remote get-url origin | cut -d : -f 2 | sed "s/\.git$//g" | sed "s/\(.*\)\/\(.*\)/https:\/\/jenkins.21re.works\/job\/\1\/job\/\2\/job\/$(git rev-parse --abbrev-ref HEAD)\//g" | xargs xdg-open'
@@ -93,7 +100,7 @@ alias fbjenkins.='git remote get-url origin | cut -d : -f 2 | sed "s/\.git$//g" 
 alias fullstack.="git remote get-url origin | cut -d : -f 2 | sed 's/\.git$//g' | sed 's/\(.*\)\/\(.*\)/https:\/\/github.com\/\1\/\2\/settings\/branches\//g' | xargs xdg-open"
 
 alias fuckjira="fbjira issue list-open TRADE TEAS FEED | fzf --preview \"echo {} | cut -d' ' -f1 | xargs fbjira issue summary\" | cut -d ' ' -f1 | xargs -I {} xdg-open 'https://21real.atlassian.net/browse/{}'"
-export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxMetaspaceSize=512M -XX:MetaspaceSize=256M -Xms512M -Xmx2G -XX:+UseG1GC"
+export SBT_OPTS="-XX:MaxMetaspaceSize=512M -XX:MetaspaceSize=256M -Xms512M -Xmx2G -XX:+UseG1GC"
 
 
 #BAT
@@ -129,13 +136,14 @@ fi;
 export SUDO_EDITOR='emacsclient -nw'
 
 
+
 # 21re customizations
 [[ -f ~/.zshrc.dpdhl ]] && {
   source ~/.zshrc.dpdhl
 }
 
-[[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && {
-  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[[ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && {
+  source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 }
 
 
