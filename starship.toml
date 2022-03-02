@@ -17,7 +17,6 @@ format = """\
     $java\
     $julia\
     $nim\
-    $nodejs\
     $ocaml\
     $php\
     $purescript\

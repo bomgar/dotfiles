@@ -102,6 +102,13 @@ alias fullstack.="git remote get-url origin | cut -d : -f 2 | sed 's/\.git$//g' 
 alias fuckjira="fbjira issue list-open TRADE TEAS FEED | fzf --preview \"echo {} | cut -d' ' -f1 | xargs fbjira issue summary\" | cut -d ' ' -f1 | xargs -I {} xdg-open 'https://21real.atlassian.net/browse/{}'"
 export SBT_OPTS="-XX:MaxMetaspaceSize=512M -XX:MetaspaceSize=256M -Xms512M -Xmx2G -XX:+UseG1GC"
 
+alias rainbow-browse='gh repo view -w Rainbow/$(gh repo list Rainbow --json name --jq ".[].name" | sk)'
+alias sunrise='xdg-open https://sunrise.zalando.net/cdp/ghe/$(gh repo view --json nameWithOwner --jq .nameWithOwner)'
+
+alias zhttp="http -A zign -a zhttp: --default-scheme=https"
+
+alias fbtoggl-delete='fbtoggl time-entries delete --id $(fbtoggl --format json time-entries list | jq .id | sk --preview "fbtoggl --format table time-entries details --id {}")'
+
 
 #BAT
 export BAT_THEME="Monokai Extended Light"
