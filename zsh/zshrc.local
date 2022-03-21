@@ -80,7 +80,7 @@ alias docker-killall='docker kill $(docker ps -q)'
 alias docker-be-gone='docker rmi -f $(docker images -a -q); docker rm -f $(docker ps -a -q)'
 alias docker-forget-untagged='docker rmi $(docker images | grep "<none>" | awk "{print $3}")'
 alias pwn-docker='docker rm -f $(docker ps -a -q)'
-alias back-to-master='git checkout master && git uff && git-trim'
+alias back-to-master='git checkout $(git remote show origin | awk  "/HEAD branch/ { print \$3 }") && git uff && git-trim'
 
 alias zvenv='source ~/venv/bin/activate'
 
