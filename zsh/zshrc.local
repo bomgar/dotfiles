@@ -82,6 +82,8 @@ alias docker-forget-untagged='docker rmi $(docker images | grep "<none>" | awk "
 alias pwn-docker='docker rm -f $(docker ps -a -q)'
 alias back-to-master='git checkout $(git remote show origin | awk  "/HEAD branch/ { print \$3 }") && git uff && git-trim'
 
+alias setup-master-ref-for-git='git symbolic-ref refs/remotes/origin/master refs/remotes/origin/main && git symbolic-ref refs/heads/master refs/heads/main'
+
 alias zvenv='source ~/venv/bin/activate'
 
 alias dist-upgrade-cargo='cargo install-update -a'
