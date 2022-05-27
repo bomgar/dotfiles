@@ -58,20 +58,6 @@ time_format = "%T"
 style = "bold blue"
 format="[$time]($style) "
 
-[git_status]
-  [git_status.staged]
-  enabled = true
-  [git_status.modified]
-  enabled = true
-  [git_status.stashed]
-  enabled = true
-  [git_status.untracked]
-  enabled = true
-  [git_status.conflicted]
-  enabled = true
-  [git_status.renamed]
-  enabled = true
-
 
 [cmd_duration]
 min_time=6_000
