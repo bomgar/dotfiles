@@ -56,4 +56,5 @@ files:
     type: LINK
   ~/.config/alacritty/alacritty.yml: alacritty.yml
   ~/.config/starship.toml: starship.toml
-  ~/bin/setWallpaper.sh: setWallpaper.sh
+  ~/.config/tealdeer/config.toml: tealdeer.toml
+  ~/.config/procs/config.toml: procs.toml
