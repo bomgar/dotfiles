@@ -38,3 +38,5 @@ actions:
   - kotlin
   - tealdeer
   - procs
+  - bat
+  - jless
