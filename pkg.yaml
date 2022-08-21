@@ -36,3 +36,5 @@ actions:
   - fd
   - visual-studio-code-bin
   - kotlin
+  - tealdeer
+  - procs
