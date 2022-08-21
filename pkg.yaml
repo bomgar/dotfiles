@@ -40,3 +40,4 @@ actions:
   - procs
   - bat
   - jless
+  - git-delta
