@@ -1,3 +1,9 @@
+* Dotfiles
+
+   #+BEGIN_SRC shell
+     comtrya .
+   #+END_SRC
+
 * Dotfile hints
 ** Docker
    Move docker dir to somewhere else
