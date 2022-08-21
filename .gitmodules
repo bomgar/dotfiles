@@ -1,15 +1,15 @@
 [submodule "tpm"]
-	path = tpm
+	path = files/tpm
 	url = https://github.com/tmux-plugins/tpm
 [submodule "vim-plug"]
-	path = vim-plug
+	path = files/vim-plug
 	url = https://github.com/junegunn/vim-plug.git
 [submodule "i3blocks-contrib"]
-	path = i3blocks-contrib
+	path = files/i3blocks-contrib
 	url = https://github.com/vivien/i3blocks-contrib
 [submodule "emacs.d/subconfigs"]
-	path = emacs.d/subconfigs
+	path = files/emacs.d/subconfigs
 	url = git@github.com:brocode/emacs_subconfigs.git
 [submodule "secret"]
-	path = secret
+	path = files/secret
 	url = git@gitlab.com:bomgar/secret.git
