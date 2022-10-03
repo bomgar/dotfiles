@@ -7,7 +7,6 @@ format = """\
     $kubernetes\
     $directory\
     $hg_branch\
-    $docker_context\
     $package\
     $dotnet\
     $elixir\
