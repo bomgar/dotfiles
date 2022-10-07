@@ -21,3 +21,15 @@
    » cat /etc/makepkg.conf | grep -i pkgext
   PKGEXT='.pkg.tar'
    #+END_SRC
+
+** rootless podman
+ enable delegation
+ 
+   #+BEGIN_SRC shell-script
+$ sudo mkdir -p /etc/systemd/system/user@.service.d
+$ cat <<EOF | sudo tee /etc/systemd/system/user@.service.d/delegate.conf
+[Service]
+Delegate=cpu cpuset io memory pids
+EOF
+$ sudo systemctl daemon-reload
+   #+END_SRC
