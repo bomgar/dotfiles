@@ -21,10 +21,13 @@
 
 [core]
   editor = emacsclient -nw
-  pager = delta --light
+  pager = delta
 
 [interactive]
-  diffFilter = delta --color-only --light
+  diffFilter = delta --color-only
+
+[delta]
+    syntax-theme = Dracula
 
 [alias]
   st = status -uall -b

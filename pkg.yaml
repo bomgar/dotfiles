@@ -22,7 +22,6 @@ actions:
   - ripgrep
   - rustup
   - sbt
-  - scala
   - scrot
   - strace
   - tar

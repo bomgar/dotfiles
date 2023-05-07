@@ -118,69 +118,57 @@ draw_bold_text_with_bright_colors: true
 
 # Colors (Tomorrow Night Bright)
 colors:
-  # Default colors
   primary:
-    background: '0xEEEEEE'
-    foreground: '0x000000'
-
-    # Bright and dim foreground colors
-    #
-    # The dimmed foreground color is calculated automatically if it is not present.
-    # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
-    # is `false`, the normal foreground color will be used.
-    #dim_foreground: '0x9a9a9a'
-    #bright_foreground: '0xffffff'
-
-  # Cursor colors
-  #
-  # Colors which should be used to draw the terminal cursor. If these are unset,
-  # the cursor color will be the inverse of the cell color.
-  #cursor:
-  #  text: '0x000000'
-  #  cursor: '0xffffff'
-
-  # Normal colors
+    background: '#282a36'
+    foreground: '#f8f8f2'
+    bright_foreground: '#ffffff'
+  cursor:
+    text: CellBackground
+    cursor: CellForeground
+  vi_mode_cursor:
+    text: CellBackground
+    cursor: CellForeground
+  search:
+    matches:
+      foreground: '#44475a'
+      background: '#50fa7b'
+    focused_match:
+      foreground: '#44475a'
+      background: '#ffb86c'
+  footer_bar:
+    background: '#282a36'
+    foreground: '#f8f8f2'
+  hints:
+    start:
+      foreground: '#282a36'
+      background: '#f1fa8c'
+    end:
+      foreground: '#f1fa8c'
+      background: '#282a36'
+  line_indicator:
+    foreground: None
+    background: None
+  selection:
+    text: CellForeground
+    background: '#44475a'
   normal:
-    black:   '0x000000'
-    red:     '0xcc0000'
-    green:   '0x4e9a06'
-    yellow:  '0xc4a000'
-    blue:    '0x3465A4'
-    magenta: '0x75507B'
-    cyan:    '0x06989A'
-    white:   '0xffffff'
-
-  # Bright colors
+    black: '#21222c'
+    red: '#ff5555'
+    green: '#50fa7b'
+    yellow: '#f1fa8c'
+    blue: '#bd93f9'
+    magenta: '#ff79c6'
+    cyan: '#8be9fd'
+    white: '#f8f8f2'
   bright:
-    black:   '0x555753'
-    red:     '0xef2929'
-    green:   '0x3ebd3e'
-    yellow:  '0xbcbc30'
-    blue:    '0x4688c2'
-    magenta: '0xb43bb4'
-    cyan:    '0x38b5b7'
-    white:   '0xffffff'
-
-  # Dim colors
-  #
-  # If the dim colors are not set, they will be calculated automatically based
-  # on the `normal` colors.
-  dim:
-    # black:   '0x333333'
-    # red:     '0xf2777a'
-    # green:   '0x99cc99'
-    # yellow:  '0xffcc66'
-    # blue:    '0x6699cc'
-    # magenta: '0xcc99cc'
-    # cyan:    '0x66cccc'
-    # white:   '0xdddddd'
-
-  # Indexed Colors
-  #
-  # The indexed colors include all colors from 16 to 256.
-  # When these are not set, they're filled with sensible defaults.
-  #indexed_colors:
-  #  - { index: 16, color: '0x000000' }
+    black: '#6272a4'
+    red: '#ff6e6e'
+    green: '#69ff94'
+    yellow: '#ffffa5'
+    blue: '#d6acff'
+    magenta: '#ff92df'
+    cyan: '#a4ffff'
+    white: '#ffffff'
 
 
 # Background opacity

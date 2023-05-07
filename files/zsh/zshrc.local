@@ -41,7 +41,7 @@ export LESS_TERMCAP_so=$'\e[0;31m'
 # Go
 export GOPATH=~/go
 
-export GLAMOUR_STYLE=light
+#export GLAMOUR_STYLE=light
 
 
 if [[ -x "$(command -v starship)" ]];
@@ -110,7 +110,7 @@ alias fbtoggl-delete='fbtoggl time-entries delete --id $(fbtoggl --format json t
 
 
 #BAT
-export BAT_THEME="Monokai Extended Light"
+export BAT_THEME="Dracula"
 
 # setup exa
 if [[ -x "$(command -v exa)" ]];

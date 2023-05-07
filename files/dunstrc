@@ -1,7 +1,7 @@
 [global]
 font = Iosevka Term 11
 frame_width = 3
-frame_color = "#8EC07C"
+frame_color = "#44475a"
 
 # Allow a small subset of html markup:
 #   <b>bold</b>
@@ -182,23 +182,22 @@ context = ctrl+shift+period
 [urgency_low]
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
-frame_color = "#3B7C87"
-foreground = "#3B7C87"
-background = "#191311"
-#background = "#2B313C"
+background = "#282a36"
+foreground = "#6272a4"
+frame_color = "#44475a"
 timeout = 4
 
 [urgency_normal]
-frame_color = "#5B8234"
-foreground = "#5B8234"
-background = "#191311"
+background = "#282a36"
+foreground = "#bd93f9"
+frame_color = "#44475a"
 #background = "#2B313C"
 timeout = 6
 
 [urgency_critical]
-frame_color = "#B7472A"
-foreground = "#B7472A"
-background = "#191311"
+background = "#ff5555"
+foreground = "#f8f8f2"
+frame_color = "#ff5555"
 #background = "#2B313C"
 timeout = 8
 
