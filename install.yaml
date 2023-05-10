@@ -122,3 +122,9 @@ actions:
   - action: file.link
     to: {{ user.home_dir }}/.config/httpie/config.json
     from: httpie/config.json
+  - action: file.link
+    to: {{ user.home_dir }}/.local/share/mc/skins/dracula256.ini
+    from: mc/dracula256.ini
+  - action: file.link
+    to: {{ user.home_dir }}/.config/mc/ini
+    from: mc/ini
