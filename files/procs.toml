@@ -119,7 +119,7 @@ ascending = "▲"
 descending = "▼"
 tree_symbols = ["│", "─", "┬", "├", "└"]
 abbr_sid = true
-theme = "Light"
+theme = "Dark"
 
 [sort]
 column = 0
