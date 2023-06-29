@@ -128,3 +128,6 @@ actions:
   - action: file.link
     to: {{ user.home_dir }}/.config/mc/ini
     from: mc/ini
+  - action: file.link
+    to: {{ user.home_dir }}/.config/zellij
+    from: zellij
