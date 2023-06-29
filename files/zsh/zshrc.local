@@ -140,6 +140,7 @@ fi;
 
 
 export SUDO_EDITOR='emacsclient -nw'
+export EDITOR='emacsclient -nw'
 
 
 
