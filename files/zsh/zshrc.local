@@ -138,6 +138,10 @@ then
   fi;
 fi;
 
+if [[ -x "$(command -v zellij)" ]];
+then
+    eval $(zellij setup --generate-completion zsh)
+fi;
 
 export SUDO_EDITOR='emacsclient -nw'
 export EDITOR='emacsclient -nw'
