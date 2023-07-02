@@ -140,7 +140,6 @@ fi;
 
 if [[ -x "$(command -v zellij)" ]];
 then
-    eval $(zellij setup --generate-completion zsh)
     eval "$(zellij setup --generate-completion zsh | grep "^function")"
 fi;
 
