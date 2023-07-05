@@ -7,6 +7,3 @@
 [submodule "i3blocks-contrib"]
 	path = files/i3blocks-contrib
 	url = https://github.com/vivien/i3blocks-contrib
-[submodule "emacs.d/subconfigs"]
-	path = files/emacs.d/subconfigs
-	url = git@github.com:brocode/emacs_subconfigs.git
