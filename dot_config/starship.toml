@@ -8,24 +8,13 @@ format = """\
     $directory\
     $hg_branch\
     $package\
-    $dotnet\
-    $elixir\
-    $elm\
-    $erlang\
     $golang\
     $java\
-    $julia\
-    $nim\
-    $ocaml\
-    $php\
-    $purescript\
     $python\
-    $ruby\
     $rust\
     $terraform\
     $zig\
     $nix_shell\
-    $conda\
     $memory_usage\
     $aws\
     $env_var\
