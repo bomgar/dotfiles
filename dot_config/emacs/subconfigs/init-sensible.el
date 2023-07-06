@@ -20,7 +20,7 @@
 ;; save history
 (setq savehist-additional-variables    ;; also save...
   '(search-ring regexp-search-ring)    ;; ... my search entries
-  savehist-file "~/.emacs.d/savehist") ;; keep my home clean
+  savehist-file "~/.config/emacs/savehist") ;; keep my home clean
 (savehist-mode t)                      ;; do customization before activate
 
 ;smooth scrolling
@@ -37,7 +37,7 @@
     ))
 
 ; remember file position
-(setq save-place-file "~/.emacs.d/saveplace")
+(setq save-place-file "~/.config/emacs/saveplace")
 (if (fboundp #'save-place-mode)
   (save-place-mode +1)
   (setq-default save-place t))
