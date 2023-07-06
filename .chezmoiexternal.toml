@@ -2,3 +2,7 @@
     type = "file"
     url = "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
     refreshPeriod = "168h"
+[".zshrc"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/grml/grml-etc-core/master/etc/zsh/zshrc"
+    refreshPeriod = "168h"
