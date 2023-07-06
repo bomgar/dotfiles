@@ -7,18 +7,11 @@ format = """\
     $kubernetes\
     $directory\
     $hg_branch\
-    $package\
-    $golang\
-    $java\
     $python\
-    $rust\
-    $terraform\
-    $zig\
     $nix_shell\
     $memory_usage\
     $aws\
     $env_var\
-    $crystal\
     $git_branch\
     $git_commit\
     $git_state\
