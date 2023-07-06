@@ -3,10 +3,8 @@
 # End:
 
 [user]
-  name = Patrick Haun
-  #email = patrick.haun@immobilienscout24.de
-  #email = bomgar85@googlemail.com
-  email = patrick@bomgar.email
+  name = {{ .user.name | quote }}
+  email = {{ .user.email | quote }}
 
 [color]
   ui = true
