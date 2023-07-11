@@ -109,6 +109,9 @@ alias zhttp="http -A zign -a zhttp: --default-scheme=https"
 alias fbtoggl-delete='fbtoggl time-entries delete --id $(fbtoggl --format json time-entries list | jq .id | sk --preview "fbtoggl --format table time-entries details --id {}")'
 
 
+alias zbn='zellij action rename-tab $(basename $(pwd))'
+
+
 #BAT
 export BAT_THEME="Dracula"
 
