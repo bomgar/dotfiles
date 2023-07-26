@@ -1,0 +1,8 @@
+# -*- mode: Conf; -*-
+after_workon = 'nvm use'
+
+# Example:
+# after_clone = 'echo after clone from tag'
+# priority = 0
+# workspace = '/home/other'
+# default = false
