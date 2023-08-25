@@ -116,15 +116,15 @@ alias zbn='zellij action rename-tab $(basename $(pwd))'
 export BAT_THEME="Dracula"
 
 # setup exa
-if [[ -x "$(command -v exa)" ]];
+if [[ -x "$(command -v eza)" ]];
 then
   unalias ls
   unalias la
   unalias ll
-  alias ls="command exa"
-  alias la="command exa -la"
-  alias ll="command exa -l"
-  alias lt="command exa --tree"
+  alias ls="command eza"
+  alias la="command eza -la"
+  alias ll="command eza -l"
+  alias lt="command eza --tree"
 fi;
 
 # fw
