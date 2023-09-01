@@ -282,7 +282,7 @@ for_window [app_id="firefox"] border none
 for_window [app_id="firefoxdeveloperedition"] border none
 for_window [app_id="Emacs24"] border pixel
 for_window [app_id="Emacs"] border pixel
-for_window [title="Screenkey"] floating enable, move position bottom
+for_window [title="xeyes"] floating enable
 for_window [title="Microsoft Teams Notification"] floating enable
 no_focus [title="Microsoft Teams Notification"]
 
