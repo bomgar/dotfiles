@@ -163,9 +163,9 @@ bindsym $mod+r mode "resize"
 
 set $mode_key us (u), (i) us intl, (d) de
 mode "$mode_key" {
-    bindsym u exec swaymsg input '*' xkb_layout us && pkill -RTMIN+1 i3blocks && swaymsg input '*' xkb_options "caps:none", mode "default"
-    bindsym d exec swaymsg input '*' xkb_layout de && pkill -RTMIN+1 i3blocks && swaymsg input '*' xkb_options "caps:none", mode "default"
-    bindsym i exec swaymsg input '*' xkb_layout us xkb_variant intl && pkill -RTMIN+1 i3blocks && swaymsg input '*' xkb_options "caps:none", mode "default"
+    bindsym u exec swaymsg input type:keyboard xkb_variant '""' && swaymsg input type:keyboard xkb_layout us && pkill -RTMIN+1 i3blocks && swaymsg input type:keyboard xkb_options "caps:none", mode "default"
+    bindsym d exec swaymsg input type:keyboard xkb_variant '""' && swaymsg input type:keyboard xkb_layout de && pkill -RTMIN+1 i3blocks && swaymsg input type:keyboard xkb_options "caps:none", mode "default"
+    bindsym i exec swaymsg input type:keyboard xkb_layout us && swaymsg input type:keyboard xkb_variant intl && pkill -RTMIN+1 i3blocks && swaymsg input type:keyboard xkb_options "caps:none", mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
