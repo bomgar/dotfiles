@@ -286,6 +286,8 @@ for_window [title="Screenkey"] floating enable, move position bottom
 for_window [title="Microsoft Teams Notification"] floating enable
 no_focus [title="Microsoft Teams Notification"]
 
+xwayland enable
+
 
 #exec
 #exec --no-startup-id nm-applet
