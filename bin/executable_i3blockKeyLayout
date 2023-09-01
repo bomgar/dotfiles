@@ -16,9 +16,20 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-setxkbmap -query | awk '
-    BEGIN{layout="";variant=""}
-    /^layout/{layout=$2}
-    /^variant/{variant=$2}
-    END{printf(" %s%s\n",layout,variant)}'
 
+if [ -n "$SWAYSOCK" ]; then
+    # Running under Sway/Wayland
+    layout_and_variant=$(swaymsg -t get_inputs | jq -r '.[] | select(.type=="keyboard" and .xkb_active_layout_name != null) | .xkb_active_layout_name' | head -n 1)
+    if [ -n "$layout_and_variant" ]; then
+        echo " $layout_and_variant"
+    else
+        echo " Layout information not available"
+    fi
+else
+    # Running under X11
+    setxkbmap -query | awk '
+        BEGIN{layout="";variant=""}
+        /^layout/{layout=$2}
+        /^variant/{variant=$2}
+        END{printf(" %s%s\n",layout,variant)}'
+fi
