@@ -186,8 +186,8 @@ mode "$mode_rfkill" {
 bindsym $mod+Shift+N mode "$mode_rfkill"
 
 #lock
-#bindsym $mod+Mod1+l exec "sh ~/.i3/lock.sh"
-bindsym Ctrl+Mod1+l exec "swaylock"
+bindsym Ctrl+Mod1+l exec "sh ~/.config/sway/lock.sh"
+#bindsym Ctrl+Mod1+l exec "swaylock"
 #exec xautolock -time 5 -locker "sh ~/.i3/lock.sh" &
 
 # sound volume
