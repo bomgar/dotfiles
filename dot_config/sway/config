@@ -188,7 +188,7 @@ bindsym $mod+Shift+N mode "$mode_rfkill"
 #lock
 bindsym Ctrl+Mod1+l exec "sh ~/.config/sway/lock.sh"
 #bindsym Ctrl+Mod1+l exec "swaylock"
-#exec xautolock -time 5 -locker "sh ~/.i3/lock.sh" &
+exec swayidle &
 
 # sound volume
 bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle
