@@ -96,11 +96,11 @@ bindsym --release Print exec grim -g "$(slurp)" ~/Pictures/$(date +'%Y-%m-%d-%H%
 
 #workspace
 set $w1 "1: terminal"
-set $w2 "2: mail"
+set $w2 "2"
 set $w3 "3: ide"
 set $w4 "4: www"
-set $w5 "5: discord"
-set $w6 "6: im"
+set $w5 "5"
+set $w6 "6"
 
 # switch to workspace
 bindsym $mod+1 workspace $w1
