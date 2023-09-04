@@ -278,6 +278,6 @@ xwayland enable
 
 #exec
 #exec --no-startup-id nm-applet
-exec "systemctl --user import-environment SWAYSOCK WAYLAND_DISPLAY"
+exec "systemctl --user import-environment SWAYSOCK WAYLAND_DISPLAY XDG_SESSION_TYPE XDG_CURRENT_DESKTOP"
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec swaymsg input type:keyboard xkb_layout us && swaymsg input type:keyboard xkb_options "caps:none", mode "default" && pkill -RTMIN+1 i3blocks
