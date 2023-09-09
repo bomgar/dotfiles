@@ -104,12 +104,25 @@ themes {
         black 22 23 29
         white 248 248 242
     }
+    onedark {
+        fg 246 247 249
+        bg 40 44 52
+        red 224 108 117
+        green 152 195 121
+        yellow 229 192 123
+        blue 97 175 239
+        magenta 198 120 221
+        orange 209 154 102
+        cyan 86 182 194
+        black 40 44 52
+        white 246 247 249
+    }
 }
 
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
- theme "dracula"
+ theme "onedark"
 
 // The name of the default layout to load on startup
 // Default: "default"
