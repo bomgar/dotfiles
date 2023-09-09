@@ -1,9 +1,7 @@
-(use-package dracula-theme
+(use-package color-theme-sanityinc-tomorrow
   :ensure
   :init
-  (load-theme 'dracula t)
-  (custom-set-faces
-  '(match ((t (:foreground "unspecified-bg" :background "#ffb86c")))))
+  (load-theme 'color-theme-sanityinc-tomorrow-night t)
   )
 
 
