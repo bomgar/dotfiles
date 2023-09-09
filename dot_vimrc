@@ -55,7 +55,7 @@ Plug 'tpope/vim-abolish'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'airblade/vim-gitgutter'
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'joshdick/onedark.vim'
 call plug#end()
 
 " Enable filetype plugins
@@ -130,7 +130,7 @@ syntax enable
 "set background=dark
 if v:version > 703
   set background=dark
-  colorscheme dracula
+  colorscheme onedark
 endif
 
 set t_Co=256
