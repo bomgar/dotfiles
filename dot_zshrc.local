@@ -112,9 +112,6 @@ alias fbtoggl-delete='fbtoggl time-entries delete --id $(fbtoggl --format json t
 alias zbn='zellij action rename-tab $(basename $(pwd))'
 
 
-#BAT
-export BAT_THEME="Dracula"
-
 # setup exa
 if [[ -x "$(command -v eza)" ]];
 then
