@@ -2,5 +2,6 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export DOCKER_HOST="unix://$XDG_RUNTIME_DIR/podman/podman.sock"
 export MOZ_ENABLE_WAYLAND=1
 export QT_QPA_PLATFORM=wayland
+export QT_QPA_PLATFORMTHEME=qt5ct
 export GDK_BACKEND=wayland
 export XDG_CURRENT_DESKTOP=sway
