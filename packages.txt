@@ -39,3 +39,7 @@ xdg-desktop-portal-kde
 xdg-desktop-portal-wlr
 eza
 fuzzel
+qt5-wayland
+qt5ct
+qt6-wayland
+qt6ct
