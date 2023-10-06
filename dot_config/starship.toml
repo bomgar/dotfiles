@@ -1,33 +1,19 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
 add_newline = false
 
 format = """\
     $time\
-    $username\
-    $hostname\
-    $kubernetes\
-    $directory\
-    $hg_branch\
-    $python\
-    $nix_shell\
-    $memory_usage\
-    $aws\
-    $env_var\
-    $git_branch\
-    $git_commit\
-    $git_state\
-    $git_status\
-    $cmd_duration\
-    $custom\
+    $all\
     $line_break\
     $jobs\
-    $battery\
     $character\
     """
 
 [character]
 format="$symbol "
-success_symbol="[»](bold  #98C379)"
-error_symbol="[»](bold #E06C75)"
+success_symbol="[»](bold green)"
+error_symbol="[»](bold red)"
 
 [java]
 disabled = true
@@ -61,3 +47,13 @@ style = "bold #C678DD"
 [username]
 format = "[$user]($style) on "
 style_user = "bold #61AFEF"
+
+[kubernetes]
+disabled = false
+
+[docker_context]
+disabled = true
+[kotlin]
+disabled = true
+[gradle]
+disabled = true
