@@ -55,3 +55,5 @@ aardvark-dns
 acpi
 xorg-xwayland
 imagemagick
+gnome-keyring
+seahorse
