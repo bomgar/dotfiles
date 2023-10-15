@@ -51,3 +51,4 @@ i3blocks
 less
 netavark
 aardvark-dns
+acpi
