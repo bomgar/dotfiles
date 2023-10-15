@@ -57,3 +57,4 @@ xorg-xwayland
 imagemagick
 gnome-keyring
 seahorse
+wireguard-tools
