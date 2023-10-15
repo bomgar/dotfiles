@@ -57,3 +57,6 @@ disabled = true
 disabled = true
 [gradle]
 disabled = true
+
+[battery]
+disabled = true
