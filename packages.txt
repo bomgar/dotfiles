@@ -32,6 +32,7 @@ zellij
 sway
 swayidle
 swaylock
+swaybg
 wlroots
 xdg-desktop-portal
 xdg-desktop-portal-gtk
@@ -53,3 +54,4 @@ netavark
 aardvark-dns
 acpi
 xorg-xwayland
+imagemagick
