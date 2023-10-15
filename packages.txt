@@ -52,3 +52,4 @@ less
 netavark
 aardvark-dns
 acpi
+xorg-xwayland
