@@ -49,12 +49,14 @@ format = "[$user]($style) on "
 style_user = "bold #61AFEF"
 
 [kubernetes]
-disabled = false
+disabled = true
 
 [docker_context]
 disabled = true
+
 [kotlin]
 disabled = true
+
 [gradle]
 disabled = true
 
