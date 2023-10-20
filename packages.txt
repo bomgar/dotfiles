@@ -63,3 +63,4 @@ extra/ttf-fira-code
 extra/ttf-firacode-nerd
 extra/woff-fira-code
 extra/woff2-fira-code
+breeze
