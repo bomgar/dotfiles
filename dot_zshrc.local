@@ -72,11 +72,9 @@ alias layusint='setxkbmap us -variant intl && pkill -RTMIN+1 i3blocks'
 
 alias mplayer='mplayer -stop-xscreensaver'
 
-alias vim='echo Did you mean "emacs"?'
-alias emacs='emacsclient -nw'
+alias vim='echo Did you mean "nvim"?'
+alias emacs='echo Did you mean "nvim"?'
 alias restartEmacs='systemctl restart --user emacs'
-alias uemacs='/usr/bin/emacs'
-alias reloadEmacs='/usr/bin/emacsclient --eval "(load-file \"~/.emacs.d/init.el\")"'
 alias get_local_ip="ip a | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1' | grep -v '172.'"
 alias docker-killall='docker kill $(docker ps -q)'
 alias docker-be-gone='docker rmi -f $(docker images -a -q); docker rm -f $(docker ps -a -q)'
@@ -95,18 +93,7 @@ alias ag='ag --smart-case --color-line-number "1;34"'
 
 source /usr/share/nvm/init-nvm.sh
 
-alias fbjenkins="fw ls | fzf | xargs fw inspect -j | jq -r '.git' | cut -d : -f 2 | sed 's/\.git$//g' | sed 's/\(.*\)\/\(.*\)/https:\/\/jenkins.21re.works\/job\/\1\/job\/\2\/job\/master\//g' | xargs xdg-open"
-alias fbjenkins.='git remote get-url origin | cut -d : -f 2 | sed "s/\.git$//g" | sed "s/\(.*\)\/\(.*\)/https:\/\/jenkins.21re.works\/job\/\1\/job\/\2\/job\/$(git rev-parse --abbrev-ref HEAD)\//g" | xargs xdg-open'
-
-alias fullstack.="git remote get-url origin | cut -d : -f 2 | sed 's/\.git$//g' | sed 's/\(.*\)\/\(.*\)/https:\/\/github.com\/\1\/\2\/settings\/branches\//g' | xargs xdg-open"
-
-alias fuckjira="fbjira issue list-open TRADE TEAS FEED | fzf --preview \"echo {} | cut -d' ' -f1 | xargs fbjira issue summary\" | cut -d ' ' -f1 | xargs -I {} xdg-open 'https://21real.atlassian.net/browse/{}'"
 export SBT_OPTS="-XX:MaxMetaspaceSize=512M -XX:MetaspaceSize=256M -Xms512M -Xmx2G -XX:+UseG1GC"
-
-alias rainbow-browse='gh repo view -w Rainbow/$(gh repo list Rainbow --json name --jq ".[].name" | sk)'
-alias sunrise='xdg-open https://sunrise.zalando.net/cdp/ghe/$(gh repo view --json nameWithOwner --jq .nameWithOwner)'
-
-alias zhttp="http -A zign -a zhttp: --default-scheme=https"
 
 alias fbtoggl-delete='fbtoggl time-entries delete --id $(fbtoggl --format json time-entries list | jq .id | sk --preview "fbtoggl --format table time-entries details --id {}")'
 
@@ -145,8 +132,8 @@ then
     eval "$(zellij setup --generate-completion zsh | grep "^function")"
 fi;
 
-export SUDO_EDITOR='emacsclient -nw'
-export EDITOR='emacsclient -nw'
+export SUDO_EDITOR='nvim'
+export EDITOR='nvim'
 export PAGER='bat'
 
 

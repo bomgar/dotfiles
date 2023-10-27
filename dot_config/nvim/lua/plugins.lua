@@ -1,0 +1,118 @@
+
+local plugin_specs = {
+  -- auto-completion engine
+  {
+    "hrsh7th/nvim-cmp",
+    -- event = 'InsertEnter',
+    event = "VeryLazy",
+    dependencies = {
+      "hrsh7th/cmp-nvim-lsp",
+      "onsails/lspkind-nvim",
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-omni",
+      "hrsh7th/cmp-emoji",
+      "quangnguyen30192/cmp-nvim-ultisnips",
+    },
+  },
+
+
+
+  -- A list of colorscheme plugin you may want to try. Find what suits you.
+  { "navarasu/onedark.nvim", lazy = true },
+
+  {
+    "nvim-lualine/lualine.nvim",
+    event = "VeryLazy",
+    cond = firenvim_not_active,
+    config = function()
+      require("config.statusline")
+    end,
+  },
+
+
+
+  -- Comment plugin
+  { "tpope/vim-commentary", event = "VeryLazy" },
+
+  -- Show undo history visually
+  { "simnalamburt/vim-mundo", cmd = { "MundoToggle", "MundoShow" } },
+
+  -- better UI for some nvim actions
+  { "stevearc/dressing.nvim" },
+
+  -- Git command inside vim
+  {
+    "tpope/vim-fugitive",
+    event = "User InGitRepo",
+  },
+
+  -- Better git log display
+  { "rbong/vim-flog", cmd = { "Flog" } },
+  { "christoomey/vim-conflicted", cmd = { "Conflicted" } },
+  {
+    "ruifm/gitlinker.nvim",
+    event = "User InGitRepo",
+  },
+
+  -- Show git change (change, delete, add) signs in vim sign column
+  {
+    "lewis6991/gitsigns.nvim",
+  },
+
+  -- Better git commit experience
+  { "rhysd/committia.vim" },
+
+  {
+    "sindrets/diffview.nvim"
+  },
+
+  {
+    "kevinhwang91/nvim-bqf",
+    ft = "qf",
+  },
+
+  -- Another markdown plugin
+  { "preservim/vim-markdown", ft = { "markdown" } },
+
+  -- Vim tabular plugin for manipulate tabular, required by markdown plugins
+  { "godlygeek/tabular", cmd = { "Tabularize" } },
+
+  { "chrisbra/unicode.vim", event = "VeryLazy" },
+
+  -- Modern matchit implementation
+  { "andymass/vim-matchup", event = "BufRead" },
+  { "tpope/vim-scriptease", cmd = { "Scriptnames", "Message", "Verbose" } },
+
+  -- Asynchronous command execution
+  { "skywind3000/asyncrun.vim", lazy = true, cmd = { "AsyncRun" } },
+  { "cespare/vim-toml", ft = { "toml" }, branch = "main" },
+
+  -- The missing auto-completion for cmdline!
+  {
+    "gelguy/wilder.nvim",
+    build = ":UpdateRemotePlugins",
+  },
+
+  -- showing keybindings
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+  },
+
+  -- show and trim trailing whitespaces
+  { "jdhao/whitespace.nvim", event = "VeryLazy" },
+
+
+}
+
+-- configuration for lazy itself.
+local lazy_opts = {
+  ui = {
+    border = "rounded",
+    title = "Plugin Manager",
+    title_pos = "center",
+  },
+}
+
+require("lazy").setup(plugin_specs, lazy_opts)
