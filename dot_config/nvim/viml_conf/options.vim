@@ -1,5 +1,8 @@
 scriptencoding utf-8
 
+" Set to auto read when a file is changed from the outside
+set autoread
+
 " change fillchars for folding, vertical split, end of buffer, and message separator
 set fillchars=fold:\ ,vert:\│,eob:\ ,msgsep:‾,diff:╱
 
@@ -89,6 +92,9 @@ set undofile
 
 " Do not show "match xx of xx" and other messages during auto-completion
 set shortmess+=c
+
+" Show matching brackets when text indicator is over them
+set showmatch
 
 " Do not show search match count on bottom right (seriously, I would strain my
 " neck looking at it). Using plugins like vim-anzu or nvim-hlslens is a better
