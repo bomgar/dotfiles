@@ -61,6 +61,8 @@ disabled = true
 disabled = true
 [rust]
 disabled = true
+[lua]
+disabled = true
 
 [battery]
 disabled = true
