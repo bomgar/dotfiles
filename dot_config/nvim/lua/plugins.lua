@@ -107,7 +107,7 @@ local plugin_specs = {
   },
 
   -- show and trim trailing whitespaces
-  { "jdhao/whitespace.nvim", event = "VeryLazy" },
+  { "ntpeters/vim-better-whitespace" },
 
 
 }
