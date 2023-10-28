@@ -50,6 +50,8 @@ set nonu
 " Ignore case in general, but become case-sensitive when uppercase is present
 set ignorecase smartcase
 
+set inccommand=nosplit
+
 " File and script encoding settings for vim
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
