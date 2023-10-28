@@ -11,9 +11,10 @@ if wezterm.config_builder then
 end
 
 config.font = wezterm.font_with_fallback {
-  'Hack Nerd Font Mono',
+  'Hack Nerd Font',
   'Noto Sans Mono',
 }
+config.warn_about_missing_glyphs=false
 
 
 -- For example, changing the color scheme:
