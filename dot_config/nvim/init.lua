@@ -7,9 +7,8 @@ function source_vim_config(file_name)
 end
 
 
-require("globals")
+require("settings")
 require("init-lazy")
-source_vim_config("options.vim")
 require("plugins")
 require("theme")
 
