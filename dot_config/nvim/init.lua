@@ -6,8 +6,8 @@ local version = vim.version
 local core_conf_files = {
   "globals.lua", -- some global settings
   "init-lazy.lua", -- some global settings
-  "plugins.lua", -- some global settings
   "options.vim", -- setting options in nvim
+  "plugins.lua", -- some global settings
   "theme.lua",
 }
 
