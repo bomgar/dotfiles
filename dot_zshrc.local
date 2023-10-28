@@ -72,7 +72,7 @@ alias layusint='setxkbmap us -variant intl && pkill -RTMIN+1 i3blocks'
 
 alias mplayer='mplayer -stop-xscreensaver'
 
-alias vim='echo Did you mean "nvim"?'
+alias vim='nvim'
 alias emacs='echo Did you mean "nvim"?'
 alias restartEmacs='systemctl restart --user emacs'
 alias get_local_ip="ip a | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1' | grep -v '172.'"
