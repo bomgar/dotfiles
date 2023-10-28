@@ -59,6 +59,8 @@ disabled = true
 
 [gradle]
 disabled = true
+[rust]
+disabled = true
 
 [battery]
 disabled = true
