@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo pacman -Sy && sudo snapper -c root create --cleanup-algorithm=number --description yay --command "sudo -u phaun yay"
