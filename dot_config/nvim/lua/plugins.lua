@@ -6,6 +6,7 @@ local plugin_specs = {
     event = "VeryLazy",
     dependencies = {
       "hrsh7th/cmp-path",
+      "hrsh7th/cmp-cmdline",
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-omni",
       "hrsh7th/cmp-emoji",
@@ -29,6 +30,12 @@ local plugin_specs = {
     end,
   },
 
+  {
+    "ur4ltz/surround.nvim",
+    config = function()
+      require"surround".setup {mappings_style = "surround"}
+    end
+  },
 
 
   -- Comment plugin
