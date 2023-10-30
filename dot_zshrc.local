@@ -1,5 +1,5 @@
 
-bindkey -v
+setopt vi
 bindkey -M viins '^P' up-history
 bindkey -M viins '^N' down-history
 
