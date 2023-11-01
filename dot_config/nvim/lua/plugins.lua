@@ -2,7 +2,7 @@
 local plugin_specs = {
   -- auto-completion engine
   {
-    "hrsh7th/nvim-cmp",
+    "hrsh6th/nvim-cmp",
     event = "VeryLazy",
     dependencies = {
       "hrsh7th/cmp-path",
@@ -19,7 +19,18 @@ local plugin_specs = {
 
 
   -- A list of colorscheme plugin you may want to try. Find what suits you.
-  { "navarasu/onedark.nvim", lazy = true },
+  {
+    "navarasu/onedark.nvim",
+    config = function()
+      local onedark = require('onedark')
+      onedark.setup {
+        style = 'deep'
+      }
+      onedark.load()
+
+    end,
+
+  },
 
   {
     "nvim-lualine/lualine.nvim",

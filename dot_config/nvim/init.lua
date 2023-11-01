@@ -7,9 +7,9 @@ require("init-lazy")
 require("plugins")
 
 if vim.g.vscode then
-    -- VSCode extension
+  -- vscode enabled
 else
-  require("theme")
+  -- vscode not enabled
 end
 
 
