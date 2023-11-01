@@ -1,7 +1,8 @@
 -- Lua
-require('onedark').setup {
+local onedark = require('onedark')
+onedark.setup {
     style = 'deep'
 }
-require('onedark').load()
+onedark.load()
 
 
