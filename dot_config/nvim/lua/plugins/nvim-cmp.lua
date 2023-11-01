@@ -1,6 +1,6 @@
 return {
   {
-    "hrsh6th/nvim-cmp",
+    "hrsh7th/nvim-cmp",
     event = "VeryLazy",
     dependencies = {
       "hrsh7th/cmp-path",
