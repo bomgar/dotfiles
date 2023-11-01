@@ -8,6 +8,7 @@ return {
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-omni",
       "hrsh7th/cmp-emoji",
+      'hrsh7th/cmp-nvim-lsp',
     },
     config = function()
       local cmp = require'cmp'
@@ -36,7 +37,7 @@ return {
         }),
         sources = cmp.config.sources({
           { name = 'path' },
-          -- { name = 'nvim_lsp' },
+          { name = 'nvim_lsp' },
           -- { name = 'vsnip' }, -- For vsnip users.
           -- { name = 'luasnip' }, -- For luasnip users.
           -- { name = 'ultisnips' }, -- For ultisnips users.
