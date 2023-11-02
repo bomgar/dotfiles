@@ -7,7 +7,10 @@ return {
     config = function()
       local onedark = require('onedark')
       onedark.setup {
-        style = 'deep'
+        style = 'darker',
+        colors = {
+          bg0 = "#1e2127",
+        },
       }
       onedark.load()
 
