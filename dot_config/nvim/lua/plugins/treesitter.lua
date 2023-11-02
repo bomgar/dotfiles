@@ -13,6 +13,8 @@ return{
           "bash",
           "c",
           "rust",
+          "svelte",
+          "astro",
           "diff",
           "html",
           "javascript",
