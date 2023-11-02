@@ -1,12 +1,12 @@
 
-
 return {
-
-
   {
-    "ur4ltz/surround.nvim",
+    "kylechui/nvim-surround",
+    event = "VeryLazy",
     config = function()
-      require"surround".setup {mappings_style = "surround"}
+        require("nvim-surround").setup({
+            -- Configuration here, or leave empty to use defaults
+        })
     end
   },
 }
