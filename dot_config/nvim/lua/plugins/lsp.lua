@@ -48,6 +48,7 @@ return {
           "tsserver",
           "astro",
           "svelte",
+          "html",
           "lua_ls",
           "rust_analyzer",
           "cssls",
