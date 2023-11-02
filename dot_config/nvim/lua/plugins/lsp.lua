@@ -50,6 +50,7 @@ return {
           "svelte",
           "lua_ls",
           "rust_analyzer",
+          "cssls",
         },
         handlers = {default_setup},
       })
