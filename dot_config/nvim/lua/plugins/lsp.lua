@@ -52,6 +52,7 @@ return {
           "lua_ls",
           "rust_analyzer",
           "cssls",
+          "cssmodules_ls",
         },
         handlers = {default_setup},
       })
