@@ -12,6 +12,8 @@ return{
         ensure_installed = {
           "bash",
           "c",
+          "css",
+          "scss",
           "rust",
           "svelte",
           "astro",
