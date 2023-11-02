@@ -221,6 +221,7 @@ assign [app_id="Emacs"] $w3
 
 # Custom style
 for_window [app_id="Gnome-terminal"] border none
+for_window [app_id="neovide"] border none
 for_window [app_id="konsole"] border none
 for_window [app_id="Alacritty"] border none
 for_window [app_id="org.wezfurlong.wezterm"] border none
