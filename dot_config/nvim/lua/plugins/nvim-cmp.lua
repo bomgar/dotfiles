@@ -9,18 +9,16 @@ return {
       "hrsh7th/cmp-omni",
       "hrsh7th/cmp-emoji",
       'hrsh7th/cmp-nvim-lsp',
+      "dcampos/nvim-snippy",
+      "dcampos/cmp-snippy",
     },
     config = function()
       local cmp = require'cmp'
 
       cmp.setup({
         snippet = {
-          -- REQUIRED - you must specify a snippet engine
           expand = function(args)
-            vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-            -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-            -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-            -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+            require('snippy').expand_snippet(args.body)
           end,
         },
         window = {
@@ -38,10 +36,7 @@ return {
         sources = cmp.config.sources({
           { name = 'path' },
           { name = 'nvim_lsp' },
-          -- { name = 'vsnip' }, -- For vsnip users.
-          -- { name = 'luasnip' }, -- For luasnip users.
-          -- { name = 'ultisnips' }, -- For ultisnips users.
-          -- { name = 'snippy' }, -- For snippy users.
+          { name = 'snippy' }, -- For snippy users.
         }, {
           { name = 'buffer' },
         })

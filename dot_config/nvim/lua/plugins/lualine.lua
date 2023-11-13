@@ -6,7 +6,9 @@ return {
     event = "VeryLazy",
     cond = firenvim_not_active,
     config = function()
-      require('lualine').setup()
+      require('lualine').setup({
+        theme = 'onedark'
+      })
     end,
   },
 }
