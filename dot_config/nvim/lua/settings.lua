@@ -43,8 +43,10 @@ vim.o.softtabstop = 2
 vim.o.shiftwidth = 2
 vim.o.expandtab = true
 
-vim.opt.spelllang = 'en_us'
-vim.opt.spell = true
+if not vim.g.vscode then
+  vim.opt.spelllang = 'en_us'
+  vim.opt.spell = true
+end
 
 vim.o.nu = true
 
