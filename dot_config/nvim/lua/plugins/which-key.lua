@@ -21,7 +21,9 @@ return {
         },
         t = {
           name = "+test",
-          r = {"<cmd>:Neotest run<CR>", "Run test"},
+          r = {"<cmd>:lua require(\"neotest\").run.run()<CR>", "Run test"},
+          d = {"<cmd>:lua require(\"neotest\").run.run({strategy = \"dap\"})<CR>", "Debug test"},
+          f = {"<cmd>:lua require(\"neotest\").run.run(vim.fn.expand(\"%\"))<CR>", "Run current file"},
           p = {"<cmd>:Neotest output-panel<CR>", "Output panel"},
           o = {"<cmd>:Neotest output<CR>", "Output"},
           s = {"<cmd>:Neotest summary<CR>", "summary"},
