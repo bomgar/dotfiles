@@ -43,6 +43,7 @@ return{
           "sql",
           "ssh_config",
           "svelte",
+          "terraform",
           "toml",
           "tsx",
           "typescript",
