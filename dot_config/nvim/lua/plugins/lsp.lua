@@ -9,6 +9,7 @@ return {
       'williamboman/mason-lspconfig.nvim',
       'mfussenegger/nvim-dap',
       'rcarriga/nvim-dap-ui',
+      'jay-babu/mason-nvim-dap.nvim',
     },
     config = function()
       local lspconfig = require('lspconfig')
@@ -43,6 +44,23 @@ return {
       end
 
       require('mason').setup({})
+      require ('mason-nvim-dap').setup({
+        ensure_installed = {'codelldb'},
+        handlers = {}, -- sets up dap in the predefined manner
+      })
+
+      local dap, dapui = require("dap"), require("dapui")
+      dapui.setup({})
+      dap.listeners.after.event_initialized["dapui_config"] = function()
+        dapui.open()
+      end
+      dap.listeners.before.event_terminated["dapui_config"] = function()
+        dapui.close()
+      end
+      dap.listeners.before.event_exited["dapui_config"] = function()
+        dapui.close()
+      end
+
       require('mason-lspconfig').setup({
         ensure_installed = {
           "astro",
