@@ -36,6 +36,8 @@ vim.o.updatetime = 500
 
 vim.o.swapfile = false
 
+vim.opt.cursorline = true -- Enable highlighting of the current line
+
 vim.o.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff800-blinkon500-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
 vim.o.guifont = "Hack:h12" -- text below applies for VimScript
 
