@@ -5,6 +5,8 @@ return{
     enabled = not vim.g.vscode,
     config = function ()
       local configs = require("nvim-treesitter.configs")
+      vim.opt.foldmethod = "expr"
+      vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
       configs.setup({
         highlight = { enable = true },
