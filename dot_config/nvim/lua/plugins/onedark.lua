@@ -1,7 +1,6 @@
 
 return {
 
-  -- A list of colorscheme plugin you may want to try. Find what suits you.
   {
     "navarasu/onedark.nvim",
     config = function()

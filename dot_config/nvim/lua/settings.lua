@@ -1,5 +1,4 @@
 
--- Custom mapping <leader> (see `:h mapleader` for more info)
 vim.g.mapleader = ' '
 
 -- Enable highlighting for lua HERE doc inside vim script
@@ -16,7 +15,6 @@ vim.api.nvim_create_autocmd("FocusGained", {
     command = "checktime"
 })
 
---vim.o.fillchars = "fold: ,vert:│,eob: ,msgsep:‾,diff:╱"
 vim.opt.fillchars = {
   foldopen = "",
   foldclose = "",
@@ -26,7 +24,7 @@ vim.opt.fillchars = {
   eob = " ",
 }
 
-vim.o.foldcolumn = '0' -- '0' is not bad
+vim.o.foldcolumn = '0'
 vim.o.foldlevel = 99
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
