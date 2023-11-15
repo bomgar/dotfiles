@@ -17,7 +17,21 @@ return {
           f = {"<cmd>Telescope find_files<CR>", "Find File"},
           g = {"<cmd>Telescope live_grep<CR>", "Live Grep"},
           b = {"<cmd>Telescope buffers<CR>", "Buffers"},
-          h = {"<cmd>Telescope help_tags<CR>", "Help Tags"}
+          ["?"] = {"<cmd>Telescope help_tags<CR>", "Help Tags"},
+          h = {"<cmd>Telescope harpoon marks<CR>", "Harpoon Marks"},
+          m = {"<cmd>Telescope marks<CR>", "Marks"},
+          j = {"<cmd>Telescope jumplist<CR>", "Jumplist"},
+        },
+        h = {
+          name = "harpoon", -- Group name
+          a = { "<cmd>lua require('harpoon.mark').add_file()<CR>", "Add File" },
+          m = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>", "Menu" },
+          n = { "<cmd>lua require('harpoon.ui').nav_next()<CR>", "Next Mark" },
+          p = { "<cmd>lua require('harpoon.ui').nav_prev()<CR>", "Previous Mark" },
+          ["1"] = { "<cmd>lua require('harpoon.ui').nav_file(1)<CR>", "Go to Mark 1" },
+          ["2"] = { "<cmd>lua require('harpoon.ui').nav_file(2)<CR>", "Go to Mark 2" },
+          ["3"] = { "<cmd>lua require('harpoon.ui').nav_file(3)<CR>", "Go to Mark 3" },
+          ["4"] = { "<cmd>lua require('harpoon.ui').nav_file(4)<CR>", "Go to Mark 4" },
         },
         t = {
           name = "+test",
