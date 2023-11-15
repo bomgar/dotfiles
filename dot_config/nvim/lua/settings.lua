@@ -12,7 +12,20 @@ vim.o.encoding = "utf-8"
 
 vim.o.autoread = true
 
-vim.o.fillchars = "fold: ,vert:│,eob: ,msgsep:‾,diff:╱"
+--vim.o.fillchars = "fold: ,vert:│,eob: ,msgsep:‾,diff:╱"
+vim.opt.fillchars = {
+  foldopen = "",
+  foldclose = "",
+  fold = "⸱",
+  foldsep = " ",
+  diff = "╱",
+  eob = " ",
+}
+
+vim.o.foldcolumn = '0' -- '0' is not bad
+vim.o.foldlevel = 99
+vim.o.foldlevelstart = 99
+vim.o.foldenable = true
 
 vim.o.splitbelow = true
 vim.o.splitright = true
