@@ -11,6 +11,10 @@ vim.cmd("language en_US.UTF-8")
 vim.o.encoding = "utf-8"
 
 vim.o.autoread = true
+vim.api.nvim_create_autocmd("FocusGained", {
+    pattern = "*",
+    command = "checktime"
+})
 
 --vim.o.fillchars = "fold: ,vert:│,eob: ,msgsep:‾,diff:╱"
 vim.opt.fillchars = {
