@@ -3,15 +3,18 @@ return {
     "williamboman/mason.nvim",
     dependencies = {
       "simrat39/rust-tools.nvim",
-      'nvim-lua/plenary.nvim',
-      'hrsh7th/cmp-nvim-lsp',
-      'neovim/nvim-lspconfig',
-      'williamboman/mason-lspconfig.nvim',
-      'mfussenegger/nvim-dap',
-      'rcarriga/nvim-dap-ui',
-      'jay-babu/mason-nvim-dap.nvim',
+      "nvim-lua/plenary.nvim",
+      "hrsh7th/cmp-nvim-lsp",
+      "neovim/nvim-lspconfig",
+      "williamboman/mason-lspconfig.nvim",
+      "mfussenegger/nvim-dap",
+      "rcarriga/nvim-dap-ui",
+      "jay-babu/mason-nvim-dap.nvim",
+      "folke/neodev.nvim",
     },
     config = function()
+      require("neodev").setup({})
+
       local lspconfig = require('lspconfig')
       local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 
