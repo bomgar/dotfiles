@@ -14,9 +14,14 @@ if wezterm.config_builder then
 end
 
 config.font = wezterm.font_with_fallback {
-  'Hack Nerd Font',
-  'Noto Sans Mono',
+  {
+    family = 'Monaspace Neon',
+    harfbuzz_features = {'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig'},
+  },
+  { family = 'Noto Sans Mono' },
 }
+
+config.underline_position=-2
 config.warn_about_missing_glyphs=false
 
 config.mouse_bindings = {
