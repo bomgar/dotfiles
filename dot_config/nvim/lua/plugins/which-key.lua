@@ -22,6 +22,10 @@ return {
           m = {"<cmd>Telescope marks<CR>", "Marks"},
           j = {"<cmd>Telescope jumplist<CR>", "Jumplist"},
         },
+        c = {
+          name="text-case",
+          t = {"<cmd>TextCaseOpenTelescope<CR>", "Telescope"},
+        },
         h = {
           name = "harpoon", -- Group name
           a = { "<cmd>lua require('harpoon.mark').add_file()<CR>", "Add File" },
