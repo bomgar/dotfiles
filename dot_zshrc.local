@@ -140,10 +140,10 @@ then
   unalias ls
   unalias la
   unalias ll
-  alias ls="command eza"
-  alias la="command eza -la"
-  alias ll="command eza -l"
-  alias lt="command eza --tree"
+  alias ls="command eza --icons=auto"
+  alias la="command eza -la --icons=auto"
+  alias ll="command eza -l --icons=auto"
+  alias lt="command eza --tree --icons=auto"
 fi;
 
 # fw
