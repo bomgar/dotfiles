@@ -38,8 +38,8 @@
   sur = submodule update --remote
   surr = submodule update --remote --recursive
   gcallthethings = -c gc.reflogExpire=0 -c gc.reflogExpireUnreachable=0 -c gc.rerereresolved=0 -c gc.rerereunresolved=0 -c gc.pruneExpire=now gc
-	rootcd = rev-parse --show-toplevel
-	force-push = push --force-if-includes --force-with-lease
+  rootcd = rev-parse --show-toplevel
+  force-push = push --force-if-includes --force-with-lease
 
 [rerere]
   enabled = 1
@@ -54,18 +54,23 @@
 [status]
   submoduleSummary = true
 [pull]
-	rebase = true
+  rebase = true
 
 # [url "git@github.com:"]
-# 	insteadOf = https://github.com/
+#   insteadOf = https://github.com/
 [magit]
-	hideCampaign = true
+  hideCampaign = true
 [commit]
-	gpgsign = true
+  gpgsign = true
 [filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
 [init]
-	defaultBranch = main
+  defaultBranch = main
+
+
+[tig "color"]
+  # A strange looking cursor line
+  cursor    = white  black bold
