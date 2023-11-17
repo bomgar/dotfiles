@@ -22,23 +22,23 @@ return {
       vim.api.nvim_create_autocmd('LspAttach', {
         desc = 'LSP actions',
         callback = function(event)
-          local opts = {buffer = event.buf}
+          local opts = { buffer = event.buf }
 
           local which_key = require("which-key")
 
           which_key.register({
-            d =  {'<cmd>lua vim.lsp.buf.definition()<cr>', "goto definition (lsp)"},
-            D =  {'<cmd>lua vim.lsp.buf.declaration()<cr>', "goto declaration (lsp)"},
-            i =  {'<cmd>lua vim.lsp.buf.implementation()<cr>', "goto implementation (lsp)"},
-            o =  {'<c>md>lua vim.lsp.buf.type_definition()<cr>', "goto type definition (lsp)"},
-            r =  {'<cmd>lua vim.lsp.buf.references()<cr>', "references (lsp)"},
-            s =  {'<cmd>lua vim.lsp.buf.signature_help()<cr>', "signature help (lsp)"},
-            l = {'<cmd>lua vim.diagnostic.open_float()<cr>', "open diagnostic (lsp)"}
-          }, {prefix="g", buffer=event.buf})
+            d = { '<cmd>lua vim.lsp.buf.definition()<cr>', "goto definition (lsp)" },
+            D = { '<cmd>lua vim.lsp.buf.declaration()<cr>', "goto declaration (lsp)" },
+            i = { '<cmd>lua vim.lsp.buf.implementation()<cr>', "goto implementation (lsp)" },
+            o = { '<cmd>lua vim.lsp.buf.type_definition()<cr>', "goto type definition (lsp)" },
+            r = { '<cmd>lua vim.lsp.buf.references()<cr>', "references (lsp)" },
+            s = { '<cmd>lua vim.lsp.buf.signature_help()<cr>', "signature help (lsp)" },
+            l = { '<cmd>lua vim.diagnostic.open_float()<cr>', "open diagnostic (lsp)" }
+          }, { prefix = "g", buffer = event.buf })
 
           which_key.register({
-            ["."] = {'<cmd>lua vim.lsp.buf.code_action()<cr>', "code action (lsp)"}
-          }, {prefix="<leader>", buffer=event.buf})
+            ["."] = { '<cmd>lua vim.lsp.buf.code_action()<cr>', "code action (lsp)" }
+          }, { prefix = "<leader>", buffer = event.buf })
 
           vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
           vim.keymap.set('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
@@ -56,8 +56,8 @@ return {
       end
 
       require('mason').setup({})
-      require ('mason-nvim-dap').setup({
-        ensure_installed = {'codelldb'},
+      require('mason-nvim-dap').setup({
+        ensure_installed = { 'codelldb' },
         handlers = {}, -- sets up dap in the predefined manner
       })
 
@@ -87,7 +87,7 @@ return {
         },
         handlers = {
           default_setup,
-          yamlls = function ()
+          yamlls = function()
             require('lspconfig').yamlls.setup({
               capabilities = lsp_capabilities,
               settings = {
@@ -120,7 +120,7 @@ return {
                     version = 'LuaJIT'
                   },
                   diagnostics = {
-                    globals = {'vim'},
+                    globals = { 'vim' },
                   },
                   workspace = {
                     library = {
@@ -146,7 +146,6 @@ return {
           end,
         },
       })
-
     end
   }
 }
