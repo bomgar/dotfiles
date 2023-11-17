@@ -12,6 +12,13 @@ return {
       which_key.setup { }
       which_key.register({
         e = {"<cmd>NvimTreeToggle<CR>", "Toggle NvimTree"},
+        d = {
+          name = "diffview",
+          o = {"<cmd>DiffviewOpen<CR>", "open"},
+          c = {"<cmd>DiffviewClose<CR>", "close"},
+          h = {"<cmd>DiffviewFileHistory<CR>", "history"},
+          f = {"<cmd>DiffviewFileHistory %<CR>", "file history"},
+        },
         f = {
           name = "+find",
           f = {"<cmd>Telescope find_files<CR>", "Find File"},
