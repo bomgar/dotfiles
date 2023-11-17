@@ -1,6 +1,7 @@
 return {
   {
     "ThePrimeagen/harpoon",
+    enabled = not vim.g.vscode,
     dependencies = { 'nvim-telescope/telescope.nvim' },
     event="VeryLazy",
     config = function ()

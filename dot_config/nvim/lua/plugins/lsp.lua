@@ -1,6 +1,7 @@
 return {
   {
     "williamboman/mason.nvim",
+    enabled = not vim.g.vscode,
     dependencies = {
       "simrat39/rust-tools.nvim",
       "nvim-lua/plenary.nvim",
