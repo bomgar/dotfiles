@@ -78,6 +78,7 @@ return {
           "astro",
           "cssls",
           "cssmodules_ls",
+          "gopls",
           "html",
           "lua_ls",
           "rust_analyzer",
