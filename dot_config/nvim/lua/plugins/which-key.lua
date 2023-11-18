@@ -22,12 +22,15 @@ return {
         f = {
           name = "+find",
           f = {"<cmd>Telescope find_files<CR>", "Find File"},
+          c = {"<cmd>Telescope command_history<CR>", "command history"},
+          a = {"<cmd>Telescope builtin<CR>", "all pickers"},
           g = {"<cmd>Telescope live_grep<CR>", "Live Grep"},
           b = {"<cmd>Telescope buffers<CR>", "Buffers"},
           ["?"] = {"<cmd>Telescope help_tags<CR>", "Help Tags"},
           h = {"<cmd>Telescope harpoon marks<CR>", "Harpoon Marks"},
           m = {"<cmd>Telescope marks<CR>", "Marks"},
           j = {"<cmd>Telescope jumplist<CR>", "Jumplist"},
+          q = {"<cmd>Telescope quickfix<CR>", "quickfix"},
         },
         c = {
           name="text-case",
