@@ -113,6 +113,24 @@ return {
               }
             })
           end,
+          gopls = function ()
+            require('lspconfig').gopls.setup({
+              capabilities = lsp_capabilities,
+              settings = {
+                gopls = {
+                  analyses = {
+                    fieldalignment = true,
+                    nilness = true,
+                    unusedparams = true,
+                    unusedwrite = true,
+                    useany = true,
+                  },
+                  usePlaceholders = true,
+                  semanticTokens = true,
+                },
+              }
+            })
+          end
         }
       })
 
