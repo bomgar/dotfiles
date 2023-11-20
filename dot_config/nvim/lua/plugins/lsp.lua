@@ -7,14 +7,7 @@ return {
       "nvim-lua/plenary.nvim",
       "hrsh7th/cmp-nvim-lsp",
       "neovim/nvim-lspconfig",
-      {
-        "leoluz/nvim-dap-go",
-        config = true,
-      },
       "williamboman/mason-lspconfig.nvim",
-      "mfussenegger/nvim-dap",
-      "rcarriga/nvim-dap-ui",
-      "jay-babu/mason-nvim-dap.nvim",
       "folke/neodev.nvim",
     },
     config = function()
@@ -60,25 +53,6 @@ return {
       end
 
       require('mason').setup({})
-      require('mason-nvim-dap').setup({
-        ensure_installed = {
-          'codelldb',
-          'delve',
-        },
-        handlers = {}, -- sets up dap in the predefined manner
-      })
-
-      local dap, dapui = require("dap"), require("dapui")
-      dapui.setup({})
-      dap.listeners.after.event_initialized["dapui_config"] = function()
-        dapui.open()
-      end
-      dap.listeners.before.event_terminated["dapui_config"] = function()
-        dapui.close()
-      end
-      dap.listeners.before.event_exited["dapui_config"] = function()
-        dapui.close()
-      end
 
       require('mason-lspconfig').setup({
         ensure_installed = {
