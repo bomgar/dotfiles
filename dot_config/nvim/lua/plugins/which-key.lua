@@ -22,6 +22,7 @@ return {
         f = {
           name = "+find",
           f = {function() require('telescope.builtin').find_files() end, "Find File"},
+          ["."] = {function() require('telescope.builtin').find_files({hidden=true}) end, "Find hidden files"},
           c = {function() require('telescope.builtin').command_history() end, "command history"},
           a = {function() require('telescope.builtin').builtin() end, "all pickers"},
           g = {function() require('telescope.builtin').live_grep() end, "Live Grep"},
