@@ -52,6 +52,7 @@ return {
           name = "+test",
           r = {function() require("neotest").run.run() end, "Run test"},
           d = {function() require("neotest").run.run({strategy = "dap"}) end, "Debug test"},
+          g = {function() require('dap-go').debug_test() end, "Debug go test"},
           f = {function() require("neotest").run.run(vim.fn.expand("%")) end, "Run current file"},
           p = {"<cmd>Neotest output-panel<CR>", "Output panel"},
           o = {"<cmd>Neotest output<CR>", "Output"},

@@ -7,6 +7,10 @@ return {
       "nvim-lua/plenary.nvim",
       "hrsh7th/cmp-nvim-lsp",
       "neovim/nvim-lspconfig",
+      {
+        "leoluz/nvim-dap-go",
+        config = true,
+      },
       "williamboman/mason-lspconfig.nvim",
       "mfussenegger/nvim-dap",
       "rcarriga/nvim-dap-ui",
@@ -57,7 +61,10 @@ return {
 
       require('mason').setup({})
       require('mason-nvim-dap').setup({
-        ensure_installed = { 'codelldb' },
+        ensure_installed = {
+          'codelldb',
+          'delve',
+        },
         handlers = {}, -- sets up dap in the predefined manner
       })
 
