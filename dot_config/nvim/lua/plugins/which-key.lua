@@ -19,6 +19,14 @@ return {
           h = {"<cmd>DiffviewFileHistory<CR>", "history"},
           f = {"<cmd>DiffviewFileHistory %<CR>", "file history"},
         },
+        b = {
+          name = "debug",
+          c = {function() require('dap').continue() end, "continue"},
+          o = {function() require('dap').step_over() end, "step over"},
+          i = {function() require('dap').step_into() end, "step into"},
+          e = {function() require('dap').step_out() end, "step out"},
+          b = {function() require('dap').toggle_breakpoint() end, "toggle breakpoint"},
+        },
         f = {
           name = "+find",
           f = {function() require('telescope.builtin').find_files() end, "Find File"},
