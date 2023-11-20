@@ -26,27 +26,27 @@ style = "bold blue"
 format="[$time]($style) "
 
 [aws]
-style = "bold #E06C75"
+style = "bold #f38ba8"
 
 [cmd_duration]
-style = "bold #E5C07B"
+style = "bold #f9e2af"
 min_time=6_000
 
 [directory]
-style = "bold #98C379"
+style = "bold #a6e3a1"
 
 [git_branch]
-style = "bold #C678DD"
+style = "bold #cba6f7"
 
 [git_status]
-style = "bold #E06C75"
+style = "bold #f38ba8"
 
 [hostname]
-style = "bold #C678DD"
+style = "bold #cba6f7"
 
 [username]
 format = "[$user]($style) on "
-style_user = "bold #61AFEF"
+style_user = "bold #74c7ec"
 
 [kubernetes]
 disabled = true

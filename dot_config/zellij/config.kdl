@@ -91,29 +91,16 @@ pane_frames false
 // Once these themes are defined, one of them should to be selected in the "theme" section of this file
 //
 themes {
-    dracula {
-        fg 248 248 242
-        bg 40 42 54
-        red 255 85 85
-        green 80 250 123
-        yellow 241 250 140
-        blue 98 114 164
-        magenta 255 121 198
-        orange 255 184 108
-        cyan 139 233 253
-        black 22 23 29
-        white 248 248 242
-    }
-    onedark {
+    catppuccin {
         fg 246 247 249
         bg 40 44 52
-        red 224 108 117
-        green 152 195 121
-        yellow 229 192 123
-        blue 97 175 239
-        magenta 198 120 221
-        orange 209 154 102
-        cyan 86 182 194
+        red "#f38ba8"
+        green "#a6e3a1"
+        blue "#89b4fa"
+        yellow "#f9e2af"
+        magenta "#f5c2e7" // Pink
+        orange "#fab387" // Peach
+        cyan "#89dceb" // Sky
         black 40 44 52
         white 246 247 249
     }
@@ -122,7 +109,7 @@ themes {
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
- theme "onedark"
+ theme "catppuccin"
 
 // The name of the default layout to load on startup
 // Default: "default"

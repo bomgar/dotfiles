@@ -7,7 +7,7 @@ return {
     event = "VeryLazy",
     config = function()
       require('lualine').setup({
-        theme = 'onedark'
+        theme = 'auto'
       })
     end,
   },

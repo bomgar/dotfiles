@@ -36,14 +36,14 @@ config.mouse_bindings = {
 
 
 -- For example, changing the color scheme:
-local one_dark = wezterm.color.get_builtin_schemes()['OneDark (base16)']
+local one_dark = wezterm.color.get_builtin_schemes()['catppuccin-mocha']
 one_dark.background = "#1E2127"
 
 config.color_schemes = {
   ['OneDark'] = one_dark,
 }
 
-config.color_scheme = 'OneDark'
+config.color_scheme = 'catppuccin-mocha'
 
 config.enable_tab_bar = false
 
