@@ -21,7 +21,7 @@ config.font = wezterm.font_with_fallback {
   { family = 'Noto Sans Mono' },
 }
 
-config.font_size=13.0
+config.font_size=12.0
 
 config.underline_position=-2
 config.warn_about_missing_glyphs=false
