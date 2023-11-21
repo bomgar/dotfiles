@@ -52,11 +52,6 @@ return {
         end
       })
 
-      local default_setup = function(server)
-        lspconfig[server].setup({
-          capabilities = lsp_capabilities,
-        })
-      end
 
       require('mason').setup({})
 
@@ -74,7 +69,36 @@ return {
           "yamlls",
         },
         handlers = {
-          default_setup,
+          astro = function()
+            require('lspconfig').astro.setup({
+              capabilities = lsp_capabilities,
+            })
+          end,
+          cssls = function()
+            require('lspconfig').cssls.setup({
+              capabilities = lsp_capabilities,
+            })
+          end,
+          cssmodules_ls = function()
+            require('lspconfig').cssmodules_ls.setup({
+              capabilities = lsp_capabilities,
+            })
+          end,
+          html = function()
+            require('lspconfig').html.setup({
+              capabilities = lsp_capabilities,
+            })
+          end,
+          svelte = function()
+            require('lspconfig').svelte.setup({
+              capabilities = lsp_capabilities,
+            })
+          end,
+          tsserver = function()
+            require('lspconfig').tsserver.setup({
+              capabilities = lsp_capabilities,
+            })
+          end,
           yamlls = function()
             require('lspconfig').yamlls.setup({
               capabilities = lsp_capabilities,
