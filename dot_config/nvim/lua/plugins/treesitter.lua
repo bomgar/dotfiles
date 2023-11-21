@@ -16,6 +16,7 @@ return{
           "bash",
           "c",
           "css",
+          "csv",
           "diff",
           "dockerfile",
           "git_config",
