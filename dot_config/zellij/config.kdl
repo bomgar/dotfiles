@@ -92,8 +92,8 @@ pane_frames false
 //
 themes {
     catppuccin {
-        fg 246 247 249
-        bg 40 44 52
+        fg "#f6f7f9"
+        bg "#1e1e2e"
         red "#f38ba8"
         green "#a6e3a1"
         blue "#89b4fa"
@@ -101,8 +101,8 @@ themes {
         magenta "#f5c2e7" // Pink
         orange "#fab387" // Peach
         cyan "#89dceb" // Sky
-        black 40 44 52
-        white 246 247 249
+        black "#1e1e2e"
+        white "#f6f7f9"
     }
 }
 
