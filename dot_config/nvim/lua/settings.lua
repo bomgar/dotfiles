@@ -96,8 +96,8 @@ vim.o.errorbells = false
 
 vim.o.history = 500
 
-vim.o.list = true
-vim.o.listchars = "tab:▸ ,extends:❯,precedes:❮,nbsp:␣"
+vim.o.list = false
+vim.o.listchars = "tab:▸ ,extends:❯,precedes:❮,nbsp:␣,eol:¶"
 
 vim.o.autowrite = true
 
