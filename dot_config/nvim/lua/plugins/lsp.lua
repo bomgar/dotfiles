@@ -67,8 +67,14 @@ return {
           "svelte",
           "tsserver",
           "yamlls",
+          "bashls",
         },
         handlers = {
+          bashls = function()
+            require('lspconfig').bashls.setup({
+              capabilities = lsp_capabilities,
+            })
+          end,
           astro = function()
             require('lspconfig').astro.setup({
               capabilities = lsp_capabilities,
