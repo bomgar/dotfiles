@@ -1,7 +1,29 @@
-source ~/.vimrc
+
+
+""" Map leader to space ---------------------
+let mapleader=" "
+
+""" Plugins  --------------------------------
+set surround
+set multiple-cursors
+set easymotion
+
+""" Plugin settings -------------------------
+let g:argtextobj_pairs="[:],(:),<:>"
+
+""" Common settings -------------------------
+set showmode
+set so=5
+set incsearch
+set nu
+
+""" Idea specific settings ------------------
+set ideajoin
+set idearefactormode=keep
+
+""" Mappings --------------------------------
+
 nmap <C-H> :action VimMotionPreviousTab<CR>
 nmap <C-L> :action VimMotionNextTab<CR>
 
-set surround
-set multiple-cursors
-
+map s <Plug>(easymotion-jumptoanywhere)
