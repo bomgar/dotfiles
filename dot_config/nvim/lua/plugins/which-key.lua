@@ -11,6 +11,12 @@ return {
       local which_key = require("which-key")
       which_key.setup { }
       which_key.register({
+        f = {
+          name = "+find",
+          s = {function() require('telescope.builtin').grep_string() end, "Grep word under cursor"},
+        }
+      }, { prefix = "<leader>", mode="v" })
+      which_key.register({
         e = {"<cmd>NvimTreeToggle<CR>", "Toggle NvimTree"},
         d = {
           name = "diffview",
@@ -30,6 +36,7 @@ return {
         f = {
           name = "+find",
           f = {function() require('telescope.builtin').find_files() end, "Find File"},
+          s = {function() require('telescope.builtin').grep_string() end, "Grep word under cursor"},
           ["."] = {function() require('telescope.builtin').find_files({hidden=true}) end, "Find hidden files"},
           c = {function() require('telescope.builtin').command_history() end, "command history"},
           a = {function() require('telescope.builtin').builtin() end, "all pickers"},
