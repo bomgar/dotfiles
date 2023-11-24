@@ -30,13 +30,13 @@ return {
           local which_key = require("which-key")
 
           which_key.register({
-            d = { '<cmd>lua vim.lsp.buf.definition()<cr>', "goto definition (lsp)" },
-            D = { '<cmd>lua vim.lsp.buf.declaration()<cr>', "goto declaration (lsp)" },
-            i = { '<cmd>lua vim.lsp.buf.implementation()<cr>', "goto implementation (lsp)" },
-            o = { '<cmd>lua vim.lsp.buf.type_definition()<cr>', "goto type definition (lsp)" },
-            r = { '<cmd>lua vim.lsp.buf.references()<cr>', "references (lsp)" },
-            s = { '<cmd>lua vim.lsp.buf.signature_help()<cr>', "signature help (lsp)" },
-            l = { '<cmd>lua vim.diagnostic.open_float()<cr>', "open diagnostic (lsp)" }
+            d = { vim.lsp.buf.definition, "goto definition (lsp)" },
+            D = { vim.lsp.buf.declaration, "goto declaration (lsp)" },
+            i = { vim.lsp.buf.implementation, "goto implementation (lsp)" },
+            o = { vim.lsp.buf.type_definition, "goto type definition (lsp)" },
+            r = { vim.lsp.buf.references, "references (lsp)" },
+            s = { vim.lsp.buf.signature_help, "signature help (lsp)" },
+            l = { vim.diagnostic.open_float, "open diagnostic (lsp)" }
           }, { prefix = "g", buffer = event.buf })
 
           which_key.register({
@@ -170,16 +170,27 @@ return {
           rust_analyzer = function ()
 
             local rt = require("rust-tools")
+            local extension_path = require('mason-registry').get_package('codelldb'):get_install_path()
+            local codelldb_path = extension_path .. '/extension/adapter/codelldb'
+            local liblldb_path = extension_path .. '/extension/lldb/lib/liblldb.so'
 
             rt.setup({
               server = {
                 on_attach = function(_, bufnr)
-                  -- Hover actions
-                  vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
-                  -- Code action groups
-                  vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
+                  local which_key = require("which-key")
+
+                  which_key.register({
+                    r = {
+                      "rust",
+                      ["r"] = {rt.hover_actions.hover_actions, "hover actions"},
+                      ["."] = {rt.hover_actions.code_action_group, "code actions"},
+                    }
+                  }, { prefix = "<leader>", buffer = bufnr })
                 end,
               },
+              dap = {
+                adapter = require('rust-tools.dap').get_codelldb_adapter( codelldb_path, liblldb_path)
+              }
             })
           end,
         }
