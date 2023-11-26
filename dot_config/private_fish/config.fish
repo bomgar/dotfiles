@@ -23,6 +23,8 @@ if status is-interactive
   bind -M insert \cn down-or-search
   bind -M insert \cf accept-autosuggestion
 
+  fzf_key_bindings
+
   if test -x (command -v fw)
     if test -x (command -v fzf)
       fw print-fish-setup -f | source
@@ -54,6 +56,7 @@ if status is-interactive
   set -x WORDCHARS '*?_-.[]~=&;!#$%^(){}<>'
   set -x PATH ~/bin ~/.cargo/bin ~/go/bin $PATH
   set -x GOPATH ~/go
+  set -x FZF_DEFAULT_OPTS "--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8  --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 
 
 end
