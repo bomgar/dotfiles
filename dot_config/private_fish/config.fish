@@ -24,16 +24,14 @@ if status is-interactive
   bind -M insert \cf accept-autosuggestion
 
   if test -x (command -v fw)
-    if test -x (command -v sk)
-      fw print-fish-setup -s | source
+    if test -x (command -v fzf)
+      fw print-fish-setup -f | source
     else
       fw print-fish-setup | source
     end
   end
 
   starship init fish | source
-
-  bind \cr 'fzf_history_widget'
 
   functions -e ls
   functions -e la
