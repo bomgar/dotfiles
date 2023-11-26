@@ -10,6 +10,7 @@ if status is-interactive
   set fish_cursor_insert line blink
   # Set the replace mode cursor to an underscore
   set fish_cursor_replace_one underscore blink
+  set fish_cursor_replace underscore blink
   # The following variable can be used to configure cursor shape in
   # visual mode, but due to fish_cursor_default, is redundant here
   set fish_cursor_visual block blink
