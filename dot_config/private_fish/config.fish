@@ -33,17 +33,22 @@ if status is-interactive
     end
   end
 
-  starship init fish | source
+  if test -x (command -v starship)
+    starship init fish | source
+  end
 
-  functions -e ls
-  functions -e la
-  functions -e ll
-  functions -e lt
+  if test -x (command -v eza)
+    functions -e ls
+    functions -e la
+    functions -e ll
+    functions -e lt
 
-  alias ls "command eza --icons=auto"
-  alias la "command eza -la --icons=auto"
-  alias ll "command eza -l --icons=auto"
-  alias lt "command eza --tree --icons=auto"
+    alias ls "command eza --icons=auto"
+    alias la "command eza -la --icons=auto"
+    alias ll "command eza -l --icons=auto"
+    alias lt "command eza --tree --icons=auto"
+  end
+
   alias zbn "zellij action rename-tab (basename (pwd))"
   alias vim nvim
   alias pwn-docker 'docker rm -f (docker ps -a -q)'
