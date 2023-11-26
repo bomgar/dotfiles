@@ -19,6 +19,7 @@ return{
           "csv",
           "diff",
           "dockerfile",
+          "fish",
           "git_config",
           "git_config",
           "git_rebase",
