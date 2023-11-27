@@ -23,7 +23,9 @@ if status is-interactive
   bind -M insert \cn down-or-search
   bind -M insert \cf accept-autosuggestion
 
-  fzf_key_bindings
+  if test -x (command -v fzf)
+    fzf_key_bindings
+  end
 
   if test -x (command -v fw)
     if test -x (command -v fzf)
@@ -50,10 +52,11 @@ if status is-interactive
   end
 
   alias zbn "zellij action rename-tab (basename (pwd))"
-  alias vim nvim
   alias pwn-docker 'docker rm -f (docker ps -a -q)'
   alias back-to-master "git checkout (git remote show origin | awk '/HEAD branch/ { print \$3 }') && git uff && git-trim"
-  alias gst "git status"
+
+  abbr --add gst "git status"
+  abbr --add vim nvim
 
   set -x SUDO_EDITOR nvim
   set -x EDITOR nvim
