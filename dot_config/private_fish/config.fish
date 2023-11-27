@@ -28,9 +28,7 @@ if status is-interactive
   end
 
   if test -x (command -v fw)
-    if test -x (command -v sk)
-      fw print-fish-setup -s | source
-    else if test -x (command -v fzf)
+    if test -x (command -v fzf)
       fw print-fish-setup -f | source
     else
       fw print-fish-setup | source
