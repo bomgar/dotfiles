@@ -35,8 +35,8 @@ config.mouse_bindings = {
 }
 
 
-config.color_scheme = 'catppuccin-mocha'
-config.force_reverse_video_cursor = true
+config.color_scheme = "Catppuccin Mocha"
+--config.force_reverse_video_cursor = true
 
 
 config.enable_tab_bar = false
