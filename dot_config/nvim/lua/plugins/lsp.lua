@@ -3,7 +3,6 @@ return {
     "williamboman/mason.nvim",
     enabled = not vim.g.vscode,
     dependencies = {
-      "simrat39/rust-tools.nvim",
       "nvim-lua/plenary.nvim",
       "hrsh7th/cmp-nvim-lsp",
       "neovim/nvim-lspconfig",
@@ -168,29 +167,8 @@ return {
             })
           end,
           rust_analyzer = function ()
-
-            local rt = require("rust-tools")
-            local extension_path = require('mason-registry').get_package('codelldb'):get_install_path()
-            local codelldb_path = extension_path .. '/extension/adapter/codelldb'
-            local liblldb_path = extension_path .. '/extension/lldb/lib/liblldb.so'
-
-            rt.setup({
-              server = {
-                on_attach = function(_, bufnr)
-                  local which_key = require("which-key")
-
-                  which_key.register({
-                    r = {
-                      "rust",
-                      ["r"] = {rt.hover_actions.hover_actions, "hover actions"},
-                      ["."] = {rt.hover_actions.code_action_group, "code actions"},
-                    }
-                  }, { prefix = "<leader>", buffer = bufnr })
-                end,
-              },
-              dap = {
-                adapter = require('rust-tools.dap').get_codelldb_adapter( codelldb_path, liblldb_path)
-              }
+            require('lspconfig').rust_analyzer.setup({
+              capabilities = lsp_capabilities,
             })
           end,
         }
