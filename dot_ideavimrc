@@ -26,4 +26,4 @@ set idearefactormode=keep
 nmap <C-H> :action VimMotionPreviousTab<CR>
 nmap <C-L> :action VimMotionNextTab<CR>
 
-map s <Plug>(easymotion-jumptoanywhere)
+map <leader>s <Plug>(easymotion-jumptoanywhere)
