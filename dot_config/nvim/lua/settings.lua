@@ -64,7 +64,7 @@ vim.o.expandtab = true
 
 if not vim.g.vscode then
   vim.opt.spelllang = 'en_us'
-  vim.opt.spell = true
+  vim.opt.spell = false
 end
 
 vim.o.nu = true
@@ -118,9 +118,6 @@ vim.o.pumheight = 10
 vim.o.pumblend = 10
 
 vim.o.complete = "kspell"
-
-vim.o.spelllang = "en,de"
-vim.o.spellsuggest = "9"
 
 vim.o.shiftround = true
 
