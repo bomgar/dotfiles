@@ -107,6 +107,12 @@ return {
           yamlls = function()
             require('lspconfig').yamlls.setup({
               capabilities = lsp_capabilities,
+              on_attach = function(_, bufnr)
+                if vim.bo[bufnr].buftype ~= "" or vim.bo[bufnr].filetype == "helm" then
+                  vim.diagnostic.disable()
+                end
+              end,
+
               settings = {
                 yaml = {
                   schemas = {
