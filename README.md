@@ -1,0 +1,6 @@
+# Dotfiles
+
+```bash
+chezmoi apply
+```
+
