@@ -1,5 +1,5 @@
 # -*- mode: Conf; -*-
-after_workon = 'nvm use'
+after_workon = 'fnm use'
 
 # Example:
 # after_clone = 'echo after clone from tag'

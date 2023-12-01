@@ -26,6 +26,9 @@ if status is-interactive
   if test -x (command -v fzf)
     fzf_key_bindings
   end
+  if test -x (command -v fnm)
+    fnm env | source
+  end
 
   if test -x (command -v fw)
     if test -x (command -v fzf)
