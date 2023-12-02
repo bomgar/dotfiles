@@ -37,6 +37,7 @@ return{
           "jsdoc",
           "json",
           "jsonc",
+          "kdl",
           "kotlin",
           "lua",
           "luadoc",
