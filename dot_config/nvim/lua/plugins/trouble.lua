@@ -1,6 +1,6 @@
 return {
-  {
-    "folke/trouble.nvim",
-    enabled = not vim.g.vscode,
-  }
+    {
+        "folke/trouble.nvim",
+        enabled = not vim.g.vscode,
+    },
 }

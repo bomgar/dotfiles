@@ -1,5 +1,4 @@
-
 return {
 
-  { "preservim/vim-markdown", ft = { "markdown" } },
+    { "preservim/vim-markdown", ft = { "markdown" } },
 }

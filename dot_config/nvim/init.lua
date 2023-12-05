@@ -4,6 +4,3 @@ local version = vim.version
 
 require("settings")
 require("init-lazy")
-
-
-

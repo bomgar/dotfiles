@@ -1,5 +1,4 @@
-
 return {
-  -- better UI for some nvim actions
-  { "stevearc/dressing.nvim" },
+    -- better UI for some nvim actions
+    { "stevearc/dressing.nvim" },
 }

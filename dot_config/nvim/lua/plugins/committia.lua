@@ -1,4 +1,4 @@
 return {
-  -- Better git commit experience
-  { "rhysd/committia.vim" },
+    -- Better git commit experience
+    { "rhysd/committia.vim" },
 }

@@ -1,179 +1,173 @@
 return {
-  {
-    "williamboman/mason.nvim",
-    enabled = not vim.g.vscode,
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "hrsh7th/cmp-nvim-lsp",
-      "neovim/nvim-lspconfig",
-      "williamboman/mason-lspconfig.nvim",
-      "folke/neodev.nvim",
-    },
-    config = function()
-      require("neodev").setup({})
-
-      local lspconfig = require('lspconfig')
-
-      local lsp_capabilities = vim.tbl_deep_extend(
-        "force",
-        {},
-        vim.lsp.protocol.make_client_capabilities(),
-        require('cmp_nvim_lsp').default_capabilities()
-      )
-
-      vim.api.nvim_create_autocmd('LspAttach', {
-        desc = 'LSP actions',
-        callback = function(event)
-          local opts = { buffer = event.buf }
-
-          local which_key = require("which-key")
-
-          which_key.register({
-            d = { vim.lsp.buf.definition, "goto definition (lsp)" },
-            D = { vim.lsp.buf.declaration, "goto declaration (lsp)" },
-            i = { vim.lsp.buf.implementation, "goto implementation (lsp)" },
-            o = { vim.lsp.buf.type_definition, "goto type definition (lsp)" },
-            r = { vim.lsp.buf.references, "references (lsp)" },
-            s = { vim.lsp.buf.signature_help, "signature help (lsp)" },
-            l = { vim.diagnostic.open_float, "open diagnostic (lsp)" }
-          }, { prefix = "g", buffer = event.buf })
-
-          which_key.register({
-            ["."] = { '<cmd>lua vim.lsp.buf.code_action()<cr>', "code action (lsp)" }
-          }, { prefix = "<leader>", buffer = event.buf })
-
-          vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
-          vim.keymap.set('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
-          vim.keymap.set('n', '<F3>', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
-
-          vim.keymap.set('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>', opts)
-          vim.keymap.set('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>', opts)
-        end
-      })
-
-
-      require('mason').setup({})
-
-      require('mason-lspconfig').setup({
-        ensure_installed = {
-          "astro",
-          "cssls",
-          "cssmodules_ls",
-          "gopls",
-          "html",
-          "lua_ls",
-          "rust_analyzer",
-          "svelte",
-          "tsserver",
-          "yamlls",
-          "bashls",
+    {
+        "williamboman/mason.nvim",
+        enabled = not vim.g.vscode,
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "hrsh7th/cmp-nvim-lsp",
+            "neovim/nvim-lspconfig",
+            "williamboman/mason-lspconfig.nvim",
+            "folke/neodev.nvim",
         },
-        handlers = {
-          bashls = function()
-            require('lspconfig').bashls.setup({
-              capabilities = lsp_capabilities,
-            })
-          end,
-          astro = function()
-            require('lspconfig').astro.setup({
-              capabilities = lsp_capabilities,
-            })
-          end,
-          cssls = function()
-            require('lspconfig').cssls.setup({
-              capabilities = lsp_capabilities,
-            })
-          end,
-          cssmodules_ls = function()
-            require('lspconfig').cssmodules_ls.setup({
-              capabilities = lsp_capabilities,
-            })
-          end,
-          html = function()
-            require('lspconfig').html.setup({
-              capabilities = lsp_capabilities,
-            })
-          end,
-          svelte = function()
-            require('lspconfig').svelte.setup({
-              capabilities = lsp_capabilities,
-            })
-          end,
-          tsserver = function()
-            require('lspconfig').tsserver.setup({
-              capabilities = lsp_capabilities,
-            })
-          end,
-          yamlls = function()
-            require('lspconfig').yamlls.setup({
-              capabilities = lsp_capabilities,
-              settings = {
-                yaml = {
-                  schemas = {
-                    ["http://json.schemastore.org/github-workflow"] = ".github/workflows/*",
-                    ["http://json.schemastore.org/github-action"] = ".github/action.{yml,yaml}",
-                    ["http://json.schemastore.org/ansible-stable-2.9"] = "roles/tasks/*.{yml,yaml}",
-                    ["http://json.schemastore.org/prettierrc"] = ".prettierrc.{yml,yaml}",
-                    ["http://json.schemastore.org/kustomization"] = "kustomization.{yml,yaml}",
-                    ["http://json.schemastore.org/ansible-playbook"] = "*play*.{yml,yaml}",
-                    ["http://json.schemastore.org/chart"] = "Chart.{yml,yaml}",
-                    ["https://json.schemastore.org/dependabot-v2"] = ".github/dependabot.{yml,yaml}",
-                    ["https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = "*gitlab-ci*.{yml,yaml}",
-                    ["https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/schemas/v3.1/schema.json"] = "*api*.{yml,yaml}",
-                    ["https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json"] = "*docker-compose*.{yml,yaml}",
-                    ["https://raw.githubusercontent.com/argoproj/argo-workflows/master/api/jsonschema/schema.json"] = "*flow*.{yml,yaml}",
-                    --kubernetes = "*.yaml",
-                  },
-                }
-              }
-            })
-          end,
-          lua_ls = function()
-            require('lspconfig').lua_ls.setup({
-              capabilities = lsp_capabilities,
-              settings = {
-                Lua = {
-                  runtime = {
-                    version = 'LuaJIT'
-                  },
-                  diagnostics = {
-                    globals = { 'vim' },
-                  },
-                  workspace = {
-                    library = {
-                      vim.env.VIMRUNTIME,
-                    }
-                  }
-                }
-              }
-            })
-          end,
-          gopls = function ()
-            require('lspconfig').gopls.setup({
-              capabilities = lsp_capabilities,
-              settings = {
-                gopls = {
-                  analyses = {
-                    fieldalignment = true,
-                    nilness = true,
-                    unusedparams = true,
-                    unusedwrite = true,
-                    useany = true,
-                  },
-                  usePlaceholders = true,
-                  semanticTokens = true,
-                },
-              }
-            })
-          end,
-          rust_analyzer = function ()
-            require('lspconfig').rust_analyzer.setup({
-              capabilities = lsp_capabilities,
-            })
-          end,
-        }
-      })
+        config = function()
+            require("neodev").setup({})
 
-    end
-  }
+            local lspconfig = require("lspconfig")
+
+            local lsp_capabilities =
+                vim.tbl_deep_extend("force", {}, vim.lsp.protocol.make_client_capabilities(), require("cmp_nvim_lsp").default_capabilities())
+
+            vim.api.nvim_create_autocmd("LspAttach", {
+                desc = "LSP actions",
+                callback = function(event)
+                    local opts = { buffer = event.buf }
+
+                    local which_key = require("which-key")
+
+                    which_key.register({
+                        d = { vim.lsp.buf.definition, "goto definition (lsp)" },
+                        D = { vim.lsp.buf.declaration, "goto declaration (lsp)" },
+                        i = { vim.lsp.buf.implementation, "goto implementation (lsp)" },
+                        o = { vim.lsp.buf.type_definition, "goto type definition (lsp)" },
+                        r = { vim.lsp.buf.references, "references (lsp)" },
+                        s = { vim.lsp.buf.signature_help, "signature help (lsp)" },
+                        l = { vim.diagnostic.open_float, "open diagnostic (lsp)" },
+                    }, { prefix = "g", buffer = event.buf })
+
+                    which_key.register({
+                        ["."] = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "code action (lsp)" },
+                    }, { prefix = "<leader>", buffer = event.buf })
+
+                    vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", opts)
+                    vim.keymap.set("n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
+                    vim.keymap.set("n", "<F3>", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opts)
+
+                    vim.keymap.set("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<cr>", opts)
+                    vim.keymap.set("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<cr>", opts)
+                end,
+            })
+
+            require("mason").setup({})
+
+            require("mason-lspconfig").setup({
+                ensure_installed = {
+                    "astro",
+                    "cssls",
+                    "cssmodules_ls",
+                    "gopls",
+                    "html",
+                    "lua_ls",
+                    "rust_analyzer",
+                    "svelte",
+                    "tsserver",
+                    "yamlls",
+                    "bashls",
+                },
+                handlers = {
+                    bashls = function()
+                        require("lspconfig").bashls.setup({
+                            capabilities = lsp_capabilities,
+                        })
+                    end,
+                    astro = function()
+                        require("lspconfig").astro.setup({
+                            capabilities = lsp_capabilities,
+                        })
+                    end,
+                    cssls = function()
+                        require("lspconfig").cssls.setup({
+                            capabilities = lsp_capabilities,
+                        })
+                    end,
+                    cssmodules_ls = function()
+                        require("lspconfig").cssmodules_ls.setup({
+                            capabilities = lsp_capabilities,
+                        })
+                    end,
+                    html = function()
+                        require("lspconfig").html.setup({
+                            capabilities = lsp_capabilities,
+                        })
+                    end,
+                    svelte = function()
+                        require("lspconfig").svelte.setup({
+                            capabilities = lsp_capabilities,
+                        })
+                    end,
+                    tsserver = function()
+                        require("lspconfig").tsserver.setup({
+                            capabilities = lsp_capabilities,
+                        })
+                    end,
+                    yamlls = function()
+                        require("lspconfig").yamlls.setup({
+                            capabilities = lsp_capabilities,
+                            settings = {
+                                yaml = {
+                                    schemas = {
+                                        ["http://json.schemastore.org/github-workflow"] = ".github/workflows/*",
+                                        ["http://json.schemastore.org/github-action"] = ".github/action.{yml,yaml}",
+                                        ["http://json.schemastore.org/ansible-stable-2.9"] = "roles/tasks/*.{yml,yaml}",
+                                        ["http://json.schemastore.org/prettierrc"] = ".prettierrc.{yml,yaml}",
+                                        ["http://json.schemastore.org/kustomization"] = "kustomization.{yml,yaml}",
+                                        ["http://json.schemastore.org/ansible-playbook"] = "*play*.{yml,yaml}",
+                                        ["http://json.schemastore.org/chart"] = "Chart.{yml,yaml}",
+                                        ["https://json.schemastore.org/dependabot-v2"] = ".github/dependabot.{yml,yaml}",
+                                        ["https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = "*gitlab-ci*.{yml,yaml}",
+                                        ["https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/schemas/v3.1/schema.json"] = "*api*.{yml,yaml}",
+                                        ["https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json"] = "*docker-compose*.{yml,yaml}",
+                                        ["https://raw.githubusercontent.com/argoproj/argo-workflows/master/api/jsonschema/schema.json"] = "*flow*.{yml,yaml}",
+                                        --kubernetes = "*.yaml",
+                                    },
+                                },
+                            },
+                        })
+                    end,
+                    lua_ls = function()
+                        require("lspconfig").lua_ls.setup({
+                            capabilities = lsp_capabilities,
+                            settings = {
+                                Lua = {
+                                    runtime = {
+                                        version = "LuaJIT",
+                                    },
+                                    diagnostics = {
+                                        globals = { "vim" },
+                                    },
+                                    workspace = {
+                                        library = {
+                                            vim.env.VIMRUNTIME,
+                                        },
+                                    },
+                                },
+                            },
+                        })
+                    end,
+                    gopls = function()
+                        require("lspconfig").gopls.setup({
+                            capabilities = lsp_capabilities,
+                            settings = {
+                                gopls = {
+                                    analyses = {
+                                        fieldalignment = true,
+                                        nilness = true,
+                                        unusedparams = true,
+                                        unusedwrite = true,
+                                        useany = true,
+                                    },
+                                    usePlaceholders = true,
+                                    semanticTokens = true,
+                                },
+                            },
+                        })
+                    end,
+                    rust_analyzer = function()
+                        require("lspconfig").rust_analyzer.setup({
+                            capabilities = lsp_capabilities,
+                        })
+                    end,
+                },
+            })
+        end,
+    },
 }
