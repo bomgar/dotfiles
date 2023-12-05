@@ -124,8 +124,6 @@ alias dist-upgrade-cargo='cargo install-update -a'
 unalias ag 2>/dev/null
 alias ag='ag --smart-case --color-line-number "1;34"'
 
-source /usr/share/nvm/init-nvm.sh
-
 export SBT_OPTS="-XX:MaxMetaspaceSize=512M -XX:MetaspaceSize=256M -Xms512M -Xmx2G -XX:+UseG1GC"
 
 alias fbtoggl-delete='fbtoggl time-entries delete --id $(fbtoggl --format json time-entries list | jq .id | sk --preview "fbtoggl --format table time-entries details --id {}")'
@@ -144,6 +142,11 @@ then
   alias la="command eza -la --icons=auto"
   alias ll="command eza -l --icons=auto"
   alias lt="command eza --tree --icons=auto"
+fi;
+
+if [[ -x "$(command -v fnm)" ]];
+then
+  eval "$(fnm env)"
 fi;
 
 # fw
