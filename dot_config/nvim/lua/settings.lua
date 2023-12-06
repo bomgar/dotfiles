@@ -56,9 +56,9 @@ vim.o.backupskip = vim.o.wildignore
 vim.o.backup = true
 vim.o.backupcopy = "yes"
 
-vim.o.tabstop = 2
-vim.o.softtabstop = 2
-vim.o.shiftwidth = 2
+vim.o.tabstop = 4
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
 vim.o.expandtab = true
 
 if not vim.g.vscode then
