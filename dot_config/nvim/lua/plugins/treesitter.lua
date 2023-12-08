@@ -11,6 +11,9 @@ return {
             configs.setup({
                 highlight = { enable = true },
                 indent = { enable = true },
+                matchup = {
+                    enable = true,
+                },
                 ensure_installed = {
                     "astro",
                     "bash",
