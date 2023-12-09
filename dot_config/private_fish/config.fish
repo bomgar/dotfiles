@@ -23,26 +23,26 @@ if status is-interactive
   bind -M insert \cn down-or-search
   bind -M insert \cf accept-autosuggestion
 
-  if test -x (command -v fzf)
+  if command -q fzf
     fzf_key_bindings
   end
-  if test -x (command -v fnm)
+  if command -q fnm
     fnm env | source
   end
 
-  if test -x (command -v fw)
-    if test -x (command -v fzf)
+  if command -q fw
+    if command -q fzf
       fw print-fish-setup -f | source
     else
       fw print-fish-setup | source
     end
   end
 
-  if test -x (command -v starship)
+  if command -q starship
     starship init fish | source
   end
 
-  if test -x (command -v eza)
+  if command -q eza
     functions -e ls
     functions -e la
     functions -e ll
