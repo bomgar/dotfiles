@@ -136,6 +136,15 @@ return {
                     name = "text-case",
                     t = { "<cmd>TextCaseOpenTelescope<CR>", "Telescope" },
                 },
+                x = {
+                    name = "inspect", -- Group name
+                    t = {
+                        function()
+                            require("trouble").toggle()
+                        end,
+                        "Toggle trouble",
+                    },
+                },
                 h = {
                     name = "harpoon", -- Group name
                     a = {
