@@ -3,6 +3,8 @@
 """ Map leader to space ---------------------
 let mapleader=" "
 
+set ignorecase
+
 """ Plugins  --------------------------------
 set surround
 set multiple-cursors
