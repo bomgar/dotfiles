@@ -56,6 +56,7 @@ return {
                     "sql",
                     "ssh_config",
                     "svelte",
+                    "templ",
                     "terraform",
                     "toml",
                     "tsx",

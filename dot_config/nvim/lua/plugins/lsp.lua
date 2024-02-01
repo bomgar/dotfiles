@@ -62,10 +62,16 @@ return {
                     "tsserver",
                     "yamlls",
                     "bashls",
+                    "templ",
                 },
                 handlers = {
                     bashls = function()
                         require("lspconfig").bashls.setup({
+                            capabilities = lsp_capabilities,
+                        })
+                    end,
+                    templ = function()
+                        require("lspconfig").templ.setup({
                             capabilities = lsp_capabilities,
                         })
                     end,

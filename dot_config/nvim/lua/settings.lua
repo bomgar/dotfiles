@@ -144,3 +144,10 @@ vim.o.wrap = false
 vim.o.ruler = false
 
 vim.o.showmode = false
+
+vim.filetype.add({
+    extension = {
+        templ = "templ",
+    },
+})
+
