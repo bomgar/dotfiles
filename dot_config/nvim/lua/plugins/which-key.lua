@@ -29,6 +29,13 @@ return {
                     h = { "<cmd>DiffviewFileHistory<CR>", "history" },
                     f = { "<cmd>DiffviewFileHistory %<CR>", "file history" },
                 },
+                q = {
+                    name = "quickfix",
+                    o = { "<cmd>copen<CR>", "open" },
+                    c = { "<cmd>cclose<CR>", "close" },
+                    n = { "<cmd>cnext<CR>", "next" },
+                    p = { "<cmd>cprevious", "previous" },
+                },
                 b = {
                     name = "debug",
                     c = {
