@@ -119,6 +119,7 @@ return {
                         end,
                         "Help Tags",
                     },
+                    r = { "<cmd>Telescope rage<CR>", "Rage" },
                     h = { "<cmd>Telescope harpoon marks<CR>", "Harpoon Marks" },
                     m = {
                         function()
