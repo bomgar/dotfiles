@@ -120,7 +120,6 @@ return {
                         "Help Tags",
                     },
                     r = { "<cmd>Telescope rage<CR>", "Rage" },
-                    h = { "<cmd>Telescope harpoon marks<CR>", "Harpoon Marks" },
                     m = {
                         function()
                             require("telescope.builtin").marks()
@@ -151,57 +150,6 @@ return {
                             require("trouble").toggle()
                         end,
                         "Toggle trouble",
-                    },
-                },
-                h = {
-                    name = "harpoon", -- Group name
-                    a = {
-                        function()
-                            require("harpoon.mark").add_file()
-                        end,
-                        "Add File",
-                    },
-                    m = {
-                        function()
-                            require("harpoon.ui").toggle_quick_menu()
-                        end,
-                        "Menu",
-                    },
-                    n = {
-                        function()
-                            require("harpoon.ui").nav_next()
-                        end,
-                        "Next Mark",
-                    },
-                    p = {
-                        function()
-                            require("harpoon.ui").nav_prev()
-                        end,
-                        "Previous Mark",
-                    },
-                    ["1"] = {
-                        function()
-                            require("harpoon.ui").nav_file(1)
-                        end,
-                        "Go to Mark 1",
-                    },
-                    ["2"] = {
-                        function()
-                            require("harpoon.ui").nav_file(2)
-                        end,
-                        "Go to Mark 2",
-                    },
-                    ["3"] = {
-                        function()
-                            require("harpoon.ui").nav_file(3)
-                        end,
-                        "Go to Mark 3",
-                    },
-                    ["4"] = {
-                        function()
-                            require("harpoon.ui").nav_file(4)
-                        end,
-                        "Go to Mark 4",
                     },
                 },
                 t = {

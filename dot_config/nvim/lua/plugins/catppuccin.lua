@@ -11,7 +11,6 @@ return {
                     cmp = true,
                     flash = true,
                     gitsigns = true,
-                    harpoon = true,
                     lsp_trouble = true,
                     markdown = true,
                     mason = true,
