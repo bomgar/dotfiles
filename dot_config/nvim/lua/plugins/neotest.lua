@@ -7,6 +7,7 @@ return {
             "antoinemadec/FixCursorHold.nvim",
             "haydenmeade/neotest-jest",
             "rouge8/neotest-rust",
+            "nvim-neotest/nvim-nio",
             "nvim-neotest/neotest-go",
         },
         config = function()
