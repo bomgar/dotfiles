@@ -4,7 +4,8 @@ return {
         cmd = "Copilot",
         build = ":Copilot auth",
         event = "InsertEnter",
-        enabled = not vim.g.vscode,
+        enabled = false,
+        -- enabled = not vim.g.vscode,
         opts = {
             suggestion = {
                 enabled = true,

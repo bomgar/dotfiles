@@ -250,4 +250,5 @@ output "*" bg /home/phaun/.config/sway/wallpaper.png fill
 exec "systemctl --user import-environment SWAYSOCK WAYLAND_DISPLAY XDG_SESSION_TYPE XDG_CURRENT_DESKTOP"
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec_always bash -c "swaymsg input type:keyboard xkb_layout us && swaymsg input type:keyboard xkb_options 'caps:none' && pkill -RTMIN+1 i3blocks"
+exec "systemctl --user start dunst"
 
