@@ -24,19 +24,19 @@ return {
 
                     local which_key = require("which-key")
 
-                    which_key.register({
-                        d = { vim.lsp.buf.definition, "goto definition (lsp)" },
-                        D = { vim.lsp.buf.declaration, "goto declaration (lsp)" },
-                        i = { vim.lsp.buf.implementation, "goto implementation (lsp)" },
-                        o = { vim.lsp.buf.type_definition, "goto type definition (lsp)" },
-                        r = { vim.lsp.buf.references, "references (lsp)" },
-                        s = { vim.lsp.buf.signature_help, "signature help (lsp)" },
-                        l = { vim.diagnostic.open_float, "open diagnostic (lsp)" },
-                    }, { prefix = "g", buffer = event.buf })
+                    which_key.add({
+                        buffer = event.buf,
 
-                    which_key.register({
-                        ["."] = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "code action (lsp)" },
-                    }, { prefix = "<leader>", buffer = event.buf })
+                        {"gd" ,  vim.lsp.buf.definition, desc = "goto definition (lsp)" },
+                        {"gD" ,  vim.lsp.buf.declaration, desc = "goto declaration (lsp)" },
+                        {"gi" ,  vim.lsp.buf.implementation, desc = "goto implementation (lsp)" },
+                        {"go" ,  vim.lsp.buf.type_definition, desc = "goto type definition (lsp)" },
+                        {"gr" ,  vim.lsp.buf.references, desc = "references (lsp)" },
+                        {"gs" ,  vim.lsp.buf.signature_help, desc = "signature help (lsp)" },
+                        {"gl" ,  vim.diagnostic.open_float, desc = "open diagnostic (lsp)" },
+                        {"<leader>." ,  "<cmd>lua vim.lsp.buf.code_action()<cr>", desc = "code action (lsp)" },
+
+                    })
 
                     vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", opts)
                     vim.keymap.set("n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
