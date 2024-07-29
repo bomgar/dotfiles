@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "Triggered changed package hook on OS {{ .chezmoi.os }}"
+
+{{ if eq .chezmoi.os "linux" -}}
+
+pacman_packages=( {{.packages.linux.arch.pacman | quoteList | join " " }})
+
+sudo pacman -S --needed --noconfirm "${pacman_packages[@]}"
+
+{{ end -}}
+
