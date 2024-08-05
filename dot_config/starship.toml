@@ -70,3 +70,7 @@ disabled = true
 
 [battery]
 disabled = true
+
+[dotnet]
+disabled = true
+
