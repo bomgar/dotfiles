@@ -35,7 +35,7 @@ return {
                 {"<leader>f", group = "find"},
                 {"<leader>ff", function() require("telescope.builtin").find_files() end, desc = "Find File"},
                 {"<leader>fs", function() require("telescope.builtin").grep_string() end, desc = "Grep word under cursor"},
-                {"<leader>f[.]", function() require("telescope.builtin").find_files({ hidden = true }) end, desc = "Find hidden files"},
+                {"<leader>f.", function() require("telescope.builtin").find_files({ hidden = true }) end, desc = "Find hidden files"},
                 {"<leader>fc", function() require("telescope.builtin").command_history() end, desc = "command history"},
                 {"<leader>fa", function() require("telescope.builtin").builtin() end, desc = "all pickers"},
                 {"<leader>fg", function() require("telescope.builtin").live_grep() end, desc = "Live Grep"},
