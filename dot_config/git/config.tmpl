@@ -59,19 +59,23 @@
 #   insteadOf = https://github.com/
 [magit]
   hideCampaign = true
+
 [commit]
   gpgsign = true
+
 [filter "lfs"]
   required = true
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
+
 [init]
   defaultBranch = main
-
 
 [tig "color"]
   cursor    = white  black bold
   title-focus   = white  black bold
   title-blur   = white  236
 
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret
