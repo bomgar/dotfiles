@@ -101,7 +101,7 @@ return {
                         })
                     end,
                     tsserver = function()
-                        require("lspconfig").tsserver.setup({
+                        require("lspconfig").ts_ls.setup({
                             capabilities = lsp_capabilities,
                         })
                     end,
