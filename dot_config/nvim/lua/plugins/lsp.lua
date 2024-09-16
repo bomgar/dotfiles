@@ -59,7 +59,7 @@ return {
                     "lua_ls",
                     "rust_analyzer",
                     "svelte",
-                    "tsserver",
+                    "ts_ls",
                     "yamlls",
                     "bashls",
                     "templ",
@@ -100,7 +100,7 @@ return {
                             capabilities = lsp_capabilities,
                         })
                     end,
-                    tsserver = function()
+                    ts_ls = function()
                         require("lspconfig").ts_ls.setup({
                             capabilities = lsp_capabilities,
                         })
