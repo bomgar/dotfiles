@@ -64,6 +64,7 @@ if status is-interactive
 
   abbr --add gst "git status"
   abbr --add vim nvim
+  abbr --add lg lazygit
 
   set -x SUDO_EDITOR nvim
   set -x EDITOR nvim
