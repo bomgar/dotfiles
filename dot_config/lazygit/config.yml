@@ -4,6 +4,7 @@ git:
     pager: delta --dark --paging=never
 
 gui:
+  mouseEvents: false
   theme:
     activeBorderColor:
       - '#89b4fa'
