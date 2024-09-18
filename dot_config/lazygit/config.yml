@@ -5,6 +5,9 @@ git:
     colorArg: always
     pager: delta --dark --paging=never
 
+services:
+  'git.dhl.com': 'github:git.dhl.com'
+
 gui:
   mouseEvents: false
   theme:
