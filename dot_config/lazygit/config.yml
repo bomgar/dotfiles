@@ -4,6 +4,8 @@ git:
   paging:
     colorArg: always
     pager: delta --dark --paging=never
+  log:
+    showWholeGraph: true
 
 services:
   'git.dhl.com': 'github:git.dhl.com'
