@@ -57,6 +57,8 @@ return {
                 {"<leader>tp", "<cmd>Neotest output-panel<CR>", desc = "Output panel" },
                 {"<leader>to", "<cmd>Neotest output<CR>", desc = "Output" },
                 {"<leader>ts", "<cmd>Neotest summary<CR>", desc = "summary" },
+                {"<leader>g", group = "git"},
+                {"<leader>gb", "<cmd>Gitsigns blame<CR>", desc = "blame" },
             })
         end,
     },
