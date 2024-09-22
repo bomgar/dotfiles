@@ -59,6 +59,8 @@ return {
                 {"<leader>ts", "<cmd>Neotest summary<CR>", desc = "summary" },
                 {"<leader>g", group = "git"},
                 {"<leader>gb", "<cmd>Gitsigns blame<CR>", desc = "blame" },
+                {"<leader>u", group = "util"},
+                {"<leader>uc", [[:%bd|e#|bd#<CR>]], desc = "close all other buffers", noremap = true, silent = true },
             })
         end,
     },
