@@ -37,6 +37,8 @@ packages:
         - kotlin
         - lazygit
         - less
+        - lua51
+        - luarocks
         - maven
         - neovide
         - netavark
