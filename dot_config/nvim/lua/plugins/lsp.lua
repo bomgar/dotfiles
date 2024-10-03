@@ -63,10 +63,16 @@ return {
                     "yamlls",
                     "bashls",
                     "templ",
+                    "pyright",
                 },
                 handlers = {
                     bashls = function()
                         require("lspconfig").bashls.setup({
+                            capabilities = lsp_capabilities,
+                        })
+                    end,
+                    pyright = function()
+                        require("lspconfig").pyright.setup({
                             capabilities = lsp_capabilities,
                         })
                     end,
