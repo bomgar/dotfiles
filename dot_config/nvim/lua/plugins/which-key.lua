@@ -15,7 +15,11 @@ return {
                 {"<leader>fs", function() require("telescope.builtin").grep_string() end, desc = "Grep word under cursor"}
             })
             which_key.add({
-                {"<leader>e", "<cmd>NvimTreeToggle<CR>", desc = "Toggle NvimTree"},
+                {"<leader>e", group = "browse"},
+                {"<leader>ee", "<cmd>NvimTreeToggle<CR>", desc = "Toggle NvimTree"},
+                {"<leader>ef", "<cmd>NvimTreeFindFile<CR>", desc = "Toggle NvimTree"},
+                {"<leader>ed", "<cmd>e %:h<CR>", desc = "Browse current directory"},
+                {"<leader>er", "<cmd>e .<CR>", desc = "Browse root directory"},
                 {"<leader>d", group = "diffview"},
                 {"<leader>do", "<cmd>DiffviewOpen<CR>", desc = "open"},
                 {"<leader>dc", "<cmd>DiffviewClose<CR>", desc = "close"},
