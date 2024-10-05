@@ -12,9 +12,15 @@ return {
             which_key.add({
                 mode = {"v"},
                 {"<leader>f", group = "find"},
-                {"<leader>fs", function() require("telescope.builtin").grep_string() end, desc = "Grep word under cursor"}
+                {"<leader>fs", function() require("telescope.builtin").grep_string() end, desc = "Grep word under cursor"},
+                {"<leader>h", group = "help"},
+                {"<leader>h?", function() require("which-key").show({ global = false }) end, desc = "Buffer Local Keymaps (which-key)", },
+                {"<leader>hg", function() require("which-key").show({ global = true }) end, desc = "Global Keymaps (which-key)", },
             })
             which_key.add({
+                {"<leader>h", group = "help"},
+                {"<leader>h?", function() require("which-key").show({ global = false }) end, desc = "Buffer Local Keymaps (which-key)", },
+                {"<leader>hg", function() require("which-key").show({ global = true }) end, desc = "Global Keymaps (which-key)", },
                 {"<leader>e", group = "browse"},
                 {"<leader>ee", "<cmd>NvimTreeToggle<CR>", desc = "Toggle NvimTree"},
                 {"<leader>ef", "<cmd>NvimTreeFindFile<CR>", desc = "Toggle NvimTree"},
