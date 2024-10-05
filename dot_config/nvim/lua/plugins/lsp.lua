@@ -35,7 +35,7 @@ return {
                         {"gr" ,  vim.lsp.buf.references, desc = "references (lsp)" },
                         {"gs" ,  vim.lsp.buf.signature_help, desc = "signature help (lsp)" },
                         {"gl" ,  vim.diagnostic.open_float, desc = "open diagnostic (lsp)" },
-                        {"gh" ,  function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled(filter), filter) end, desc = "open diagnostic (lsp)" },
+                        {"gh" ,  function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled(filter), filter) end, desc = "toggle inlay hints" },
                         {"<leader>." ,  "<cmd>lua vim.lsp.buf.code_action()<cr>", desc = "code action (lsp)" },
 
                     })
