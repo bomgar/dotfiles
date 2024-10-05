@@ -24,6 +24,7 @@ return {
 
                     local which_key = require("which-key")
 
+                    local filter = {bufnr = event.buf}
                     which_key.add({
                         buffer = event.buf,
 
@@ -34,6 +35,7 @@ return {
                         {"gr" ,  vim.lsp.buf.references, desc = "references (lsp)" },
                         {"gs" ,  vim.lsp.buf.signature_help, desc = "signature help (lsp)" },
                         {"gl" ,  vim.diagnostic.open_float, desc = "open diagnostic (lsp)" },
+                        {"gh" ,  function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled(filter), filter) end, desc = "open diagnostic (lsp)" },
                         {"<leader>." ,  "<cmd>lua vim.lsp.buf.code_action()<cr>", desc = "code action (lsp)" },
 
                     })
@@ -169,6 +171,15 @@ return {
                                     },
                                     usePlaceholders = true,
                                     semanticTokens = true,
+                                    hints = {
+                                        assignVariableTypes = true,  -- Show inlay hints for variable types in assignments
+                                        compositeLiteralFields = true,  -- Show inlay hints for composite literal fields
+                                        compositeLiteralTypes = true,  -- Show inlay hints for composite literal types
+                                        constantValues = true,  -- Show inlay hints for constant values
+                                        functionTypeParameters = true,  -- Show inlay hints for function type parameters
+                                        parameterNames = true,  -- Show inlay hints for parameter names
+                                        rangeVariableTypes = true,  -- Show inlay hints for range variable types
+                                    },
                                 },
                             },
                         })
