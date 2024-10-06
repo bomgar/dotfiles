@@ -71,6 +71,7 @@ return {
                 { "<leader>gb", "<cmd>Gitsigns blame<CR>",                                                 desc = "blame" },
                 { "<leader>u",  group = "util" },
                 { "<leader>uc", [[:%bd|e#|bd#<CR>]],                                                       desc = "close all other buffers",          noremap = true, silent = true },
+                { "<leader>uw", "<cmd>StripWhitespace<CR>",                                                desc = "strip trailing whitespace",        noremap = true, silent = true },
             })
         end,
     },
