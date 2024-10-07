@@ -9,7 +9,13 @@ return {
         },
         config = function()
             local builtin = require("telescope.builtin")
-            require("telescope").load_extension("zf-native")
+            local telescope = require("telescope")
+            telescope.setup({
+                defaults = {
+                    file_ignore_patterns = { "^.git/" },
+                },
+            })
+            telescope.load_extension("zf-native")
         end,
     },
 }
