@@ -1,7 +1,7 @@
 return {
     {
         "nvim-neotest/neotest",
-        event = "VeryLazy",
+        ft = {"go", "rust", "jsx", "js", "ts", "tsx"},
         dependencies = {
             "nvim-lua/plenary.nvim",
             "antoinemadec/FixCursorHold.nvim",
