@@ -1,5 +1,12 @@
 return {
     {
+        "folke/lazydev.nvim",
+        ft = "lua", -- only load on lua files
+        opts = {
+            library = {},
+        },
+    },
+    {
         "williamboman/mason.nvim",
         enabled = not vim.g.vscode,
         dependencies = {
@@ -7,10 +14,8 @@ return {
             "hrsh7th/cmp-nvim-lsp",
             "neovim/nvim-lspconfig",
             "williamboman/mason-lspconfig.nvim",
-            "folke/neodev.nvim",
         },
         config = function()
-            require("neodev").setup({})
 
             local lspconfig = require("lspconfig")
 
@@ -28,15 +33,15 @@ return {
                     which_key.add({
                         buffer = event.buf,
 
-                        { "gd",         vim.lsp.buf.definition,                                                                      desc = "goto definition (lsp)" },
-                        { "gD",         vim.lsp.buf.declaration,                                                                     desc = "goto declaration (lsp)" },
-                        { "gi",         vim.lsp.buf.implementation,                                                                  desc = "goto implementation (lsp)" },
-                        { "go",         vim.lsp.buf.type_definition,                                                                 desc = "goto type definition (lsp)" },
-                        { "gr",         vim.lsp.buf.references,                                                                      desc = "references (lsp)" },
-                        { "gs",         vim.lsp.buf.signature_help,                                                                  desc = "signature help (lsp)" },
-                        { "gl",         vim.diagnostic.open_float,                                                                   desc = "open diagnostic (lsp)" },
-                        { "gh",         function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled(filter), filter) end, desc = "toggle inlay hints" },
-                        { "<leader>.",  "<cmd>lua vim.lsp.buf.code_action()<cr>",                                                    desc = "code action (lsp)" },
+                        { "gd",        vim.lsp.buf.definition,                                                                      desc = "goto definition (lsp)" },
+                        { "gD",        vim.lsp.buf.declaration,                                                                     desc = "goto declaration (lsp)" },
+                        { "gi",        vim.lsp.buf.implementation,                                                                  desc = "goto implementation (lsp)" },
+                        { "go",        vim.lsp.buf.type_definition,                                                                 desc = "goto type definition (lsp)" },
+                        { "gr",        vim.lsp.buf.references,                                                                      desc = "references (lsp)" },
+                        { "gs",        vim.lsp.buf.signature_help,                                                                  desc = "signature help (lsp)" },
+                        { "gl",        vim.diagnostic.open_float,                                                                   desc = "open diagnostic (lsp)" },
+                        { "gh",        function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled(filter), filter) end, desc = "toggle inlay hints" },
+                        { "<leader>.", "<cmd>lua vim.lsp.buf.code_action()<cr>",                                                    desc = "code action (lsp)" },
 
                     })
 
