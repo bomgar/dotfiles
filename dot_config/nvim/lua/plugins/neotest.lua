@@ -1,7 +1,7 @@
 return {
     {
         "nvim-neotest/neotest",
-        ft = {"go", "rust", "jsx", "js", "ts", "tsx"},
+        ft = {"go", "rust", "javascriptreact", "javascript", "typescript", "typescriptreact"},
         dependencies = {
             "nvim-lua/plenary.nvim",
             "antoinemadec/FixCursorHold.nvim",
