@@ -58,7 +58,6 @@ return {
                 { "<leader>c",  group = "text-case" },
                 { "<leader>ct", "<cmd>TextCaseOpenTelescope<CR>",                                                            desc = "Text case Telescope" },
                 { "<leader>x",  group = "inspect" },
-                { "<leader>xt", function() require("trouble").toggle() end,                                                  desc = "Toggle trouble" },
                 { "<leader>t",  group = "test" },
                 { "<leader>tr", function() require("neotest").run.run() end,                                                 desc = "Run test" },
                 { "<leader>td", function() require("neotest").run.run({ strategy = "dap" }) end,                             desc = "Debug test" },
