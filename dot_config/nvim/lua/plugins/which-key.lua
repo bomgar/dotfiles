@@ -23,7 +23,7 @@ return {
                 { "<leader>hg", function() require("which-key").show({ global = true }) end,                                 desc = "Global Keymaps (which-key)", },
                 { "<leader>e",  group = "browse" },
                 { "<leader>ee", "<cmd>NvimTreeToggle<CR>",                                                                   desc = "Toggle NvimTree" },
-                { "<leader>ef", "<cmd>NvimTreeFindFile<CR>",                                                                 desc = "Toggle NvimTree" },
+                { "<leader>ef", "<cmd>NvimTreeFindFile<CR>",                                                                 desc = "NvimTree find file" },
                 { "<leader>ed", "<cmd>Oil %:h<CR>",                                                                          desc = "Browse current directory" },
                 { "<leader>er", "<cmd>Oil .<CR>",                                                                            desc = "Browse root directory" },
                 { "<leader>d",  group = "diffview" },
