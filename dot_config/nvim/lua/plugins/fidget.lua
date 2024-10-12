@@ -3,7 +3,12 @@ return {
         "j-hui/fidget.nvim",
         enabled = not vim.g.vscode,
         opts = {
-            -- options
+
+            integration = {
+                ["nvim-tree"] = {
+                    enable = false,
+                },
+            },
         },
     },
 }

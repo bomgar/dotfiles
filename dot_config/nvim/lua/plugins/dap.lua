@@ -11,6 +11,14 @@ return {
             "rcarriga/nvim-dap-ui",
             "jay-babu/mason-nvim-dap.nvim",
         },
+        keys = {
+
+            { "<leader>bc", function() require("dap").continue() end,          desc = "continue" },
+            { "<leader>bo", function() require("dap").step_over() end,         desc = "step over" },
+            { "<leader>bi", function() require("dap").step_into() end,         desc = "step into" },
+            { "<leader>be", function() require("dap").step_out() end,          desc = "step out" },
+            { "<leader>bb", function() require("dap").toggle_breakpoint() end, desc = "toggle breakpoint" },
+        },
         config = function()
             require("mason-nvim-dap").setup({
                 ensure_installed = {
