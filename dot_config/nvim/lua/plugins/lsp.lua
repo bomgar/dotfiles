@@ -71,6 +71,7 @@ return {
                     "bashls",
                     "templ",
                     "pyright",
+                    "zls"
                 },
                 handlers = {
                     bashls = function()
@@ -80,6 +81,11 @@ return {
                     end,
                     pyright = function()
                         require("lspconfig").pyright.setup({
+                            capabilities = lsp_capabilities,
+                        })
+                    end,
+                    zls = function()
+                        require("lspconfig").zls.setup({
                             capabilities = lsp_capabilities,
                         })
                     end,
