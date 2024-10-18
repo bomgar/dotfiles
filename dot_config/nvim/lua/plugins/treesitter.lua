@@ -34,6 +34,7 @@ return {
                     "gomod",
                     "gosum",
                     "gowork",
+                    "hcl",
                     "hocon",
                     "html",
                     "javascript",
