@@ -20,6 +20,7 @@ return {
             { "<leader>fm", function() require("telescope.builtin").marks() end,                                         desc = "Marks" },
             { "<leader>fj", function() require("telescope.builtin").jumplist() end,                                      desc = "Jumplist" },
             { "<leader>fq", function() require("telescope.builtin").quickfix() end,                                      desc = "quickfix" },
+            { "<leader>fo", function() require("telescope.builtin").oldfiles() end,                                      desc = "quickfix" },
         },
         config = function()
             local builtin = require("telescope.builtin")
