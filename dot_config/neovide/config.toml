@@ -1,3 +1,6 @@
+fork = true
+tabs = false
+
 [font]
 normal = ["MonaspiceNe Nerd Font Mono"]
 size = 12
