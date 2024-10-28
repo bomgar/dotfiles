@@ -42,6 +42,7 @@ packages:
         - maven
         - neovide
         - netavark
+        - network-manager-applet
         - noto-fonts
         - noto-fonts-emoji
         - otf-monaspace
@@ -69,6 +70,7 @@ packages:
         - ttf-liberation
         - ttf-noto-nerd
         - vim
+        - waybar
         - wl-clipboard
         - wlroots
         - xdg-desktop-portal
