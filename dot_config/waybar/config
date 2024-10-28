@@ -1,0 +1,45 @@
+{
+  "layer": "top",
+  "position": "top",
+  "modules-left": [
+    "sway/workspaces",
+    "sway/mode"
+  ],
+  "modules-center": [
+        "sway/window"
+  ],
+  "modules-right": [
+    "tray",
+    "custom/layout",
+    "memory",
+    "cpu",
+    "load",
+    "clock"
+  ],
+  "custom/layout": {
+    "exec": "$HOME/bin/i3blockKeyLayout",
+    "interval": "once",
+    "format": "{}",
+    "return-type": "text",
+    "signal": 1
+  },
+  "cpu": {
+    "format": " {usage}%",
+    "max-length": 10,
+    "interval": 1
+  },
+  "load": {
+    "format": "Load: {}",
+    "interval": 1
+  },
+  "memory": {
+    "format": "🐏 {}%",
+    "max-length": 20,
+    "interval": 1
+  },
+  "clock": {
+    "format": "{:%d.%m.%Y %H:%M:%S}",
+    "tooltip": false,
+    "interval": 1
+  }
+}
