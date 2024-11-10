@@ -13,6 +13,7 @@ return {
             { "<leader>rr", function() Snacks.rename() end,           desc = "Rename File" },
             { "<c-/>",      function() Snacks.terminal() end,         desc = "Toggle Terminal" },
             { "<c-_>",      function() Snacks.terminal() end,         desc = "which_key_ignore" },
+            { "<leader>uc", function() Snacks.bufdelete.other() end,  desc = "close all other buffers" },
         },
         opts =
         ---@class snacks.Config
