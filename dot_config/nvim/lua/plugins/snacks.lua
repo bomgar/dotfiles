@@ -31,11 +31,10 @@ return {
         {
             styles = {},
             bigfile = { enabled = true },
-            notifier = { enabled = false },
+            notifier = { enabled = true },
             quickfile = { enabled = true },
             statuscolumn = { enabled = true },
             words = { enabled = false },
-
         }
     }
 }
