@@ -88,7 +88,7 @@ pane_frames false
 // Once these themes are defined, one of them should to be selected in the "theme" section of this file
 //
 themes {
-    catppuccin {
+    catppuccin_mocha {
         fg "#f6f7f9"
         bg "#1e1e2e"
         red "#f38ba8"
@@ -101,12 +101,30 @@ themes {
         black "#1e1e2e"
         white "#f6f7f9"
     }
+
+    catppuccin_latte {
+        bg "#acb0be" // Surface2
+        fg "#4c4f69" // Text
+        red "#f38ba8"
+        green "#40a02b"
+        blue "#1e66f5"
+        yellow "#df8e1d"
+        magenta "#ea76cb" // Pink
+        orange "#fe640b" // Peach
+        cyan "#04a5e5" // Sky
+        black "#e6e9ef" // Mantle
+        white "#4c4f69" // Text
+    }
 }
 
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
- theme "catppuccin"
+{{ if eq .theme.variant "light" }}
+theme "catppuccin_latte"
+{{ else }}
+theme "catppuccin_mocha"
+{{ end }}
 
 // The name of the default layout to load on startup
 // Default: "default"

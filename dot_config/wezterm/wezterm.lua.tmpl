@@ -1,3 +1,4 @@
+-- vim: filetype=lua
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
 
@@ -33,7 +34,12 @@ config.mouse_bindings = {
     },
 }
 
+{{ if eq .theme.variant "light" }}
+config.color_scheme = "Catppuccin Latte"
+{{ else }}
 config.color_scheme = "Catppuccin Mocha"
+{{ end }}
+
 --config.force_reverse_video_cursor = true
 
 config.enable_tab_bar = false
