@@ -1,7 +1,7 @@
 return {
     {
         'echasnovski/mini.nvim',
-        version = '*',
+        version = false,
         config = function()
             require("mini.indentscope").setup({})
             require("mini.comment").setup({})
