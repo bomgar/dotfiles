@@ -8,6 +8,7 @@ return {
             { "<leader>ud", function() Snacks.bufdelete() end,        desc = "Delete Buffer" },
             { "<F12>",      function() Snacks.lazygit() end,          desc = "Lazygit" },
             { "<leader>gB", function() Snacks.gitbrowse() end,        desc = "Git Browse" },
+            { "<leader>gb", function() Snacks.git.blame_line() end,   desc = "Git blame" },
             { "<leader>gf", function() Snacks.lazygit.log_file() end, desc = "Lazygit Current File History" },
             { "<leader>gl", function() Snacks.lazygit.log() end,      desc = "Lazygit Log (cwd)" },
             { "<leader>rr", function() Snacks.rename() end,           desc = "Rename File" },
