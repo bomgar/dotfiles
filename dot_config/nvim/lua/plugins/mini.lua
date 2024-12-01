@@ -5,6 +5,7 @@ return {
         keys = {
             { "<leader>go", function() MiniDiff.toggle_overlay() end,    desc = "Toggle minidiff overlay" },
         },
+        lazy = false,
         config = function()
             require("mini.icons").setup({})
             require("mini.indentscope").setup({})
