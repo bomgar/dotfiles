@@ -34,6 +34,9 @@ return {
                         ["ctrl-q"] = "select-all+accept",
                     },
                 },
+                files = {
+                    cwd_prompt = false,
+                },
                 fzf_opts = { ['--layout'] = 'default' }
             })
         end,
