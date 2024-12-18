@@ -88,6 +88,19 @@ pane_frames false
 // Once these themes are defined, one of them should to be selected in the "theme" section of this file
 //
 themes {
+    rose-pine-dawn {
+		bg "#faf4ed"
+		fg "#575279"
+		red "#f38ba8"
+		green "#286983"
+		blue "#56949f"
+		yellow "#ea9d34"
+		magenta "#907aa9"
+		orange "#fe640b"
+		cyan "#d7827e"
+		black "#f2e9e1"
+		white "#575279"
+	}
     catppuccin_mocha {
         fg "#f6f7f9"
         bg "#1e1e2e"
@@ -120,11 +133,7 @@ themes {
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
-{{ if eq .theme.variant "light" }}
-theme "catppuccin_latte"
-{{ else }}
-theme "catppuccin_mocha"
-{{ end }}
+theme "rose-pine-dawn"
 
 // The name of the default layout to load on startup
 // Default: "default"

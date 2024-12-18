@@ -23,13 +23,9 @@
   diffFilter = delta --color-only
 
 [delta]
-{{ if eq .theme.variant "light" }}
-    features = catppuccin-latte
-{{ else }}
-    features = catppuccin-mocha
-{{ end }}
+    features = rose-pine-dawn
 
-[delta "catppuccin-latte"]
+[delta "rose-pine-dawn"]
 	blame-palette = "#eff1f5 #e6e9ef #dce0e8 #ccd0da #bcc0cc"
 	commit-decoration-style = box ul
 	light = true
@@ -58,40 +54,7 @@
 		bold cyan => syntax "#b4def1", \
 		bold yellow => syntax "#ebd9bf"
 	# Should match the name of the bat theme
-	syntax-theme = Catppuccin-latte
-
-
-
-[delta "catppuccin-mocha"]
-	blame-palette = "#1e1e2e #181825 #11111b #313244 #45475a"
-	commit-decoration-style = box ul
-	dark = true
-	file-decoration-style = "#cdd6f4"
-	file-style = "#cdd6f4"
-	hunk-header-decoration-style = box ul
-	hunk-header-file-style = bold
-	hunk-header-line-number-style = bold "#a6adc8"
-	hunk-header-style = file line-number syntax
-	line-numbers-left-style = "#6c7086"
-	line-numbers-minus-style = bold "#f38ba8"
-	line-numbers-plus-style = bold "#a6e3a1"
-	line-numbers-right-style = "#6c7086"
-	line-numbers-zero-style = "#6c7086"
-	# 25% red 75% base
-	minus-emph-style = bold syntax "#53394c"
-	# 10% red 90% base
-	minus-style = syntax "#34293a"
-	# 25% green 75% base
-	plus-emph-style = bold syntax "#404f4a"
-	# 10% green 90% base
-	plus-style = syntax "#2c3239"
-	map-styles = \
-		bold purple => syntax "#494060", \
-		bold blue => syntax "#384361", \
-		bold cyan => syntax "#384d5d", \
-		bold yellow => syntax "#544f4e"
-	# Should match the name of the bat theme
-	syntax-theme = Catppuccin-mocha
+	syntax-theme = rose-pine-dawn
 
 [alias]
   st = status -uall -b

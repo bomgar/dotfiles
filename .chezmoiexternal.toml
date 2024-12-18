@@ -14,5 +14,9 @@
     type = "file"
     url = "https://raw.githubusercontent.com/catppuccin/fish/main/themes/Catppuccin%20Latte.theme"
     refreshPeriod = "168h"
+[".config/fish/themes/Rosépine Dawn.theme"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/rose-pine/fish/refs/heads/main/themes/Ros%C3%A9%20Pine%20Dawn.theme"
+    refreshPeriod = "168h"
 
 

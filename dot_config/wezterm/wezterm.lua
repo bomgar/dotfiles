@@ -34,11 +34,7 @@ config.mouse_bindings = {
     },
 }
 
-{{ if eq .theme.variant "light" }}
-config.color_scheme = "Catppuccin Latte"
-{{ else }}
-config.color_scheme = "Catppuccin Mocha"
-{{ end }}
+config.color_scheme = "Rosé Pine Dawn (Gogh)"
 
 --config.force_reverse_video_cursor = true
 

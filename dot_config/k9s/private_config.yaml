@@ -13,11 +13,7 @@ k9s:
     reactive: false
     noIcons: false
     defaultsToFullScreen: false
-{{ if eq .theme.variant "light" }}
     skin: catppuccin-latte
-{{ else }}
-    skin: catppuccin-mocha
-{{ end }}
   skipLatestRevCheck: false
   disablePodCounting: false
   shellPod:

@@ -1,0 +1,47 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+
+format = """\
+    $time\
+    $all\
+    $line_break\
+    $jobs\
+    $character\
+    """
+
+[character]
+format="$symbol "
+success_symbol="[»](bold green)"
+error_symbol="[»](bold red)"
+
+
+[java]
+disabled = true
+
+
+[time]
+disabled = false
+time_format = "%T"
+style = "bold blue"
+format="[$time]($style) "
+
+
+[cmd_duration]
+min_time=6_000
+
+[username]
+format = "[$user]($style) on "
+
+[kubernetes]
+disabled = true
+
+[docker_context]
+disabled = true
+
+[battery]
+disabled = true
+
+[dotnet]
+disabled = true
+

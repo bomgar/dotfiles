@@ -1,0 +1,37 @@
+os:
+  editPreset: 'nvim'
+git:
+  paging:
+    colorArg: always
+    pager: delta --paging=never
+  log:
+    showWholeGraph: true
+
+services:
+  'git.dhl.com': 'github:git.dhl.com'
+
+gui:
+  mouseEvents: false
+  theme:
+    activeBorderColor:
+      - '#56949f'
+      - bold
+    inactiveBorderColor:
+      - '#797593'
+    optionsTextColor:
+      - '#56949f'
+    selectedLineBgColor:
+      - '#f2e9e1'
+    cherryPickedCommitBgColor:
+      - '#9893a5'
+    cherryPickedCommitFgColor:
+      - '#56949f'
+    unstagedChangesColor:
+      - '#b4637a'
+    defaultFgColor:
+      - '#575279'
+    searchingActiveBorderColor:
+      - '#ea9d34'
+
+  authorColors:
+    '*': '#286983'
