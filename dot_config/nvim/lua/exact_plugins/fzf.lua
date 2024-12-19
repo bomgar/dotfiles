@@ -34,7 +34,10 @@ return {
                         ["ctrl-q"] = "select-all+accept",
                     },
                 },
-                files = {
+                oldfiles = {
+                    include_current_session = true,
+                },
+                files    = {
                     cwd_prompt = false,
                 },
                 fzf_opts = { ['--layout'] = 'default' }
