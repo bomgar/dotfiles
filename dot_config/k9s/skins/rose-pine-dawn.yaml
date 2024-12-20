@@ -5,6 +5,11 @@ k9s:
     bgColor: '#faf4ed'
     logoColor: '#56949f'
 
+  prompt:
+    fgColor: '#575279'
+    bgColor: '#faf4ed'
+    suggestColor: '#56949f'
+
   # ClusterInfoView styles
   info:
     fgColor: '#286983'
