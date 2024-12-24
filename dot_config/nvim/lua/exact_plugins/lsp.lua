@@ -11,7 +11,7 @@ return {
         enabled = not vim.g.vscode,
         dependencies = {
             "nvim-lua/plenary.nvim",
-            "hrsh7th/cmp-nvim-lsp",
+            "saghen/blink.cmp",
             "neovim/nvim-lspconfig",
             "williamboman/mason-lspconfig.nvim",
         },
@@ -19,8 +19,7 @@ return {
 
             local lspconfig = require("lspconfig")
 
-            local lsp_capabilities =
-                vim.tbl_deep_extend("force", {}, vim.lsp.protocol.make_client_capabilities(), require("cmp_nvim_lsp").default_capabilities())
+            local lsp_capabilities = require('blink.cmp').get_lsp_capabilities()
 
             vim.api.nvim_create_autocmd("LspAttach", {
                 desc = "LSP actions",
