@@ -6,7 +6,7 @@ font pango:DejaVu Sans Mono 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec wezterm
+bindsym $mod+Return exec ghostty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -193,6 +193,7 @@ mouse_warping none
 # Assign workspaces
 assign [app_id="Alacritty"] 1
 assign [app_id="org.wezfurlong.wezterm"] 1
+assign [app_id="ghostty"] 1
 assign [app_id="jetbrains-idea"] 3
 assign [app_id="google-chrome" window_role="app"] 4
 assign [app_id="google-chrome" window_role="browser"] 4
@@ -208,6 +209,7 @@ for_window [app_id="Gnome-terminal"] border none
 for_window [app_id="neovide"] border none
 for_window [app_id="konsole"] border none
 for_window [app_id="Alacritty"] border none
+for_window [app_id="ghostty"] border none
 for_window [app_id="org.wezfurlong.wezterm"] border none
 for_window [app_id="google-chrome" window_role="browser"] border none
 for_window [app_id="Google-chrome" window_role="browser"] border none
