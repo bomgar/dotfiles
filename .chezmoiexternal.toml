@@ -6,5 +6,9 @@
     type = "file"
     url = "https://raw.githubusercontent.com/grml/grml-etc-core/master/etc/zsh/zshrc"
     refreshPeriod = "168h"
+[".config/k9s/skins/rose-pine-dawn.yaml"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/sasoria/k9s-theme/refs/heads/main/rose-pine-dawn.yaml"
+    refreshPeriod = "168h"
 
 
