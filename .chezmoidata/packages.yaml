@@ -24,6 +24,7 @@ packages:
         - fd
         - fish
         - fuzzel
+        - ghostty
         - git-delta
         - gnome-keyring
         - go
