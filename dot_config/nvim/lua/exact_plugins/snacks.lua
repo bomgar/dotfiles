@@ -26,8 +26,15 @@ return {
                     quickfile = { enabled = true },
                     statuscolumn = { enabled = true },
                     words = { enabled = false },
+                    input = {
+                        enabled = false,
+                        win = {
+                            relative = "win",
+                        }
+                    },
                 }
             )
+            Snacks.input.enable()
             vim.api.nvim_create_autocmd("User", {
                 pattern = "MiniFilesActionRename",
                 callback = function(event)

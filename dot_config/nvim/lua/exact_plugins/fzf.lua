@@ -7,6 +7,7 @@ return {
             "echasnovski/mini.nvim",
         },
         cmd = { "FzfLua" },
+        event = "VeryLazy",
         keys = {
             { "<leader>ff", function() require("fzf-lua").files({ hidden = true }) end, desc = "Find File" },
             { "<leader>fs", function() require("fzf-lua").grep_cword() end,             desc = "Grep word under cursor" },
@@ -21,7 +22,8 @@ return {
             { "<leader>fo", function() require("fzf-lua").oldfiles() end,               desc = "Old files" },
         },
         config = function()
-            require("fzf-lua").setup({
+            local fzf = require("fzf-lua")
+            fzf.setup({
                 keymap   = {
                     builtin = {
                         true,
@@ -42,6 +44,16 @@ return {
                 },
                 fzf_opts = { ['--layout'] = 'default' }
             })
+            fzf.register_ui_select(function(_, items)
+                local min_h, max_h = 0.15, 0.70
+                local h = (#items + 4) / vim.o.lines
+                if h < min_h then
+                    h = min_h
+                elseif h > max_h then
+                    h = max_h
+                end
+                return { winopts = { height = h, width = 0.60, row = 0.40 } }
+            end)
         end,
     },
 }
