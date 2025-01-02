@@ -1,4 +1,5 @@
-#!/bin/sh -e
+#!/bin/bash
+
 SCREENSHOT=/tmp/screen_locked.png
 SCREENSHOT_BLURED=/tmp/screen_locked_blur.png
 
@@ -6,7 +7,7 @@ SCREENSHOT_BLURED=/tmp/screen_locked_blur.png
 grim $SCREENSHOT
 
 # blur it
-convert -blur 0x4 $SCREENSHOT $SCREENSHOT_BLURED
+magick $SCREENSHOT -blur 0x4 $SCREENSHOT_BLURED
 rm $SCREENSHOT
 
 # Lock screen displaying this image.
