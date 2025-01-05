@@ -89,9 +89,7 @@ bindsym $mod+u border none
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your session.' -b 'Yes, exit sway' 'swaymsg exit'"
 
 # resize window (you can also use the mouse for that)
@@ -155,8 +153,6 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 bindsym $mod+apostrophe exec ~/bin/toggle_touchpad.sh
 
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
 bar {
     swaybar_command waybar
 }
@@ -237,6 +233,6 @@ output "*" bg /home/phaun/.config/sway/wallpaper.png fill
 exec --no-startup-id nm-applet
 exec "systemctl --user import-environment SWAYSOCK WAYLAND_DISPLAY XDG_SESSION_TYPE XDG_CURRENT_DESKTOP"
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
-exec_always bash -c "swaymsg input type:keyboard xkb_layout us && swaymsg input type:keyboard xkb_options 'caps:none' && pkill -RTMIN+1 i3blocks"
+exec_always bash -c "swaymsg input type:keyboard xkb_layout us && swaymsg input type:keyboard xkb_options 'caps:none' && pkill -RTMIN+1 waybar"
 exec "systemctl --user start dunst"
 
