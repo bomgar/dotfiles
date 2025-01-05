@@ -1,4 +1,16 @@
 # vim: filetype=fish
+if status is-login
+{{- if eq .chezmoi.os "linux" }}
+    set -x SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
+    set -x DOCKER_HOST "unix://$XDG_RUNTIME_DIR/podman/podman.sock"
+    set -x MOZ_ENABLE_WAYLAND 1
+    set -x QT_QPA_PLATFORM wayland
+    set -x QT_QPA_PLATFORMTHEME qt5ct
+    set -x GDK_BACKEND wayland
+    set -x XDG_CURRENT_DESKTOP sway
+{{ end -}}
+end
+
 if status is-interactive
   # Commands to run in interactive sessions can go here
 
