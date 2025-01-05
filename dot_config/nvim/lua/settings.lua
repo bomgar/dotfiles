@@ -44,6 +44,11 @@ vim.o.guicursor =
 --vim.o.guifont = "Monaspace Neon,Noto Sans Mono:h12"
 vim.g.neovide_hide_mouse_when_typing = true
 vim.g.neovide_floating_shadow = false
+vim.g.neovide_padding_top = 2
+vim.g.neovide_padding_bottom = 2
+vim.g.neovide_padding_right = 2
+vim.g.neovide_padding_left = 2
+
 -- vim.o.linespace=-1
 
 vim.o.wildignore = "*.o,*.obj,*.dylib,*.bin,*.dll,*.exe,*/.git/*,*/.svn/*,*/__pycache__/*,*/build/**"
