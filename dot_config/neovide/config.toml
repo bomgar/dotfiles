@@ -2,8 +2,8 @@ fork = true
 tabs = false
 
 [font]
-normal = ["MonaspiceNe Nerd Font Mono"]
+normal = ["Jetbrains Mono"]
 size = 12
 
-features = { "MonaspiceNe Nerd Font Mono" = [ "+ss01", "+ss02", "+ss03", "+ss04", "+ss05",  "+ss08", "+calt" ] }
+features = { "Jetbrains Mono" = [ "+calt", "+zero" ] }
 

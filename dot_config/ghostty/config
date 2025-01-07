@@ -1,14 +1,9 @@
 theme = rose-pine-dawn
 
-font-family="Monaspace Neon"
+font-family = "JetBrains Mono"
 font-size = 12
-font-feature = "ss01"
-font-feature = "ss02"
-font-feature = "ss03"
-font-feature = "ss04"
-font-feature = "ss05"
-font-feature = "ss08"
 font-feature = "calt"
+font-feature = "zero"
 
 selection-background = #dfdad9
 

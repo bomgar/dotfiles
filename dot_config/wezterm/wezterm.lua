@@ -15,8 +15,8 @@ end
 
 config.font = wezterm.font_with_fallback({
     {
-        family = "Monaspace Neon",
-        harfbuzz_features = { "ss01", "ss02", "ss03", "ss04", "ss05",  "ss08", "calt" },
+        family = "Jetbrains Mono",
+        harfbuzz_features = { "calt", "zero" },
     },
     { family = "Noto Sans Mono" },
 })
