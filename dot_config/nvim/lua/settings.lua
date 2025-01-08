@@ -130,7 +130,7 @@ vim.o.virtualedit = "block"
 
 vim.o.formatoptions = vim.o.formatoptions .. "mM"
 
-vim.o.tildeop = true
+vim.o.tildeop = false
 
 vim.o.synmaxcol = 250
 
