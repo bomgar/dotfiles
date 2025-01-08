@@ -43,7 +43,6 @@ return {
                 { "<leader>ts", "<cmd>Neotest summary<CR>",                                      desc = "summary" },
                 { "<leader>g",  group = "git" },
                 { "<leader>u",  group = "util" },
-                { "<leader>uw", function() MiniTrailspace.trim() end,                            desc = "strip trailing whitespace",        noremap = true, silent = true },
             })
         end,
     },

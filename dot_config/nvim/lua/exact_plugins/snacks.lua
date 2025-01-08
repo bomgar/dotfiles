@@ -25,6 +25,7 @@ return {
                     notifier = { enabled = true },
                     quickfile = { enabled = true },
                     statuscolumn = { enabled = true },
+                    dashboard = { enabled = true },
                     words = { enabled = false },
                     input = {
                         enabled = false,

@@ -3,20 +3,50 @@ return {
         'echasnovski/mini.nvim',
         version = false,
         keys = {
-            { "<leader>go", function() MiniDiff.toggle_overlay() end,    desc = "Toggle minidiff overlay" },
+            { "<leader>go", function() MiniDiff.toggle_overlay() end, desc = "Toggle minidiff overlay" },
         },
         lazy = false,
         config = function()
             require("mini.icons").setup({})
             require("mini.indentscope").setup({})
-            require("mini.trailspace").setup({})
+
+            vim.api.nvim_create_autocmd("FileType", {
+                pattern = {
+                    "Trouble",
+                    "alpha",
+                    "dashboard",
+                    "fzf",
+                    "help",
+                    "lazy",
+                    "mason",
+                    "neo-tree",
+                    "notify",
+                    "snacks_dashboard",
+                    "snacks_notif",
+                    "snacks_terminal",
+                    "snacks_win",
+                    "toggleterm",
+                    "trouble",
+                },
+                callback = function()
+                    vim.b.miniindentscope_disable = true
+                end,
+            })
+
+            vim.api.nvim_create_autocmd("User", {
+                pattern = "SnacksDashboardOpened",
+                callback = function(data)
+                    vim.b[data.buf].miniindentscope_disable = true
+                end,
+            })
+
             require("mini.files").setup({})
             require("mini.hipatterns").setup({
                 highlighters = {
-                    fixme     = { pattern = '%f[%w]()FIXME()%f[%W]', group = 'MiniHipatternsFixme' },
-                    hack      = { pattern = '%f[%w]()HACK()%f[%W]', group = 'MiniHipatternsHack' },
-                    todo      = { pattern = '%f[%w]()TODO()%f[%W]', group = 'MiniHipatternsTodo' },
-                    note      = { pattern = '%f[%w]()NOTE()%f[%W]', group = 'MiniHipatternsNote' },
+                    fixme = { pattern = '%f[%w]()FIXME()%f[%W]', group = 'MiniHipatternsFixme' },
+                    hack  = { pattern = '%f[%w]()HACK()%f[%W]', group = 'MiniHipatternsHack' },
+                    todo  = { pattern = '%f[%w]()TODO()%f[%W]', group = 'MiniHipatternsTodo' },
+                    note  = { pattern = '%f[%w]()NOTE()%f[%W]', group = 'MiniHipatternsNote' },
 
                 },
             })
