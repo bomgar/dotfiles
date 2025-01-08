@@ -8,11 +8,7 @@ return {
         lazy = false,
         config = function()
             require("mini.icons").setup({})
-
             require("mini.indentscope").setup({})
-            local disableIndent = function(args) vim.b[args.buf].miniindentscope_disable = true end
-            vim.api.nvim_create_autocmd('Filetype', { pattern = 'fzf', callback = disableIndent })
-
             require("mini.trailspace").setup({})
             require("mini.files").setup({})
             require("mini.hipatterns").setup({
