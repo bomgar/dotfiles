@@ -16,7 +16,7 @@ return {
             { "<leader>fg", function() require("fzf-lua").live_grep() end,                  desc = "Live Grep" },
             { "<leader>fb", function() require("fzf-lua").buffers() end,                    desc = "Buffers" },
             { "<leader>f?", function() require("fzf-lua").help_tags() end,                  desc = "Help Tags" },
-            { "<leader>fw", function() require("fzf-lua").lsp_live_workspace_symbols() end, desc = "Help Tags" },
+            { "<leader>fw", function() require("fzf-lua").lsp_live_workspace_symbols() end, desc = "Live workspace symbols" },
             { "<leader>fm", function() require("fzf-lua").marks() end,                      desc = "Marks" },
             { "<leader>fj", function() require("fzf-lua").jumps() end,                      desc = "Jumplist" },
             { "<leader>fq", function() require("fzf-lua").quickfix() end,                   desc = "quickfix" },
