@@ -157,3 +157,9 @@ vim.filetype.add({
     },
 })
 
+-- Enable the title setting
+vim.o.title = true
+
+-- Set the title to the current directory name
+vim.o.titlestring = "%{fnamemodify(getcwd(), ':t')}"
+
