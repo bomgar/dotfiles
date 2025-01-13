@@ -12,6 +12,7 @@ services:
 
 gui:
   mouseEvents: false
+  nerdFontsVersion: "3"
   theme:
     activeBorderColor:
       - '#56949f'
