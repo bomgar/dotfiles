@@ -26,7 +26,7 @@
 @define-color crust #11111b;
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: "Monaspace Neon", Roboto, Helvetica, Arial, sans-serif;
+    font-family: "JetBrains Mono", Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
 }
 
