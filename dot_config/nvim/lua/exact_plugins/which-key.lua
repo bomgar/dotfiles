@@ -43,6 +43,7 @@ return {
                 { "<leader>ts", "<cmd>Neotest summary<CR>",                                      desc = "summary" },
                 { "<leader>g",  group = "git" },
                 { "<leader>u",  group = "util" },
+                { "<leader>gs",  group = "git search" },
             })
         end,
     },
