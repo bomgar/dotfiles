@@ -89,10 +89,6 @@ vim.o.wildmode = "list:longest"
 
 vim.o.scrolloff = 5
 
-if not vim.g.neovide then
-    vim.o.mouse = ""
-end
-
 vim.o.fileformats = "unix,dos"
 
 vim.o.confirm = true

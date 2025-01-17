@@ -89,7 +89,7 @@ pane_frames false
 //
 themes {
     rose-pine-dawn {
-		bg "#faf4ed"
+		bg "#dfdad9"
 		fg "#575279"
 		red "#f38ba8"
 		green "#286983"
@@ -101,33 +101,6 @@ themes {
 		black "#f2e9e1"
 		white "#575279"
 	}
-    catppuccin_mocha {
-        fg "#f6f7f9"
-        bg "#1e1e2e"
-        red "#f38ba8"
-        green "#a6e3a1"
-        blue "#89b4fa"
-        yellow "#f9e2af"
-        magenta "#f5c2e7" // Pink
-        orange "#fab387" // Peach
-        cyan "#89dceb" // Sky
-        black "#1e1e2e"
-        white "#f6f7f9"
-    }
-
-    catppuccin_latte {
-        bg "#acb0be" // Surface2
-        fg "#4c4f69" // Text
-        red "#f38ba8"
-        green "#40a02b"
-        blue "#1e66f5"
-        yellow "#df8e1d"
-        magenta "#ea76cb" // Pink
-        orange "#fe640b" // Peach
-        cyan "#04a5e5" // Sky
-        black "#e6e9ef" // Mantle
-        white "#4c4f69" // Text
-    }
 }
 
 // Choose the theme that is specified in the themes section.
@@ -152,7 +125,7 @@ theme "rose-pine-dawn"
 //   - true (default)
 //   - false
 //
-mouse_mode false
+mouse_mode true
 
 // Configure the scroll back buffer size
 // This is the number of lines zellij stores for each pane in the scroll back
@@ -179,7 +152,7 @@ scroll_buffer_size 10000
 //   - system (default)
 //   - primary
 //
-// copy_clipboard "primary"
+copy_clipboard "system"
 
 // Enable or disable automatic copy (and clear) of selection when releasing mouse
 // Default: true
