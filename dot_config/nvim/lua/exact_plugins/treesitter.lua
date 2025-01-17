@@ -59,6 +59,7 @@ return {
                     "scss",
                     "sql",
                     "ssh_config",
+                    "styled",
                     "svelte",
                     "templ",
                     "terraform",
