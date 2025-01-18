@@ -129,8 +129,6 @@ vim.o.formatoptions = vim.o.formatoptions .. "mM"
 
 vim.o.tildeop = false
 
-vim.o.synmaxcol = 250
-
 vim.o.startofline = false
 
 if vim.fn.executable("rg") then
