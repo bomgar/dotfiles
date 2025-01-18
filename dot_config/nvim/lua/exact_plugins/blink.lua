@@ -14,6 +14,14 @@ return {
                 ['<C-k>'] = { 'snippet_backward', 'fallback' },
             },
 
+            signature = {
+                enabled = true,
+                window = {
+                    show_documentation = false,
+                    max_height = 1,
+                }
+            },
+
             appearance = {
                 use_nvim_cmp_as_default = false,
                 nerd_font_variant = 'mono'
