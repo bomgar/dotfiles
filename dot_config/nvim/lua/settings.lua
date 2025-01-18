@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+vim.g.maplocalleader = '\\'
 
 -- Enable highlighting for lua HERE doc inside vim script
 vim.g.vimsyn_embed = "l"
