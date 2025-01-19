@@ -25,7 +25,7 @@ return {
             { "<leader>fs",  function() Snacks.picker.grep_word() end,              desc = "Visual selection or word",    mode = { "n", "x" } },
             { "<leader>fb",  function() Snacks.picker.buffers() end,                desc = "Buffers" },
             { "<leader>f?",  function() Snacks.picker.help() end,                   desc = "Help Tags" },
-            { "<leader>fw",  function() Snacks.picker.lsp_symbols() end,            desc = "Live workspace symbols" },
+            { "<leader>fw",  function() Snacks.picker.lsp_workspace_symbols() end,  desc = "LSP workspace symbols" },
             { "<leader>fm",  function() Snacks.picker.marks() end,                  desc = "Marks" },
             { "<leader>fj",  function() Snacks.picker.jumps() end,                  desc = "Jumplist" },
             { "<leader>fq",  function() require("fzf-lua").qflist() end,            desc = "quickfix" },
