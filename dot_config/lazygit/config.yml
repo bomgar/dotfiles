@@ -11,7 +11,7 @@ services:
   'git.dhl.com': 'github:git.dhl.com'
 
 gui:
-  mouseEvents: false
+  mouseEvents: true
   nerdFontsVersion: "3"
   theme:
     activeBorderColor:
