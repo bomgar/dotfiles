@@ -1,4 +1,4 @@
 return {
 
-    { "chrisbra/unicode.vim", event = "VeryLazy" },
+	{ "chrisbra/unicode.vim", event = "VeryLazy" },
 }

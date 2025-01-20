@@ -11,17 +11,17 @@ vim.o.encoding = "utf-8"
 
 vim.o.autoread = true
 vim.api.nvim_create_autocmd("FocusGained", {
-    pattern = "*",
-    command = "checktime",
+	pattern = "*",
+	command = "checktime",
 })
 
 vim.opt.fillchars = {
-    foldopen = "",
-    foldclose = "",
-    fold = "⸱",
-    foldsep = " ",
-    diff = "╱",
-    eob = " ",
+	foldopen = "",
+	foldclose = "",
+	fold = "⸱",
+	foldsep = " ",
+	diff = "╱",
+	eob = " ",
 }
 
 vim.o.foldcolumn = "0"
@@ -69,8 +69,8 @@ vim.o.shiftwidth = 4
 vim.o.expandtab = true
 
 if not vim.g.vscode then
-    vim.opt.spelllang = "en_us"
-    vim.opt.spell = false
+	vim.opt.spelllang = "en_us"
+	vim.opt.spell = false
 end
 
 vim.o.nu = true
@@ -132,8 +132,8 @@ vim.o.tildeop = false
 vim.o.startofline = false
 
 if vim.fn.executable("rg") then
-    vim.o.grepprg = "rg --vimgrep --no-heading --smart-case"
-    vim.o.grepformat = "%f:%l:%c:%m"
+	vim.o.grepprg = "rg --vimgrep --no-heading --smart-case"
+	vim.o.grepformat = "%f:%l:%c:%m"
 end
 
 vim.o.termguicolors = true
@@ -147,9 +147,9 @@ vim.o.ruler = false
 vim.o.showmode = false
 
 vim.filetype.add({
-    extension = {
-        templ = "templ",
-    },
+	extension = {
+		templ = "templ",
+	},
 })
 
 -- Enable the title setting
@@ -160,8 +160,8 @@ vim.o.titlestring = "%{fnamemodify(getcwd(), ':t')}"
 
 
 vim.api.nvim_create_autocmd("TextYankPost", {
-    pattern = "*",
-    callback = function()
-       vim.highlight.on_yank({higroup='IncSearch', timeout=300})
-    end
+	pattern = "*",
+	callback = function()
+		vim.highlight.on_yank({ higroup = 'IncSearch', timeout = 300 })
+	end
 })

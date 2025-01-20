@@ -1,6 +1,6 @@
 return {
-    {
-        "NoahTheDuke/vim-just",
-        ft = { "just" },
-    }
+	{
+		"NoahTheDuke/vim-just",
+		ft = { "just" },
+	}
 }

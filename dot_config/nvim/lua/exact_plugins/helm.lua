@@ -1,6 +1,6 @@
 return {
-    {
-        "towolf/vim-helm",
-        ft = { "yaml", "helm" },
-    },
+	{
+		"towolf/vim-helm",
+		ft = { "yaml", "helm" },
+	},
 }
