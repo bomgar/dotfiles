@@ -8,6 +8,7 @@ return {
 		lazy = false,
 		config = function()
 			require("mini.icons").setup({})
+			MiniIcons.mock_nvim_web_devicons()
 			require("mini.indentscope").setup({})
 
 			vim.api.nvim_create_autocmd("FileType", {
