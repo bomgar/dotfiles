@@ -74,6 +74,7 @@ return {
 					"cssls",
 					"cssmodules_ls",
 					"gopls",
+					"helm_ls",
 					"html",
 					"jsonls",
 					"lua_ls",
@@ -88,6 +89,11 @@ return {
 				handlers = {
 					bashls = function()
 						require("lspconfig").bashls.setup({
+							capabilities = lsp_capabilities,
+						})
+					end,
+					helm_ls = function()
+						require("lspconfig").helm_ls.setup({
 							capabilities = lsp_capabilities,
 						})
 					end,
