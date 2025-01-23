@@ -31,6 +31,7 @@ return {
 			{ "<leader>fq",  function() require("fzf-lua").qflist() end,            desc = "quickfix" },
 			{ "<leader>fo",  function() Snacks.picker.recent() end,                 desc = "recent files" },
 			{ "<leader>fl",  function() Snacks.picker.lines() end,                  desc = "file lines" },
+			{ "<leader>fp",  function() Snacks.picker.projects() end,               desc = "projects" },
 		},
 		config = function()
 			require("snacks").setup(
