@@ -13,7 +13,6 @@ return {
 	},
 	{
 		"williamboman/mason.nvim",
-		enabled = not vim.g.vscode,
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"saghen/blink.cmp",

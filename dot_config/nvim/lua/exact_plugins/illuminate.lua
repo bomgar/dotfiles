@@ -1,7 +1,6 @@
 return {
 	{
 		"RRethy/vim-illuminate",
-		enabled = not vim.g.vscode,
 		config = function()
 			require("illuminate").configure({
 				under_cursor = false,

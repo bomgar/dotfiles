@@ -1,7 +1,6 @@
 return {
 	{
 		"mfussenegger/nvim-dap",
-		enabled = not vim.g.vscode,
 		dependencies = {
 			"williamboman/mason.nvim",
 			{

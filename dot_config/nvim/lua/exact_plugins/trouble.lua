@@ -1,7 +1,6 @@
 return {
 	{
 		"folke/trouble.nvim",
-		enabled = not vim.g.vscode,
 		opts = {},
 		cmd = "Trouble",
 		keys = {
