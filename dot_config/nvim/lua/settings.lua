@@ -38,7 +38,7 @@ vim.o.updatetime = 500
 
 vim.o.swapfile = false
 
-vim.opt.cursorline = true -- Enable highlighting of the current line
+vim.o.cursorline = true -- Enable highlighting of the current line
 
 vim.o.guicursor =
 "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff800-blinkon500-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
@@ -68,10 +68,8 @@ vim.o.softtabstop = 2
 vim.o.shiftwidth = 2
 vim.o.expandtab = true
 
-if not vim.g.vscode then
-	vim.opt.spelllang = "en_us"
-	vim.opt.spell = false
-end
+vim.o.spelllang = "en_us"
+vim.o.spell = false
 
 vim.o.nu = true
 
@@ -106,12 +104,11 @@ vim.o.autowrite = true
 
 vim.o.undofile = true
 
-vim.o.shortmess = vim.o.shortmess .. "c"
 
 vim.o.showmatch = true
 
+vim.o.shortmess = vim.o.shortmess .. "c"
 vim.o.shortmess = vim.o.shortmess .. "S"
-
 vim.o.shortmess = vim.o.shortmess .. "I"
 
 vim.o.completeopt = "menuone"
@@ -165,3 +162,5 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.highlight.on_yank({ higroup = 'IncSearch', timeout = 300 })
 	end
 })
+
+vim.o.smoothscroll = true
