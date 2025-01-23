@@ -7,15 +7,18 @@ vim.g.vimsyn_embed = "l"
 -- Use English as main language
 vim.cmd("language en_US.UTF-8")
 
-vim.o.encoding = "utf-8"
+local opt = vim.opt
 
-vim.o.autoread = true
+opt.encoding = "utf-8"
+
+opt.autoread = true
+
 vim.api.nvim_create_autocmd("FocusGained", {
 	pattern = "*",
 	command = "checktime",
 })
 
-vim.opt.fillchars = {
+opt.fillchars = {
 	foldopen = "",
 	foldclose = "",
 	fold = "⸱",
@@ -24,25 +27,24 @@ vim.opt.fillchars = {
 	eob = " ",
 }
 
-vim.o.foldcolumn = "0"
-vim.o.foldlevel = 99
-vim.o.foldlevelstart = 99
-vim.o.foldenable = true
+opt.foldcolumn = "0"
+opt.foldlevel = 99
+opt.foldlevelstart = 99
+opt.foldenable = true
 
-vim.o.splitbelow = true
-vim.o.splitright = true
+opt.splitbelow = true
+opt.splitright = true
 
-vim.o.timeoutlen = 500
+opt.timeoutlen = 500
 
-vim.o.updatetime = 500
+opt.updatetime = 500
 
-vim.o.swapfile = false
+opt.swapfile = false
 
-vim.opt.cursorline = true -- Enable highlighting of the current line
+opt.cursorline = true -- Enable highlighting of the current line
 
 vim.o.guicursor =
 "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff800-blinkon500-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
---vim.o.guifont = "Monaspace Neon,Noto Sans Mono:h12"
 vim.g.neovide_hide_mouse_when_typing = true
 vim.g.neovide_floating_shadow = false
 vim.g.neovide_padding_top = 2
@@ -52,99 +54,99 @@ vim.g.neovide_padding_left = 2
 
 -- vim.o.linespace=-1
 
-vim.o.wildignore = "*.o,*.obj,*.dylib,*.bin,*.dll,*.exe,*/.git/*,*/.svn/*,*/__pycache__/*,*/build/**"
-vim.o.wildignore = vim.o.wildignore .. "*.jpg,*.png,*.jpeg,*.bmp,*.gif,*.tiff,*.svg,*.ico,*.pyc,*.pkl,*.DS_Store"
-vim.o.wildignore = vim.o.wildignore .. "*.aux,*.bbl,*.blg,*.brf,*.fls,*.fdb_latexmk,*.synctex.gz,*.xdv"
-vim.o.wildignorecase = true
+opt.wildignore = "*.o,*.obj,*.dylib,*.bin,*.dll,*.exe,*/.git/*,*/.svn/*,*/__pycache__/*,*/build/**"
+opt.wildignore = vim.o.wildignore .. "*.jpg,*.png,*.jpeg,*.bmp,*.gif,*.tiff,*.svg,*.ico,*.pyc,*.pkl,*.DS_Store"
+opt.wildignore = vim.o.wildignore .. "*.aux,*.bbl,*.blg,*.brf,*.fls,*.fdb_latexmk,*.synctex.gz,*.xdv"
+opt.wildignorecase = true
 
 local backupdir = vim.fn.stdpath("data") .. "/backup//"
-vim.o.backupdir = backupdir
-vim.o.backupskip = vim.o.wildignore
-vim.o.backup = true
-vim.o.backupcopy = "yes"
+opt.backupdir = backupdir
+opt.backupskip = vim.o.wildignore
+opt.backup = true
+opt.backupcopy = "yes"
 
-vim.o.tabstop = 2
-vim.o.softtabstop = 2
-vim.o.shiftwidth = 2
-vim.o.expandtab = true
+opt.tabstop = 2
+opt.softtabstop = 2
+opt.shiftwidth = 2
+opt.expandtab = true
 
 if not vim.g.vscode then
-	vim.opt.spelllang = "en_us"
-	vim.opt.spell = false
+	opt.spelllang = "en_us"
+	opt.spell = false
 end
 
-vim.o.nu = true
+opt.nu = true
 
-vim.o.ignorecase = true
-vim.o.smartcase = true
+opt.ignorecase = true
+opt.smartcase = true
 
-vim.o.inccommand = "nosplit"
+opt.inccommand = "nosplit"
 
-vim.o.fileencoding = "utf-8"
-vim.o.fileencodings = "ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1"
+opt.fileencoding = "utf-8"
+opt.fileencodings = "ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1"
 
-vim.o.linebreak = true
-vim.o.showbreak = "↪"
+opt.linebreak = true
+opt.showbreak = "↪"
 
-vim.o.wildmode = "list:longest"
+opt.wildmode = "list:longest"
 
-vim.o.scrolloff = 5
+opt.scrolloff = 5
 
-vim.o.fileformats = "unix,dos"
+opt.fileformats = "unix,dos"
 
-vim.o.confirm = true
+opt.confirm = true
 
-vim.o.visualbell = true
-vim.o.errorbells = false
+opt.visualbell = true
+opt.errorbells = false
 
-vim.o.history = 500
+opt.history = 500
 
-vim.o.list = false
-vim.o.listchars = "tab:▸ ,extends:❯,precedes:❮,nbsp:␣,eol:¶"
+opt.list = false
+opt.listchars = "tab:▸ ,extends:❯,precedes:❮,nbsp:␣,eol:¶"
 
-vim.o.autowrite = true
+opt.autowrite = true
 
-vim.o.undofile = true
+opt.undofile = true
 
-vim.o.shortmess = vim.o.shortmess .. "c"
+opt.shortmess = vim.o.shortmess .. "c"
 
-vim.o.showmatch = true
+opt.showmatch = true
 
-vim.o.shortmess = vim.o.shortmess .. "S"
+opt.shortmess = vim.o.shortmess .. "S"
 
-vim.o.shortmess = vim.o.shortmess .. "I"
+opt.shortmess = vim.o.shortmess .. "I"
 
-vim.o.completeopt = "menuone"
+opt.completeopt = "menuone"
 
-vim.o.pumheight = 10
-vim.o.pumblend = 10
+opt.pumheight = 10
+opt.pumblend = 10
 
-vim.o.complete = "kspell"
+opt.complete = "kspell"
 
-vim.o.shiftround = true
+opt.shiftround = true
 
-vim.o.virtualedit = "block"
+opt.virtualedit = "block"
 
-vim.o.formatoptions = vim.o.formatoptions .. "mM"
+opt.formatoptions = vim.o.formatoptions .. "mM"
 
-vim.o.tildeop = false
+opt.tildeop = false
 
-vim.o.startofline = false
+opt.startofline = false
 
 if vim.fn.executable("rg") then
-	vim.o.grepprg = "rg --vimgrep --no-heading --smart-case"
-	vim.o.grepformat = "%f:%l:%c:%m"
+	opt.grepprg = "rg --vimgrep --no-heading --smart-case"
+	opt.grepformat = "%f:%l:%c:%m"
 end
 
-vim.o.termguicolors = true
+opt.termguicolors = true
 
-vim.o.diffopt = "vertical,filler,closeoff,context:3,internal,indent-heuristic,algorithm:histogram,linematch:60"
+opt.diffopt = "vertical,filler,closeoff,context:3,internal,indent-heuristic,algorithm:histogram,linematch:60"
 
-vim.o.wrap = false
+opt.wrap = false
 
-vim.o.ruler = false
+opt.ruler = false
 
-vim.o.showmode = false
+opt.showmode = false
 
 vim.filetype.add({
 	extension = {
@@ -153,10 +155,10 @@ vim.filetype.add({
 })
 
 -- Enable the title setting
-vim.o.title = true
+opt.title = true
 
 -- Set the title to the current directory name
-vim.o.titlestring = "%{fnamemodify(getcwd(), ':t')}"
+opt.titlestring = "%{fnamemodify(getcwd(), ':t')}"
 
 
 vim.api.nvim_create_autocmd("TextYankPost", {
@@ -165,3 +167,5 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.highlight.on_yank({ higroup = 'IncSearch', timeout = 300 })
 	end
 })
+
+opt.smoothscroll = true
