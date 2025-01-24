@@ -1,30 +1,30 @@
-# vim: filetype=gitconfig
+# vim: filetype=gitconfig noexpandtab
 
 [user]
-  name = {{ .user.name | quote }}
-  email = {{ .user.email | quote }}
+	name = {{ .user.name | quote }}
+	email = {{ .user.email | quote }}
 
 [color]
-  ui = true
+	ui = true
 
 [color "status"]
-  added = green bold
-  changed = magenta bold
-  untracked = red bold
+	added = green bold
+	changed = magenta bold
+	untracked = red bold
 
 [push]
-  default = tracking
+	default = tracking
 
 [core]
-  editor = nvim
-  pager = delta
+	editor = nvim
+	pager = delta
 
 [interactive]
-  diffFilter = delta --color-only
+	diffFilter = delta --color-only
 
 [delta]
-  features = rose-pine-dawn
-  tabs = 2
+	features = rose-pine-dawn
+	tabs = 2
 
 [delta "rose-pine-dawn"]
 	blame-palette = "#eff1f5 #e6e9ef #dce0e8 #ccd0da #bcc0cc"
@@ -58,55 +58,55 @@
 	syntax-theme = rose-pine-dawn
 
 [alias]
-  st = status -uall -b
-  rup = remote update --prune
-  ffm = merge --ff-only
-  uff = !sh -c 'git rup && git ffm'
-  destroy = reset --hard
-  pulr = pull --rebase
-  co = checkout
-  sur = submodule update --remote
-  surr = submodule update --remote --recursive
-  gcallthethings = -c gc.reflogExpire=0 -c gc.reflogExpireUnreachable=0 -c gc.rerereresolved=0 -c gc.rerereunresolved=0 -c gc.pruneExpire=now gc
-  rootcd = rev-parse --show-toplevel
-  force-push = push --force-if-includes --force-with-lease
+	st = status -uall -b
+	rup = remote update --prune
+	ffm = merge --ff-only
+	uff = !sh -c 'git rup && git ffm'
+	destroy = reset --hard
+	pulr = pull --rebase
+	co = checkout
+	sur = submodule update --remote
+	surr = submodule update --remote --recursive
+	gcallthethings = -c gc.reflogExpire=0 -c gc.reflogExpireUnreachable=0 -c gc.rerereresolved=0 -c gc.rerereunresolved=0 -c gc.pruneExpire=now gc
+	rootcd = rev-parse --show-toplevel
+	force-push = push --force-if-includes --force-with-lease
 
 [rerere]
-  enabled = 1
+	enabled = 1
 
 [diff]
-  tool = vimdiff
-  algorithm = histogram
+	tool = vimdiff
+	algorithm = histogram
 
 [web]
-  browser = firefox
+	browser = firefox
 
 [status]
-  submoduleSummary = true
+	submoduleSummary = true
 [pull]
-  rebase = true
+	rebase = true
 
 # [url "git@github.com:"]
 #   insteadOf = https://github.com/
 [magit]
-  hideCampaign = true
+	hideCampaign = true
 
 [commit]
-  gpgsign = false
+	gpgsign = false
 
 [filter "lfs"]
-  required = true
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge -- %f
-  process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 
 [init]
-  defaultBranch = main
+	defaultBranch = main
 
 [tig "color"]
-  cursor    = white  black bold
-  title-focus   = white  black bold
-  title-blur   = white  236
+	cursor    = white  black bold
+	title-focus   = white  black bold
+	title-blur   = white  236
 
 [credential]
 	helper = libsecret
