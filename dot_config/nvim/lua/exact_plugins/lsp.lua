@@ -24,6 +24,13 @@ return {
 
 			local lsp_capabilities = require('blink.cmp').get_lsp_capabilities()
 
+			local symbols = { Error = " ", Warn = " ", Hint = " ", Info = " ", }
+
+			for name, icon in pairs(symbols) do
+				local hl = "DiagnosticSign" .. name
+				vim.fn.sign_define(hl, { text = icon, numhl = hl, texthl = hl })
+			end
+
 			vim.api.nvim_create_autocmd("LspAttach", {
 				desc = "LSP actions",
 				callback = function(event)

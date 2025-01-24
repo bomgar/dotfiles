@@ -27,6 +27,16 @@ return {
 				handlers = {}, -- sets up dap in the predefined manner
 			})
 
+			local symbols = {
+				Breakpoint          = " ",
+				BreakpointCondition = " ",
+			}
+
+			for name, icon in pairs(symbols) do
+				local hl = "Dap" .. name
+				vim.fn.sign_define(hl, { text = icon, numhl = hl, texthl = hl })
+			end
+
 			local dap, dapui = require("dap"), require("dapui")
 			dapui.setup({})
 			dap.listeners.after.event_initialized["dapui_config"] = function()
