@@ -41,7 +41,15 @@ return {
 				end,
 			})
 
-			require("mini.files").setup({})
+			require("mini.files").setup({
+				mappings = {
+					go_in_plus = '<CR>',
+				},
+				windows = {
+					preview = true,
+					width_preview = 50,
+				}
+			})
 			require("mini.hipatterns").setup({
 				highlighters = {
 					fixme = { pattern = '%f[%w]()FIXME()%f[%W]', group = 'MiniHipatternsFixme' },
@@ -66,10 +74,10 @@ return {
 						i = { "@block.inner", "@conditional.inner", "@loop.inner" },
 					}),
 					f = ai.gen_spec.treesitter({ a = "@function.outer", i = "@function.inner" }), -- function
-					c = ai.gen_spec.treesitter({ a = "@class.outer", i = "@class.inner" }),       -- class
-					d = { "%f[%d]%d+" },                                                          -- digits
-					u = ai.gen_spec.function_call(),                                              -- u for "Usage"
-					U = ai.gen_spec.function_call({ name_pattern = "[%w_]" }),                    -- without dot in function name
+					c = ai.gen_spec.treesitter({ a = "@class.outer", i = "@class.inner" }),  -- class
+					d = { "%f[%d]%d+" },                                                     -- digits
+					u = ai.gen_spec.function_call(),                                         -- u for "Usage"
+					U = ai.gen_spec.function_call({ name_pattern = "[%w_]" }),               -- without dot in function name
 				},
 			})
 		end
