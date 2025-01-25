@@ -6,7 +6,7 @@ return {
 		},
 		keys = {
 
-			{ "<leader>ur", "<cmd>GrugFar<cr>", desc = "search and replace", noremap = true, silent = true },
+			{ "<leader>fR", "<cmd>GrugFar<cr>", desc = "search and replace", noremap = true, silent = true },
 		},
 	},
 }
