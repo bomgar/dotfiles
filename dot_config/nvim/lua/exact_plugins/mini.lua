@@ -3,7 +3,11 @@ return {
 		'echasnovski/mini.nvim',
 		version = false,
 		keys = {
-			{ "<leader>go", function() MiniDiff.toggle_overlay() end, desc = "Toggle minidiff overlay" },
+			{ "<leader>go", function() MiniDiff.toggle_overlay() end,                    desc = "Toggle minidiff overlay" },
+			{ "<leader>ed", function() MiniFiles.open(vim.api.nvim_buf_get_name(0)) end, desc = "Browse current directory" },
+			{ "<leader>ec", function() MiniFiles.open() end,                             desc = "Browse cwd" },
+			{ "<leader>eh", function() MiniFiles.open("~") end,                          desc = "Browse home directory" },
+			{ "<leader>er", function() MiniFiles.open("/") end,                          desc = "Browse home directory" },
 		},
 		lazy = false,
 		config = function()

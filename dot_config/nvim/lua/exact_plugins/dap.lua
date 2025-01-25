@@ -17,6 +17,7 @@ return {
 			{ "<leader>bi", function() require("dap").step_into() end,         desc = "step into" },
 			{ "<leader>be", function() require("dap").step_out() end,          desc = "step out" },
 			{ "<leader>bb", function() require("dap").toggle_breakpoint() end, desc = "toggle breakpoint" },
+			{ "<leader>tg", function() require("dap-go").debug_test() end,     desc = "Debug go test" },
 		},
 		config = function()
 			require("mason-nvim-dap").setup({
