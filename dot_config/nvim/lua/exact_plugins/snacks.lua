@@ -14,7 +14,7 @@ return {
 			{ "<leader>gb",  function() Snacks.git.blame_line() end,                                desc = "Git blame" },
 			{ "<leader>gf",  function() Snacks.lazygit.log_file() end,                              desc = "Lazygit Current File History" },
 			{ "<leader>gl",  function() Snacks.lazygit.log() end,                                   desc = "Lazygit Log (cwd)" },
-			{ "<leader>rr",  function() Snacks.rename() end,                                        desc = "Rename File" },
+			{ "<leader>uR",  function() Snacks.rename() end,                                        desc = "Rename File" },
 			{ "<c-/>",       function() Snacks.terminal() end,                                      desc = "Toggle Terminal" },
 			{ "<c-_>",       function() Snacks.terminal() end,                                      desc = "which_key_ignore" },
 			{ "<leader>uc",  function() Snacks.bufdelete.other() end,                               desc = "close all other buffers" },
