@@ -8,7 +8,9 @@ return {
 			vim.o.timeout = true
 			vim.o.timeoutlen = 300
 			local which_key = require("which-key")
-			which_key.setup({})
+			which_key.setup({
+				preset = "helix",
+			})
 			which_key.add({
 				mode = { "v" },
 				{ "<leader>f",  group = "find" },
