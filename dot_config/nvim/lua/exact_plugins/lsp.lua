@@ -88,6 +88,7 @@ return {
 					"rust_analyzer",
 					"svelte",
 					"templ",
+					"terraformls",
 					"vtsls",
 					"yamlls",
 					"zls"
@@ -120,6 +121,11 @@ return {
 					end,
 					astro = function()
 						require("lspconfig").astro.setup({
+							capabilities = lsp_capabilities,
+						})
+					end,
+					terraformls = function()
+						require("lspconfig").terraformls.setup({
 							capabilities = lsp_capabilities,
 						})
 					end,
