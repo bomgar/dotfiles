@@ -5,7 +5,10 @@ return {
 		event = "VeryLazy",
 		config = function()
 			require("lualine").setup({
-				theme = "catppuccin",
+				options = {
+					theme = "auto",
+					disabled_filetypes = { statusline = { "dashboard", "snacks_dashboard" } },
+				}
 			})
 		end,
 	},
