@@ -7,7 +7,7 @@ return {
 			{ "<leader>ed", function() MiniFiles.open(vim.api.nvim_buf_get_name(0)) end, desc = "Browse current directory" },
 			{ "<leader>ec", function() MiniFiles.open() end,                             desc = "Browse cwd" },
 			{ "<leader>eh", function() MiniFiles.open("~") end,                          desc = "Browse home directory" },
-			{ "<leader>er", function() MiniFiles.open("/") end,                          desc = "Browse home directory" },
+			{ "<leader>er", function() MiniFiles.open("/") end,                          desc = "Browse root directory" },
 		},
 		lazy = false,
 		config = function()
