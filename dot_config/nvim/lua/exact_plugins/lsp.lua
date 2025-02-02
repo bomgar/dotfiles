@@ -57,7 +57,7 @@ return {
 							end,
 							desc = "toggle inlay hints"
 						},
-						{ "<leader>.", "<cmd>lua vim.lsp.buf.code_action()<cr>", desc = "code action (lsp)" },
+						{ "<leader>.", vim.lsp.buf.code_action, desc = "code action (lsp)" },
 
 					})
 
