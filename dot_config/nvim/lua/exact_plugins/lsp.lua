@@ -94,68 +94,14 @@ return {
 					"zls"
 				},
 				handlers = {
-					bashls = function()
-						require("lspconfig").bashls.setup({
+					-- to disable add a handler that does nothing
+					function(server_name) -- default handler (optional)
+						lspconfig[server_name].setup {
 							capabilities = lsp_capabilities,
-						})
-					end,
-					helm_ls = function()
-						require("lspconfig").helm_ls.setup({
-							capabilities = lsp_capabilities,
-						})
-					end,
-					pyright = function()
-						require("lspconfig").pyright.setup({
-							capabilities = lsp_capabilities,
-						})
-					end,
-					zls = function()
-						require("lspconfig").zls.setup({
-							capabilities = lsp_capabilities,
-						})
-					end,
-					templ = function()
-						require("lspconfig").templ.setup({
-							capabilities = lsp_capabilities,
-						})
-					end,
-					astro = function()
-						require("lspconfig").astro.setup({
-							capabilities = lsp_capabilities,
-						})
-					end,
-					terraformls = function()
-						require("lspconfig").terraformls.setup({
-							capabilities = lsp_capabilities,
-						})
-					end,
-					cssls = function()
-						require("lspconfig").cssls.setup({
-							capabilities = lsp_capabilities,
-						})
-					end,
-					cssmodules_ls = function()
-						require("lspconfig").cssmodules_ls.setup({
-							capabilities = lsp_capabilities,
-						})
-					end,
-					html = function()
-						require("lspconfig").html.setup({
-							capabilities = lsp_capabilities,
-						})
-					end,
-					svelte = function()
-						require("lspconfig").svelte.setup({
-							capabilities = lsp_capabilities,
-						})
-					end,
-					vtsls = function()
-						require("lspconfig").vtsls.setup({
-							capabilities = lsp_capabilities,
-						})
+						}
 					end,
 					jsonls = function()
-						require("lspconfig").jsonls.setup({
+						lspconfig.jsonls.setup({
 							capabilities = lsp_capabilities,
 							-- lazy-load schemastore when needed
 							on_new_config = function(new_config)
@@ -173,7 +119,7 @@ return {
 						})
 					end,
 					yamlls = function()
-						require("lspconfig").yamlls.setup({
+						lspconfig.yamlls.setup({
 							capabilities = lsp_capabilities,
 							-- lazy-load schemastore when needed
 							on_new_config = function(new_config)
@@ -203,7 +149,7 @@ return {
 						})
 					end,
 					lua_ls = function()
-						require("lspconfig").lua_ls.setup({
+						lspconfig.lua_ls.setup({
 							capabilities = lsp_capabilities,
 							settings = {
 								Lua = {
@@ -223,7 +169,7 @@ return {
 						})
 					end,
 					gopls = function()
-						require("lspconfig").gopls.setup({
+						lspconfig.gopls.setup({
 							capabilities = lsp_capabilities,
 							settings = {
 								gopls = {
@@ -246,11 +192,6 @@ return {
 									},
 								},
 							},
-						})
-					end,
-					rust_analyzer = function()
-						require("lspconfig").rust_analyzer.setup({
-							capabilities = lsp_capabilities,
 						})
 					end,
 				},
