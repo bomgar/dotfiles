@@ -10,3 +10,6 @@ selection-background = #dfdad9
 window-decoration = false
 
 mouse-hide-while-typing = true
+
+app-notifications = false
+
