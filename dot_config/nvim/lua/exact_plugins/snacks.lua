@@ -43,7 +43,7 @@ return {
 					quickfile = { enabled = true },
 					statuscolumn = { enabled = true },
 					dashboard = { enabled = true },
-					words = { enabled = false },
+					words = { enabled = true },
 					input = {
 						enabled = false,
 						win = {
