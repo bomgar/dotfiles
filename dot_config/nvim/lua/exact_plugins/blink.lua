@@ -19,6 +19,7 @@ return {
 				window = {
 					show_documentation = false,
 					max_height = 1,
+					direction_priority = {"s", "n"},
 				}
 			},
 
