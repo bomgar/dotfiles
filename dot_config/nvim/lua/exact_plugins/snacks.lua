@@ -45,7 +45,7 @@ return {
 					dashboard = { enabled = true },
 					words = { enabled = true },
 					input = {
-						enabled = false,
+						enabled = true,
 						win = {
 							relative = "win",
 						}
@@ -55,7 +55,6 @@ return {
 					}
 				}
 			)
-			Snacks.input.enable()
 			vim.api.nvim_create_autocmd("User", {
 				pattern = "MiniFilesActionRename",
 				callback = function(event)
