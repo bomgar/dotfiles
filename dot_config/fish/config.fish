@@ -74,6 +74,7 @@ if status is-interactive
   set -x WORDCHARS '*?_-.[]~=&;!#$%^(){}<>'
   set -x GOPATH ~/go
   set -x FZF_DEFAULT_OPTS " \
+        --reverse
         --color=fg:#797593,bg:#faf4ed,hl:#d7827e
         --color=fg+:#575279,bg+:#f2e9e1,hl+:#d7827e
         --color=border:#dfdad9,header:#286983,gutter:#faf4ed
