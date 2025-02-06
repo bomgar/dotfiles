@@ -9,6 +9,7 @@ set ignorecase
 set surround
 set multiple-cursors
 set easymotion
+set commentary
 
 """ Plugin settings -------------------------
 let g:argtextobj_pairs="[:],(:),<:>"
