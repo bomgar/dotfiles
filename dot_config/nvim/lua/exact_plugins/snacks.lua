@@ -27,6 +27,7 @@ return {
 			{ "<leader>fb",  function() Snacks.picker.buffers() end,                                desc = "Buffers" },
 			{ "<leader>f?",  function() Snacks.picker.help() end,                                   desc = "Help Tags" },
 			{ "<leader>fw",  function() Snacks.picker.lsp_workspace_symbols() end,                  desc = "LSP workspace symbols" },
+			{ "<leader>ft",  function() Snacks.picker.treesitter() end,                             desc = "treesitter symbols" },
 			{ "<leader>fm",  function() Snacks.picker.marks() end,                                  desc = "Marks" },
 			{ "<leader>fj",  function() Snacks.picker.jumps() end,                                  desc = "Jumplist" },
 			{ "<leader>fq",  function() require("fzf-lua").qflist() end,                            desc = "quickfix" },
