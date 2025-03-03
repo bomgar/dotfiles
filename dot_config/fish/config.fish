@@ -4,7 +4,7 @@ if status is-interactive
 
   fish_config theme choose "Rosépine Dawn"
 
-  set -x PATH ~/bin ~/.cargo/bin ~/go/bin $PATH
+  set -x PATH ~/bin ~/.cargo/bin ~/go/bin ~/.local/bin $PATH
 
   set -g fish_greeting
 
