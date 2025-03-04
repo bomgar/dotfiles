@@ -9,6 +9,7 @@ git:
 
 services:
   'git.dhl.com': 'github:git.dhl.com'
+  'github.bus.zalan.do': 'github:github.bus.zalan.do'
 
 gui:
   mouseEvents: true
