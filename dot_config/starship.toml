@@ -45,3 +45,5 @@ disabled = true
 [dotnet]
 disabled = true
 
+[aws]
+disabled = true
