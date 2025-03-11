@@ -38,6 +38,7 @@ return {
 					"hcl",
 					"hocon",
 					"html",
+					"http",
 					"javascript",
 					"jsdoc",
 					"json",

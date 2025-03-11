@@ -150,6 +150,12 @@ vim.filetype.add({
 	},
 })
 
+vim.filetype.add({
+	extension = {
+		http = "http",
+	},
+})
+
 -- Enable the title setting
 vim.o.title = true
 
