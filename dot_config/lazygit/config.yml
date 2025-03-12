@@ -37,3 +37,12 @@ gui:
 
   authorColors:
     '*': '#286983'
+
+customCommands:
+  - key: "E"
+    command: "git commit --allow-empty -m '{{index .PromptResponses 0}}'"
+    context: "files"
+    description: 'Empty commit'
+    prompts:
+      - type: "input"
+        title: "Enter commit message"
