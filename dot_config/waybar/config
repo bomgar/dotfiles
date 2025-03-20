@@ -15,6 +15,7 @@
     "memory",
     "cpu",
     "load",
+    "privacy",
     "clock"
   ],
   "custom/layout": {
@@ -42,5 +43,17 @@
     "format": "{:%d.%m.%Y %H:%M:%S}",
     "tooltip": false,
     "interval": 1
+  },
+  "privacy": {
+    "icon-spacing": 4,
+    "icon-size": 18,
+    "transition-duration": 250,
+    "modules": [
+      {
+        "type": "screenshare",
+        "tooltip": true,
+        "tooltip-icon-size": 24
+      }
+    ]
   }
 }
