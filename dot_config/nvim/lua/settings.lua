@@ -172,4 +172,20 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 vim.o.smoothscroll = true
 
-vim.diagnostic.config({ virtual_text = true })
+vim.diagnostic.config({
+	virtual_text = true,
+	signs = {
+		text = {
+			[vim.diagnostic.severity.ERROR] = '',
+			[vim.diagnostic.severity.WARN] = '',
+			[vim.diagnostic.severity.HINT] = '',
+			[vim.diagnostic.severity.INFO] = '',
+		},
+		linehl = {
+		},
+		numhl = {
+			[vim.diagnostic.severity.ERROR] = 'ErrorMsg',
+			[vim.diagnostic.severity.WARN] = 'WarningMsg',
+		},
+	},
+})
