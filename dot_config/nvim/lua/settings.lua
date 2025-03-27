@@ -171,3 +171,5 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 vim.o.smoothscroll = true
+
+vim.diagnostic.config({ virtual_text = true })
