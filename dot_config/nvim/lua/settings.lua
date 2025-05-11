@@ -147,13 +147,8 @@ vim.o.showmode = false
 
 vim.filetype.add({
 	extension = {
-		templ = "templ",
-	},
-})
-
-vim.filetype.add({
-	extension = {
 		http = "http",
+		templ = "templ",
 	},
 })
 
