@@ -12,22 +12,9 @@ return {
 		},
 	},
 	{
-		"mason-org/mason.nvim",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"saghen/blink.cmp",
-			"neovim/nvim-lspconfig",
-			"mason-org/mason-lspconfig.nvim",
-		},
+		"neovim/nvim-lspconfig",
 		config = function()
-			local lspconfig = require("lspconfig")
-
-			local lsp_capabilities = require('blink.cmp').get_lsp_capabilities()
-
-			vim.lsp.config("*", {
-				capabilities = lsp_capabilities
-			})
-
+			require("lspconfig")
 			vim.api.nvim_create_autocmd("LspAttach", {
 				desc = "LSP actions",
 				callback = function(event)
@@ -61,34 +48,44 @@ return {
 					vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 					vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, opts)
 					vim.keymap.set("n", "<F3>", function() vim.lsp.buf.format({ async = true }) end, opts)
-
 				end,
 			})
-
-			require("mason").setup({})
-
-			require("mason-lspconfig").setup({
-				automatic_enable = true,
-				ensure_installed = {
-					"astro",
-					"bashls",
-					"cssls",
-					"cssmodules_ls",
-					"gopls",
-					"helm_ls",
-					"html",
-					"jsonls",
-					"lua_ls",
-					"pyright",
-					"rust_analyzer",
-					"svelte",
-					"templ",
-					"terraformls",
-					"vtsls",
-					"yamlls",
-					"zls"
-				}
-			})
-		end
+		end,
+	},
+	{
+		"mason-org/mason.nvim",
+		opts = {},
+		dependencies = {
+			"neovim/nvim-lspconfig",
+		},
+	},
+	{
+		"mason-org/mason-lspconfig.nvim",
+		opts = {
+			automatic_enable = true,
+			ensure_installed = {
+				"astro",
+				"bashls",
+				"cssls",
+				"cssmodules_ls",
+				"gopls",
+				"helm_ls",
+				"html",
+				"jsonls",
+				"lua_ls",
+				"pyright",
+				"rust_analyzer",
+				"svelte",
+				"templ",
+				"terraformls",
+				"vtsls",
+				"yamlls",
+				"zls"
+			}
+		},
+		dependencies = {
+			"neovim/nvim-lspconfig",
+			"mason-org/mason.nvim",
+		},
 	}
 }
