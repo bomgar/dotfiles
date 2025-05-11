@@ -24,6 +24,10 @@ return {
 
 			local lsp_capabilities = require('blink.cmp').get_lsp_capabilities()
 
+			vim.lsp.config("*", {
+				capabilities = lsp_capabilities
+			})
+
 			vim.api.nvim_create_autocmd("LspAttach", {
 				desc = "LSP actions",
 				callback = function(event)
@@ -64,7 +68,7 @@ return {
 			require("mason").setup({})
 
 			require("mason-lspconfig").setup({
-				automatic_installation = false,
+				automatic_enable = true,
 				ensure_installed = {
 					"astro",
 					"bashls",
@@ -83,110 +87,8 @@ return {
 					"vtsls",
 					"yamlls",
 					"zls"
-				},
-				handlers = {
-					-- to disable add a handler that does nothing
-					function(server_name) -- default handler (optional)
-						lspconfig[server_name].setup {
-							capabilities = lsp_capabilities,
-						}
-					end,
-					jsonls = function()
-						lspconfig.jsonls.setup({
-							capabilities = lsp_capabilities,
-							-- lazy-load schemastore when needed
-							on_new_config = function(new_config)
-								new_config.settings.json.schemas = new_config.settings.json.schemas or {}
-								vim.list_extend(new_config.settings.json.schemas, require("schemastore").json.schemas())
-							end,
-							settings = {
-								json = {
-									format = {
-										enable = true,
-									},
-									validate = { enable = true },
-								},
-							},
-						})
-					end,
-					yamlls = function()
-						lspconfig.yamlls.setup({
-							capabilities = lsp_capabilities,
-							-- lazy-load schemastore when needed
-							on_new_config = function(new_config)
-								new_config.settings.yaml.schemas = vim.tbl_deep_extend(
-									"force",
-									new_config.settings.yaml.schemas or {},
-									require("schemastore").yaml.schemas()
-								)
-							end,
-							settings = {
-								redhat = { telemetry = { enabled = false } },
-								yaml = {
-									keyOrdering = false,
-									format = {
-										enable = true,
-									},
-									validate = true,
-									schemaStore = {
-										-- Must disable built-in schemaStore support to use
-										-- schemas from SchemaStore.nvim plugin
-										enable = false,
-										-- Avoid TypeError: Cannot read properties of undefined (reading 'length')
-										url = "",
-									},
-								},
-							},
-						})
-					end,
-					lua_ls = function()
-						lspconfig.lua_ls.setup({
-							capabilities = lsp_capabilities,
-							settings = {
-								Lua = {
-									runtime = {
-										version = "LuaJIT",
-									},
-									diagnostics = {
-										globals = { "vim" },
-									},
-									workspace = {
-										library = {
-											vim.env.VIMRUNTIME,
-										},
-									},
-								},
-							},
-						})
-					end,
-					gopls = function()
-						lspconfig.gopls.setup({
-							capabilities = lsp_capabilities,
-							settings = {
-								gopls = {
-									analyses = {
-										nilness = true,
-										unusedparams = true,
-										unusedwrite = true,
-										useany = true,
-									},
-									usePlaceholders = true,
-									semanticTokens = true,
-									hints = {
-										assignVariableTypes = true,
-										compositeLiteralFields = true,
-										compositeLiteralTypes = true,
-										constantValues = true,
-										functionTypeParameters = true,
-										parameterNames = true,
-										rangeVariableTypes = true,
-									},
-								},
-							},
-						})
-					end,
-				},
+				}
 			})
-		end,
-	},
+		end
+	}
 }
