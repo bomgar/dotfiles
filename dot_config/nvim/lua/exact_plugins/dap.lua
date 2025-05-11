@@ -2,7 +2,7 @@ return {
 	{
 		"mfussenegger/nvim-dap",
 		dependencies = {
-			"williamboman/mason.nvim",
+			"mason-org/mason.nvim",
 			{
 				"leoluz/nvim-dap-go",
 				config = true,
@@ -21,6 +21,7 @@ return {
 		},
 		config = function()
 			require("mason-nvim-dap").setup({
+				automatic_installation = false,
 				ensure_installed = {
 					"codelldb",
 					"delve",
