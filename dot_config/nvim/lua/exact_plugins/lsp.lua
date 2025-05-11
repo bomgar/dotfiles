@@ -12,12 +12,12 @@ return {
 		},
 	},
 	{
-		"williamboman/mason.nvim",
+		"mason-org/mason.nvim",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"saghen/blink.cmp",
 			"neovim/nvim-lspconfig",
-			"williamboman/mason-lspconfig.nvim",
+			"mason-org/mason-lspconfig.nvim",
 		},
 		config = function()
 			local lspconfig = require("lspconfig")
