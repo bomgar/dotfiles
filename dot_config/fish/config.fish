@@ -28,6 +28,10 @@ if status is-interactive
   bind -M insert \cn down-or-search
   bind -M insert \cf accept-autosuggestion
 
+  if command -q nvim
+    set -x MANPAGER "nvim +Man!"
+  end
+
 
   if command -q fzf
     fzf_key_bindings
