@@ -59,6 +59,7 @@ packages:
         - swayidle
         - swaylock
         - tealdeer
+        - tree-sitter-cli
         - traceroute
         - ttf-droid
         - ttf-jetbrains-mono
