@@ -37,6 +37,7 @@ return {
 				"hocon",
 				"html",
 				"http",
+				"java",
 				"javascript",
 				"jsdoc",
 				"json",
