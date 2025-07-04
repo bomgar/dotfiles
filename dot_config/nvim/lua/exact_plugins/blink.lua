@@ -19,7 +19,7 @@ return {
 				window = {
 					show_documentation = false,
 					max_height = 1,
-					direction_priority = {"s", "n"},
+					direction_priority = { "s", "n" },
 				}
 			},
 
@@ -35,6 +35,11 @@ return {
 					window = {
 						border = "double"
 					}
+				},
+				list = {
+					selection = {
+						preselect = false,
+					},
 				},
 			},
 
