@@ -10,6 +10,7 @@ set surround
 set multiple-cursors
 set easymotion
 set commentary
+set highlightedyank 
 
 """ Plugin settings -------------------------
 let g:argtextobj_pairs="[:],(:),<:>"
