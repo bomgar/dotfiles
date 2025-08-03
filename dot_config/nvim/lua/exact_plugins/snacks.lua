@@ -53,6 +53,9 @@ return {
 					},
 					picker = {
 						enabled = true,
+						matcher = {
+							frecency = true,
+						}
 					}
 				}
 			)
