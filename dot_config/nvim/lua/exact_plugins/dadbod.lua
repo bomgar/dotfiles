@@ -5,6 +5,9 @@ return {
 			{ 'tpope/vim-dadbod',                     lazy = true },
 			{ 'kristijanhusak/vim-dadbod-completion', ft = { 'sql', 'mysql', 'plsql' }, lazy = true },
 		},
+		keys = {
+			{ "<leader>Db", "<cmd>DBUIToggle<CR>", desc = "DBUI toggle" },
+		},
 		cmd = {
 			'DBUI',
 			'DBUIToggle',
