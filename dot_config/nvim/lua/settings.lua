@@ -168,6 +168,8 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 vim.o.smoothscroll = true
 
+vim.o.winborder = "rounded"
+
 vim.diagnostic.config({
 	virtual_text = false,
 	virtual_lines = {
