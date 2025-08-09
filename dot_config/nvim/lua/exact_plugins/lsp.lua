@@ -18,8 +18,6 @@ return {
 			vim.api.nvim_create_autocmd("LspAttach", {
 				desc = "LSP actions",
 				callback = function(event)
-					local opts = { buffer = event.buf }
-
 					local which_key = require("which-key")
 
 					local filter = { bufnr = event.buf }
