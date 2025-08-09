@@ -41,13 +41,15 @@ return {
 							end,
 							desc = "toggle inlay hints"
 						},
-						{ "<leader>.", vim.lsp.buf.code_action, desc = "code action (lsp)" },
-
+						{ "K",    vim.lsp.buf.hover,                                   desc = "hover (lsp)" },
+						{ "<F2>", vim.lsp.buf.rename,                                  desc = "rename (lsp)" },
+						{ "<F3>", function() vim.lsp.buf.format({ async = true }) end, desc = "format (lsp)" },
 					})
-
-					vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-					vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, opts)
-					vim.keymap.set("n", "<F3>", function() vim.lsp.buf.format({ async = true }) end, opts)
+					which_key.add({
+						buffer = event.buf,
+						mode = { "n", "v" },
+						{ "<leader>.", vim.lsp.buf.code_action, desc = "code action (lsp)" },
+					})
 				end,
 			})
 		end,
