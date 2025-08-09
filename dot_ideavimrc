@@ -38,3 +38,5 @@ nnoremap [<space> mzO<Esc>`z
 nnoremap ]<space> mzo<Esc>`z
 nnoremap [q :action PreviousOccurence<cr>
 nnoremap ]q :action NextOccurence<cr>
+nnoremap [d :action GotoPreviousError<CR>
+nnoremap ]d :action GotoNextError<CR>
