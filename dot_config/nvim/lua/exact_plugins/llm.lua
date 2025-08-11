@@ -2,7 +2,7 @@ return {
 	{
 		"olimorris/codecompanion.nvim",
 		opts = {},
-		enabled = false,
+		enabled = true,
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvim-treesitter/nvim-treesitter",
@@ -12,10 +12,11 @@ return {
 				adapters = {
 					copilot = function()
 						return require("codecompanion.adapters").extend("copilot", {
-							-- optional: override command path
-							cmd = "copilot", -- default: "copilot"
-							-- extra args to the CLI (if any)
-							args = {},
+							schema = {
+								model = {
+									default = "claude-sonnet-4",
+								},
+							},
 						})
 					end,
 				},
@@ -32,7 +33,7 @@ return {
 		cmd = "Copilot",
 		build = ":Copilot auth",
 		event = "InsertEnter",
-		enabled = false,
+		enabled = true,
 		opts = {
 			suggestion = {
 				enabled = true,
@@ -51,3 +52,4 @@ return {
 		},
 	}
 }
+
