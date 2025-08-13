@@ -11,6 +11,7 @@ set multiple-cursors
 set easymotion
 set commentary
 set highlightedyank 
+set hls
 
 """ Plugin settings -------------------------
 let g:argtextobj_pairs="[:],(:),<:>"
