@@ -243,11 +243,11 @@ layout {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 
-// This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "waybar" "-c" "/home/phaun/.config/waybar/config-niri"
 spawn-at-startup "systemctl" "--user" "start" "dunst"
 spawn-at-startup "nm-applet"
 spawn-at-startup "xwayland-satellite"
+spawn-at-startup "swayidle" "-C" "/home/phaun/.config/swayidle/config-niri"
 
 environment {
     DISPLAY ":0"
