@@ -39,6 +39,7 @@ packages:
         - neovide
         - netavark
         - network-manager-applet
+        - niri
         - noto-fonts
         - noto-fonts-emoji
         - podman
@@ -59,8 +60,8 @@ packages:
         - swayidle
         - swaylock
         - tealdeer
-        - tree-sitter-cli
         - traceroute
+        - tree-sitter-cli
         - ttf-droid
         - ttf-jetbrains-mono
         - ttf-liberation
@@ -68,12 +69,15 @@ packages:
         - vim
         - waybar
         - wl-clipboard
-        - wlroots
+        - wlroots0.18
+        - wlroots0.19
         - xdg-desktop-portal
+        - xdg-desktop-portal-gnome
         - xdg-desktop-portal-gtk
         - xdg-desktop-portal-kde
         - xdg-desktop-portal-wlr
         - xorg-xwayland
+        - xwayland-satellite
         - zellij
         - zsh
 

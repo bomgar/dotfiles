@@ -3,15 +3,15 @@
   "layer": "top",
   "position": "top",
   "modules-left": [
-    "sway/workspaces",
-    "sway/mode"
+    "niri/workspaces",
+    "niri/mode"
   ],
   "modules-center": [
-        "sway/window"
+        "niri/window"
   ],
   "modules-right": [
     "tray",
-    "sway/language",
+    "niri/language",
     "memory",
     "cpu",
     "load",
