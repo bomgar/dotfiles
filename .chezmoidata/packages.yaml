@@ -6,6 +6,7 @@ packages:
         - acpi
         - alacritty
         - ark
+        - ast-grep
         - bat
         - breeze
         - docker
