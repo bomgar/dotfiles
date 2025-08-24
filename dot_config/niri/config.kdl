@@ -615,6 +615,10 @@ window-rule {
     match is-window-cast-target=true
 
     focus-ring {
+      off
+    }
+    border {
+        on
         width 4
         active-color "#eb6f92"
         inactive-color "#b4637a"
