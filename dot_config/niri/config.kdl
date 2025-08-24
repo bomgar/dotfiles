@@ -629,3 +629,10 @@ window-rule {
         inactive-color "#b4637a"
     }
 }
+
+
+gestures {
+    hot-corners {
+        off
+    }
+}
