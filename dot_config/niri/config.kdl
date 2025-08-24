@@ -150,7 +150,7 @@ layout {
         // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
         // Color of the ring on the active monitor.
-        active-color "#7fc8ff"
+        active-color "#56949f"
 
         // Color of the ring on inactive monitors.
         inactive-color "#505050"
@@ -251,6 +251,11 @@ spawn-at-startup "xwayland-satellite"
 
 environment {
     DISPLAY ":0"
+    MOZ_ENABLE_WAYLAND "1"
+    QT_QPA_PLATFORM "wayland"
+    QT_QPA_PLATFORMTHEME "qt5ct"
+    GDK_BACKEND "wayland"
+    XDG_CURRENT_DESKTOP "niri"
 }
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
@@ -417,12 +422,12 @@ binds {
 
     Mod+Page_Down      { focus-workspace-down; }
     Mod+Page_Up        { focus-workspace-up; }
-    Mod+U              { focus-workspace-down; }
-    Mod+I              { focus-workspace-up; }
+    Mod+U              { focus-workspace-up; }
+    Mod+I              { focus-workspace-down; }
     Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
     Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
-    Mod+Ctrl+U         { move-column-to-workspace-down; }
-    Mod+Ctrl+I         { move-column-to-workspace-up; }
+    Mod+Ctrl+U         { move-column-to-workspace-up; }
+    Mod+Ctrl+I         { move-column-to-workspace-down; }
 
     // Alternatively, there are commands to move just a single window:
     // Mod+Ctrl+Page_Down { move-window-to-workspace-down; }
