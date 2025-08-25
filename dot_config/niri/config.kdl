@@ -639,6 +639,12 @@ window-rule {
   }
 }
 
+layer-rule {
+  // Block out mako notifications from screencasts.
+  match namespace="^notifications$"
+  block-out-from "screencast"
+}
+
 
 gestures {
     hot-corners {
