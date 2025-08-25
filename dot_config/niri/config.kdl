@@ -436,6 +436,9 @@ binds {
   Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
   Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
 
+  Mod+Shift+t { set-dynamic-cast-window; }
+  Mod+Ctrl+t { clear-dynamic-cast-target; }
+
   // Similarly, you can bind touchpad scroll "ticks".
   // Touchpad scrolling is continuous, so for these binds it is split into
   // discrete intervals.
