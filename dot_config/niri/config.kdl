@@ -244,7 +244,7 @@ layout {
 // See the binds section below for more spawn examples.
 
 spawn-at-startup "waybar" "-c" "/home/phaun/.config/waybar/config-niri"
-spawn-at-startup "systemctl" "--user" "start" "dunst"
+// spawn-at-startup "systemctl" "--user" "start" "dunst"
 spawn-at-startup "nm-applet"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "swayidle" "-C" "/home/phaun/.config/swayidle/config-niri"
