@@ -34,6 +34,7 @@ return {
 			{ "<leader>fo",  function() Snacks.picker.recent() end,                                 desc = "recent files" },
 			{ "<leader>fl",  function() Snacks.picker.lines() end,                                  desc = "file lines" },
 			{ "<leader>fp",  function() Snacks.picker.projects() end,                               desc = "projects" },
+			{ "<leader>fP",  function() Snacks.picker.pickers() end,                                desc = "pickers" },
 		},
 		config = function()
 			require("snacks").setup(
