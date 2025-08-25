@@ -182,7 +182,7 @@ layout {
         inactive-color "#505050"
 
         // Color of the border around windows that request your attention.
-        urgent-color "#9b0000"
+        urgent-color "#eb6f92"
 
         // active-gradient from="#ffbb66" to="#ffc880" angle=45 relative-to="workspace-view"
         // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
@@ -605,22 +605,38 @@ hotkey-overlay {
 }
 
 window-rule {
-    match is-window-cast-target=true
+  match is-urgent=true
+  focus-ring {
+    off
+  }
+  border {
+    on
+    width 4
+    urgent-color "#eb6f92"
+  }
 
-    focus-ring {
-      off
-    }
-    border {
-        on
-        width 4
-        active-color "#eb6f92"
-        inactive-color "#b4637a"
-    }
+  tab-indicator {
+    urgent-color "#eb6f92"
+  }
+}
 
-    tab-indicator {
-        active-color "#eb6f92"
-        inactive-color "#b4637a"
-    }
+window-rule {
+  match is-window-cast-target=true
+
+  focus-ring {
+    off
+  }
+  border {
+    on
+    width 4
+    active-color "#ea9d34"
+    inactive-color "#f6c177"
+  }
+
+  tab-indicator {
+    active-color "#ea9d34"
+    inactive-color "#f6c177"
+  }
 }
 
 
