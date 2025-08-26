@@ -242,6 +242,14 @@ layout {
     // top 64
     // bottom 64
   }
+
+  tab-indicator {
+    width 8
+    gap 8
+    length total-proportion=1.0
+    position "left"
+    place-within-column
+  }
 }
 
 // Add lines like this to spawn processes at startup.
