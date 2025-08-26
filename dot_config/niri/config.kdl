@@ -262,6 +262,7 @@ environment {
   QT_QPA_PLATFORMTHEME "qt5ct"
   GDK_BACKEND "wayland"
   XDG_CURRENT_DESKTOP "niri"
+  ELECTRON_OZONE_PLATFORM_HINT "auto"
 }
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
