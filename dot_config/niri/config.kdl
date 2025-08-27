@@ -52,6 +52,10 @@ input {
   // focus-follows-mouse max-scroll-amount="0%"
 }
 
+cursor {
+  // hide-when-typing
+}
+
 // You can configure outputs by their name, which you can find
 // by running `niri msg outputs` while inside a niri instance.
 // The built-in laptop monitor is usually called "eDP-1".
