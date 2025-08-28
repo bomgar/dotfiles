@@ -1,6 +1,6 @@
 return {
 	{
-		'echasnovski/mini.nvim',
+		'nvim-mini/mini.nvim',
 		version = false,
 		keys = {
 			{ "<leader>go", function() MiniDiff.toggle_overlay() end,                    desc = "Toggle minidiff overlay" },
