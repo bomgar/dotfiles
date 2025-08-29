@@ -64,11 +64,6 @@ return {
 				},
 			})
 			require("mini.splitjoin").setup({})
-			require("mini.diff").setup({
-				view = {
-					style = "sign"
-				}
-			})
 			local ai = require("mini.ai")
 			ai.setup({
 				n_lines = 500,
