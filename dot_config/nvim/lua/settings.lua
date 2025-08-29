@@ -87,7 +87,7 @@ vim.o.showbreak = "↪"
 
 vim.o.wildmode = "list:longest"
 
-vim.o.scrolloff = 8
+vim.o.scrolloff = 10
 vim.o.sidescrolloff = 8
 
 vim.o.fileformats = "unix,dos"

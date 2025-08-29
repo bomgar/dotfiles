@@ -19,7 +19,7 @@ let g:highlightedyank_highlight_color = "rgba(234, 157, 52, 255)"
 let g:highlightedyank_highlight_foreground_color = "rgba(250, 244, 237, 255)"
 """ Common settings -------------------------
 set showmode
-set so=5
+set scrolloff=10
 set incsearch
 set nu
 
