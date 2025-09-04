@@ -261,14 +261,11 @@ layout {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 
-spawn-at-startup "waybar" "-c" "/home/phaun/.config/waybar/config-niri"
-// spawn-at-startup "systemctl" "--user" "start" "dunst"
+spawn-sh-at-startup "waybar -c ~/.config/waybar/config-niri"
 spawn-at-startup "nm-applet"
-spawn-at-startup "xwayland-satellite"
-spawn-at-startup "swayidle" "-C" "/home/phaun/.config/swayidle/config-niri"
+spawn-sh-at-startup "swayidle -C ~/.config/swayidle/config-niri"
 
 environment {
-  DISPLAY ":0"
   MOZ_ENABLE_WAYLAND "1"
   QT_QPA_PLATFORM "wayland"
   QT_QPA_PLATFORMTHEME "qt5ct"
