@@ -1,6 +1,6 @@
 # vim: ft=conf
 
-theme = rose-pine-dawn
+theme = "Rose Pine Dawn"
 
 font-family = "JetBrains Mono"
 font-size = 12
