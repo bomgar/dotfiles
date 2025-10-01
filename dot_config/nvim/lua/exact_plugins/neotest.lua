@@ -23,7 +23,7 @@ return {
 			"haydenmeade/neotest-jest",
 			"rouge8/neotest-rust",
 			"nvim-neotest/nvim-nio",
-			{ "fredrikaverpil/neotest-golang", branch = "feat/treesitter-main" }
+			{ "fredrikaverpil/neotest-golang", version = "*"},
 		},
 		config = function()
 			require("neotest").setup({
