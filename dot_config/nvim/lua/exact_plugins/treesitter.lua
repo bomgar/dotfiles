@@ -16,6 +16,7 @@ return {
 			local parsers ={
 				"astro",
 				"bash",
+				"blade",
 				"c",
 				"css",
 				"csv",
@@ -49,6 +50,7 @@ return {
 				"luap",
 				"markdown",
 				"markdown_inline",
+				"php",
 				"proto",
 				"python",
 				"query",
