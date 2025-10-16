@@ -2,7 +2,7 @@ return {
 	{
 		"olimorris/codecompanion.nvim",
 		opts = {},
-		enabled = true,
+		enabled = false,
 		cmd = {
 			"CodeCompanion",
 			"CodeCompanionActions",
@@ -41,7 +41,7 @@ return {
 		cmd = "Copilot",
 		build = ":Copilot auth",
 		event = "InsertEnter",
-		enabled = true,
+		enabled = false,
 		opts = {
 			suggestion = {
 				enabled = true,
