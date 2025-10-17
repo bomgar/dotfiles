@@ -53,7 +53,7 @@ input {
 }
 
 cursor {
-  // hide-when-typing
+  hide-when-typing
 }
 
 // You can configure outputs by their name, which you can find
