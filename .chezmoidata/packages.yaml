@@ -36,6 +36,7 @@ packages:
         - lua51
         - luarocks
         - mako
+        - man-pages
         - maven
         - neovide
         - netavark
