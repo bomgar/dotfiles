@@ -9,6 +9,7 @@ packages:
         - ast-grep
         - bat
         - breeze
+        - darkman
         - docker
         - docker-compose
         - dolphin

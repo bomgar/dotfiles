@@ -7,13 +7,13 @@ return {
 		priority = 1000, -- make sure to load this before all the other start plugins
 		config = function()
 			require("rose-pine").setup({
-				variant = "dawn",
+				--variant = "dawn",
 				-- highlight_groups = {
 				-- 	MiniCursorword = { underline = false, bg = "highlight_med" },
 				-- 	MiniCursorwordCurrent = {  underline = false },
 				-- },
 			})
-			vim.cmd("colorscheme rose-pine")
+			vim.cmd("colorscheme rose-pine-dawn")
 		end
 	},
 }
