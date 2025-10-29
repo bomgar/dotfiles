@@ -7,4 +7,12 @@
     url = "https://raw.githubusercontent.com/sasoria/k9s-theme/refs/heads/main/rose-pine-dawn.yaml"
     refreshPeriod = "168h"
 
+[".config/fuzzel/rose-pine.ini"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/bomgar/rose-pine-fuzzel/refs/heads/main/themes/rose-pine.ini"
+    refreshPeriod = "168h"
+[".config/fuzzel/rose-pine-dawn.ini"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/bomgar/rose-pine-fuzzel/refs/heads/main/themes/rose-pine-dawn.ini"
+    refreshPeriod = "168h"
 
