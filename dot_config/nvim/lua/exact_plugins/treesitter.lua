@@ -35,6 +35,7 @@ return {
 				"gowork",
 				"groovy",
 				"hcl",
+				"helm",
 				"hocon",
 				"html",
 				"http",
