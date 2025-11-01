@@ -38,6 +38,7 @@ return {
 				{ "<leader>x",  group = "inspect" },
 				{ "<leader>t",  group = "test" },
 				{ "<leader>g",  group = "git" },
+				{ "<leader>gh", group = "github" },
 				{ "<leader>u",  group = "util" },
 				{ "<leader>gs", group = "git search" },
 			})

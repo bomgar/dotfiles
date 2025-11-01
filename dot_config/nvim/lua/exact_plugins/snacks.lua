@@ -12,6 +12,10 @@ return {
 			{ "<leader>gsf", function() Snacks.picker.git_log_file() end,                           desc = "Git search log file" },
 			{ "<leader>gf",  function() Snacks.lazygit.log_file() end,                              desc = "Lazygit Current File History" },
 			{ "<leader>gl",  function() Snacks.lazygit.log() end,                                   desc = "Lazygit Log (cwd)" },
+			{ "<leader>ghi", function() Snacks.picker.gh_issue() end,                               desc = "GitHub Issues (open)" },
+			{ "<leader>ghI", function() Snacks.picker.gh_issue({ state = "all" }) end,              desc = "GitHub Issues (all)" },
+			{ "<leader>ghp", function() Snacks.picker.gh_pr() end,                                  desc = "GitHub Pull Requests (open)" },
+			{ "<leader>ghP", function() Snacks.picker.gh_pr({ state = "all" }) end,                 desc = "GitHub Pull Requests (all)" },
 			{ "<leader>uR",  function() Snacks.rename() end,                                        desc = "Rename File" },
 			{ "<c-/>",       function() Snacks.terminal() end,                                      desc = "Toggle Terminal" },
 			{ "<c-_>",       function() Snacks.terminal() end,                                      desc = "which_key_ignore" },
@@ -45,6 +49,7 @@ return {
 					statuscolumn = { enabled = true },
 					dashboard = { enabled = true },
 					words = { enabled = true },
+					gh = { enabled = true },
 					input = {
 						enabled = true,
 						win = {
