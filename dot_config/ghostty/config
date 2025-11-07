@@ -7,8 +7,6 @@ font-size = 12
 font-feature = "calt"
 font-feature = "zero"
 
-selection-background = #dfdad9
-
 window-decoration = false
 
 mouse-hide-while-typing = true
