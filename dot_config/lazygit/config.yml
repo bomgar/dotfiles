@@ -1,20 +1,17 @@
 os:
   editPreset: 'nvim'
 git:
-  paging:
-    colorArg: always
-    pager: delta --paging=never
+  pagers:
+    - colorArg: always
+      pager: delta --paging=never
   log:
     showWholeGraph: true
-
 services:
   'git.dhl.com': 'github:git.dhl.com'
   'github.bus.zalan.do': 'github:github.bus.zalan.do'
-
 gui:
   mouseEvents: true
   nerdFontsVersion: "3"
-
 customCommands:
   - key: "E"
     command: "git commit --allow-empty -m '{{index .PromptResponses 0}}'"
