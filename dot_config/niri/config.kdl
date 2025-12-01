@@ -512,12 +512,13 @@ binds {
   Mod+R { switch-preset-column-width; }
   Mod+Shift+R { switch-preset-window-height; }
   Mod+Ctrl+R { reset-window-height; }
-  Mod+F { maximize-column; }
+  Mod+F { maximize-window-to-edges; }
+  Mod+Ctrl+F { maximize-column; }
   Mod+Shift+F { fullscreen-window; }
 
   // Expand the focused column to space not taken up by other fully visible columns.
   // Makes the column "fill the rest of the space".
-  Mod+Ctrl+F { expand-column-to-available-width; }
+  // Mod+Ctrl+F { expand-column-to-available-width; }
 
   Mod+C { center-column; }
 
@@ -602,7 +603,7 @@ window-rule {
 window-rule {
   match app-id=r#"^[Ff]irefox"#
   open-on-workspace "browser"
-  open-maximized true
+  open-maximized-to-edges true
 }
 
 window-rule {
@@ -617,7 +618,7 @@ window-rule {
 
 window-rule {
   match app-id="ghostty"
-  open-maximized true
+  open-maximized-to-edges true
 }
 
 hotkey-overlay {
