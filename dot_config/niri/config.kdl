@@ -3,7 +3,7 @@ input {
     xkb {
       layout "us,us"
       variant ",intl"
-      options "grp:caps_toggle,caps:none,shift:breaks_caps"
+      options "grp:caps_toggle,caps:none"
     }
 
     // Enable numlock on startup, omitting this setting disables it.
