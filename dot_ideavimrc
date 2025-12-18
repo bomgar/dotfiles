@@ -11,7 +11,10 @@ set multiple-cursors
 set easymotion
 set commentary
 set highlightedyank 
-"set hls
+set hls
+sethandler <C-L> a:vim
+nnoremap <C-L> :nohlsearch<CR>
+
 
 """ Plugin settings -------------------------
 let g:argtextobj_pairs="[:],(:),<:>"
@@ -28,9 +31,6 @@ set ideajoin
 set idearefactormode=keep
 
 """ Mappings --------------------------------
-
-nmap <C-H> :action VimMotionPreviousTab<CR>
-nmap <C-L> :action VimMotionNextTab<CR>
 
 map <leader>s <Plug>(easymotion-jumptoanywhere)
 
