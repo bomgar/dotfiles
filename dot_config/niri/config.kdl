@@ -4,6 +4,7 @@ input {
       layout "us,us"
       variant ",intl"
       options "grp:caps_toggle,caps:none"
+      // options "grp:caps_toggle,caps:none,shift:breaks_caps"
     }
 
     // Enable numlock on startup, omitting this setting disables it.
