@@ -23,7 +23,7 @@ if status is-interactive
   set fish_cursor_visual block blink
 
   set fish_vi_force_cursor true
-  fish_vi_key_bindings
+  set --global fish_key_bindings fish_vi_key_bindings
   fish_vi_cursor
 
   bind -M insert \cp up-or-search
