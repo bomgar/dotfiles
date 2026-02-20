@@ -322,7 +322,7 @@
         "animationDisabled": false,
         "animationSpeed": 1,
         "autoStartAuth": false,
-        "avatarImage": "/home/phaun/.face",
+        "avatarImage": "/home/phaun/Pictures/avatar.jpg",
         "boxRadiusRatio": 1,
         "clockFormat": "hh\\nmm",
         "clockStyle": "custom",
@@ -409,7 +409,7 @@
         "bluetoothRssiPollingEnabled": false,
         "disableDiscoverability": false,
         "wifiDetailsViewMode": "grid",
-        "wifiEnabled": true
+        "wifiEnabled": false
     },
     "nightLight": {
         "autoSchedule": true,
