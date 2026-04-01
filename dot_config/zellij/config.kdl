@@ -308,7 +308,7 @@ theme "rose-pine-dawn"
 // The folder in which Zellij will look for themes
 // (Requires restart)
 // 
-// theme_dir "/tmp"
+theme_dir "/home/phaun/.config/zellij/themes"
  
 // Toggle enabling the mouse mode.
 // On certain configurations, or terminals this could
