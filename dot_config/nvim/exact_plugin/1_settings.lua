@@ -111,9 +111,9 @@ vim.o.undofile = true
 
 vim.o.showmatch = true
 
-vim.o.shortmess = vim.o.shortmess .. "c"
-vim.o.shortmess = vim.o.shortmess .. "S"
-vim.o.shortmess = vim.o.shortmess .. "I"
+--vim.o.shortmess = vim.o.shortmess .. "c"
+--vim.o.shortmess = vim.o.shortmess .. "S"
+--vim.o.shortmess = vim.o.shortmess .. "I"
 
 vim.o.completeopt = "menuone"
 
