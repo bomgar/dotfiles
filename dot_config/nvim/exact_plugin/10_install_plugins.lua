@@ -10,7 +10,7 @@ vim.api.nvim_create_autocmd('PackChanged', {
 
 vim.pack.add({
   "https://github.com/nvim-lua/plenary.nvim",
-  "https://github.com/rose-pine/neovim",
+	{src = "https://github.com/rose-pine/neovim", name = "rose-pine"},
   "https://github.com/folke/which-key.nvim",
   "https://github.com/folke/snacks.nvim",
   "https://github.com/nvim-lualine/lualine.nvim",
