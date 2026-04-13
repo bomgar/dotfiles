@@ -17,7 +17,7 @@ which_key.add({
   { "<leader>qo", "<cmd>copen<CR>",                                             desc = "open" },
   { "<leader>qc", "<cmd>cclose<CR>",                                            desc = "close" },
   { "<leader>qn", "<cmd>cnext<CR>",                                             desc = "next" },
-  { "<leader>qp", "<cmd>cprevious",                                             desc = "previous" },
+  { "<leader>qp", "<cmd>cprevious<CR>",                                         desc = "previous" },
   { "<leader>Pu", vim.pack.update,                                              desc = "vim pack update" },
 })
 

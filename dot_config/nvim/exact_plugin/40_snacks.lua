@@ -83,7 +83,7 @@ wk.add({
 	{ "<leader>ft",  function() Snacks.picker.treesitter() end,                             desc = "Treesitter symbols" },
 	{ "<leader>fm",  function() Snacks.picker.marks() end,                                  desc = "Marks" },
 	{ "<leader>fj",  function() Snacks.picker.jumps() end,                                  desc = "Jumplist" },
-	{ "<leader>fq",  function() require("fzf-lua").qflist() end,                            desc = "Quickfix" },
+	{ "<leader>fq",  function() Snacks.picker.qflist() end,                                 desc = "Quickfix" },
 	{ "<leader>fo",  function() Snacks.picker.recent() end,                                 desc = "Recent files" },
 	{ "<leader>fl",  function() Snacks.picker.lines() end,                                  desc = "File lines" },
 	{ "<leader>fp",  function() Snacks.picker.projects() end,                               desc = "Projects" },

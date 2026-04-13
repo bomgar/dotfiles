@@ -35,8 +35,6 @@ vim.o.foldtext = ""
 vim.o.splitbelow = true
 vim.o.splitright = true
 
-vim.o.timeoutlen = 500
-
 vim.o.updatetime = 500
 
 vim.o.swapfile = false
