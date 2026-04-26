@@ -9,11 +9,11 @@ require("snacks").setup({
 		enabled = true,
 		preset = {
 			keys = {
-				{ icon = "📦", key = "U", desc = "Update plugins", action = ":lua vim.pack.update()" },
-				{ icon = "📦", key = "P", desc = "Show installed plugins", action = ":lua vim.pack.update(nil, { offline = true })" },
-				{ icon = "", key = "n", desc = "New File", action = ":ene | startinsert" },
-				{ icon = "", key = "c", desc = "Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
-				{ icon = "", key = "q", desc = "Quit", action = ":qa" },
+				{ icon = "", key = "U", desc = "Update plugins", action = ":lua vim.pack.update()" },
+				{ icon = "", key = "P", desc = "Show installed plugins", action = ":lua vim.pack.update(nil, { offline = true })" },
+				{ icon = "", key = "n", desc = "New File", action = ":ene | startinsert" },
+				{ icon = "", key = "c", desc = "Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
+				{ icon = "", key = "q", desc = "Quit", action = ":qa" },
 			}
 		},
 		sections = {
