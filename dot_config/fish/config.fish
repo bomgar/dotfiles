@@ -66,6 +66,10 @@ if status is-interactive
     alias lt "command eza --tree --icons=auto"
   end
 
+  if command -q zoxide
+    zoxide init fish | source
+  end
+
   alias zbn "zellij action rename-tab (basename (pwd))"
   alias pwn-docker 'docker rm -f (docker ps -a -q)'
   alias back-to-master "git checkout (git remote show origin | awk '/HEAD branch/ { print \$3 }') && git uff && git-trim"

@@ -82,5 +82,6 @@ packages:
         - xorg-xwayland
         - xwayland-satellite
         - zellij
+        - zoxide
         - zsh
 
