@@ -265,7 +265,6 @@ layout {
 //spawn-sh-at-startup "waybar -c ~/.config/waybar/config-niri"
 spawn-at-startup "qs" "-c" "noctalia-shell" "--no-duplicate"
 spawn-at-startup "nm-applet"
-spawn-sh-at-startup "swayidle -C ~/.config/swayidle/config-niri"
 
 environment {
   MOZ_ENABLE_WAYLAND "1"
