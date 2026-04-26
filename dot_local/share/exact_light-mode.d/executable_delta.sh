@@ -1,3 +1,3 @@
 #!/bin/bash
-sed -i 's/features = rose-pine/features = rose-pine-dawn/' ~/.config/git/config
+sed -i -E 's/features = rose-pine(-dawn)*/features = rose-pine-dawn/' ~/.config/git/config
 

@@ -1,3 +1,3 @@
 #!/bin/bash
-sed -i 's/--theme=rose-pine/--theme=rose-pine-dawn/' ~/.config/bat/config
+sed -i -E 's/--theme=rose-pine(-dawn)*/--theme=rose-pine-dawn/' ~/.config/bat/config
 
