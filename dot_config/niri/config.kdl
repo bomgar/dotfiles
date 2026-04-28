@@ -364,7 +364,8 @@ binds {
   XF86MonBrightnessUp { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "increase"; }
   XF86MonBrightnessDown { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "decrease"; }
 
-  Mod+Shift+Escape allow-when-locked=true { spawn "systemctl" "suspend"; }
+  // Mod+Shift+Escape allow-when-locked=true { spawn "systemctl" "suspend"; }
+  Mod+Shift+Escape allow-when-locked=true { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "lockAndSuspend"; }
 
   // Open/close the Overview: a zoomed-out view of workspaces and windows.
   // You can also move the mouse into the top-left hot corner,
