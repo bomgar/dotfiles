@@ -49,4 +49,5 @@ vim.pack.add({
   "https://github.com/leath-dub/snipe.nvim",
   "https://github.com/kylechui/nvim-surround",
   "https://github.com/folke/trouble.nvim",
+  "https://github.com/dlyongemallo/diffview-plus.nvim",
 })
